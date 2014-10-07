@@ -36,6 +36,7 @@ public class TestBase {
 	protected String baseUrl;
 
 	protected Browser browser;
+	
 
 	@BeforeClass
 	public void init() {
@@ -54,6 +55,8 @@ public class TestBase {
 				password);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
+	
+	
 
 	@AfterSuite(alwaysRun = true)
 	public void tearDown() {
