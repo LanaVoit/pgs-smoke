@@ -23,7 +23,7 @@ public class Checkout extends PGS.pages.TestBase {
 	driver.get("chrome://settings/clearBrowserData");
 
 	final By cleanCacheIframe = By.xpath("//iframe[@src='chrome://settings-frame/clearBrowserData']");
-	driver.switchTo().frame(driver.findElement(cleanCacheIframe));
+	//driver.switchTo().frame(driver.findElement(cleanCacheIframe));
 	 
 	driver.findElement(By.id("clear-browser-data-commit")).click();
 	TimeUnit.SECONDS.sleep(5);

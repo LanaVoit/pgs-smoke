@@ -86,7 +86,7 @@ public class Ask extends PGS.pages.TestBase {
     assertEquals("testpgs", driver.findElement(By.cssSelector("ul.aw-pq2-list > li:last-child > div.aw-pq2-list__question-wrapper > div.aw-pq2-list__question > span.aw-pq2-list__question-content")).getText());
     TimeUnit.SECONDS.sleep(10);
     driver.get(baseUrl + "admin");
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/a/span"))).build().perform();
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li[11]/a/span"))).build().perform();
     driver.findElement(By.xpath("//*[@id=\"nav\"]/li[3]/ul/li[11]/ul/li[2]/a/span")).click();
