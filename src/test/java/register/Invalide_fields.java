@@ -18,7 +18,7 @@ public class Invalide_fields extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled2() throws Exception {
+  public void Invalide_fields() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "customer/account/create/");    
     driver.findElement(By.id("firstname")).clear();
@@ -55,7 +55,7 @@ public class Invalide_fields extends PGS.pages.TestBase {
             ,driver.findElement(By.cssSelector("div.buttons-set > button.button.btn-primary")));
     driver.findElement(By.cssSelector("div.buttons-set > button.button.btn-primary")).click();
     assertEquals("Incorrect CAPTCHA.", driver.findElement(By.cssSelector("li > span")).getText());
-
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

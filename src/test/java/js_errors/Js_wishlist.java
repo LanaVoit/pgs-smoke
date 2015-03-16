@@ -28,7 +28,7 @@ public class Js_wishlist extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Js_wishlist() throws Exception {
     	Actions actions = new Actions(driver);
     	driver.manage().window().maximize();
         driver.get(baseUrl + "customer/account/login/");
@@ -60,6 +60,7 @@ public class Js_wishlist extends PGS.pages.TestBase {
         TimeUnit.SECONDS.sleep(5);
 		    assertEquals(list, logsEntries);
 		   // driver.quit(); 
+		    TimeUnit.SECONDS.sleep(10);
 		    
   }
 

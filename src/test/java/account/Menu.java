@@ -19,7 +19,7 @@ public class Menu extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled7() throws Exception {
+  public void Menu() throws Exception {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
 	driver.get(baseUrl + "customer/account/login/");
@@ -95,12 +95,11 @@ public class Menu extends PGS.pages.TestBase {
     driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[18]/a")).click();
     assertEquals("REWARD POINTS", driver.findElement(By.cssSelector("h1")).getText());
     TimeUnit.SECONDS.sleep(3);*/
-    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[19]/a")));
-    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[19]/a")).click();
-    TimeUnit.SECONDS.sleep(3);
+    driver.get(baseUrl + "customer/account/logout");
+    TimeUnit.SECONDS.sleep(7);
     assertEquals("YOU ARE NOW LOGGED OUT", driver.findElement(By.cssSelector("h1")).getText());
     driver.get(baseUrl + "customer/account/login/");
+    TimeUnit.SECONDS.sleep(10);
 
   }
 

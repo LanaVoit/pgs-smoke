@@ -20,7 +20,7 @@ public class Valide_fields extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled2() throws Exception {
+  public void Valide_fields() throws Exception {
     	Random rand = new Random();
 
         String AlphabetString = "ABCDEFGHIKLMNOPQRSTVXYZabcdefghiklmnopqrstvxyz";
@@ -119,7 +119,7 @@ public class Valide_fields extends PGS.pages.TestBase {
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure[\\s\\S]$"));
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Total of 1 record(s) were deleted.", driver.findElement(By.cssSelector("li > span")).getText());
-    
+    TimeUnit.SECONDS.sleep(10);
     
   }
 

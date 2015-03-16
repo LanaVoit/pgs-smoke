@@ -26,7 +26,7 @@ public class Ask extends PGS.pages.TestBase {
   
   
     @Test
-  public void testUntitled10() throws Exception {
+  public void Ask() throws Exception {
     driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
@@ -101,6 +101,7 @@ public class Ask extends PGS.pages.TestBase {
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure[\\s\\S]$"));
     TimeUnit.SECONDS.sleep(5);
     assertEquals("1 question has been deleted successfully", driver.findElement(By.cssSelector("li > span")).getText());
+    TimeUnit.SECONDS.sleep(10);
   }
     
     public void waitForAjax(int timeoutInSeconds) {

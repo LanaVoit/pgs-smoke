@@ -15,7 +15,7 @@ public class Sort extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled5() throws Exception {
+  public void Sort() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html?dir=asc&order=price");
@@ -33,6 +33,7 @@ public class Sort extends PGS.pages.TestBase {
     assertEquals("30 to 58 of 583 items", driver.findElement(By.cssSelector("p.amount")).getText());
     TimeUnit.SECONDS.sleep(3);
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html?dir=desc&order=bestsellers");
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

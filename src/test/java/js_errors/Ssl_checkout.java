@@ -29,7 +29,7 @@ public class Ssl_checkout extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Ssl_checkout() throws Exception {
     	Actions actions = new Actions(driver);
     	driver.manage().window().maximize();
         driver.get(baseUrl);
@@ -56,6 +56,7 @@ public class Ssl_checkout extends PGS.pages.TestBase {
 
 		    assertEquals(list, logsEntries);
 		   // driver.quit(); 
+		    TimeUnit.SECONDS.sleep(10);
 		    
   }
 

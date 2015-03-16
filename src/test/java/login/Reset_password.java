@@ -37,7 +37,7 @@ public class Reset_password extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled3() throws Exception {
+  public void Reset_password() throws Exception {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "customer/account/login/");
@@ -184,6 +184,7 @@ public class Reset_password extends PGS.pages.TestBase {
         
         inbox.close(false);
         store.close();  
+        TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

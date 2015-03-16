@@ -18,13 +18,13 @@ public class Delete_cart extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Delete_cart() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")));
     driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")).click();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(7);
     driver.findElement(By.xpath("//a[2]/span")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("YOUR SHOPPING BASKET", driver.findElement(By.cssSelector("h1")).getText());
@@ -32,6 +32,7 @@ public class Delete_cart extends PGS.pages.TestBase {
     driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
+    TimeUnit.SECONDS.sleep(10);
 
   }
 

@@ -25,7 +25,7 @@ public class Js_error_listing extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Js_error_listing() throws Exception {
 
     	driver.manage().window().maximize();
         driver.get(baseUrl + "personalised-birthday-gifts/for-her.html");
@@ -41,6 +41,7 @@ public class Js_error_listing extends PGS.pages.TestBase {
         
 		    assertEquals(list, logsEntries);
 		   // driver.quit(); 
+		    TimeUnit.SECONDS.sleep(10);
 		    
   }
 

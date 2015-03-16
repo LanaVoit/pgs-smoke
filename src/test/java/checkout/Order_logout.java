@@ -20,7 +20,7 @@ public class Order_logout extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled10() throws Exception {
+  public void Order_logout() throws Exception {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
 	driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
@@ -103,7 +103,7 @@ public class Order_logout extends PGS.pages.TestBase {
         assertEquals("1 order(s) have been canceled.", driver.findElement(By.cssSelector("li > span")).getText());
     	   
     }
-    
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

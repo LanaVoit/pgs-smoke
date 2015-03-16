@@ -18,13 +18,14 @@ public class Video extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled6() throws Exception {
+  public void Video() throws Exception {
     driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("a.video-link.slick-slide.slick-active")));
     driver.findElement(By.cssSelector("a.video-link.slick-slide.slick-active")).click();
     driver.findElement(By.cssSelector("button.mfp-close")).click();
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

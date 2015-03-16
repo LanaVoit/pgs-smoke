@@ -18,7 +18,7 @@ public class Update extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled6() throws Exception {
+  public void Update() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
@@ -34,10 +34,13 @@ public class Update extends PGS.pages.TestBase {
     driver.findElement(By.xpath("//div[@class='item']/div[5]/a[1]")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Your shopping cart was updated.", driver.findElement(By.cssSelector("li > span")).getText());
-    driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
     TimeUnit.SECONDS.sleep(5);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            , driver.findElement(By.xpath("//div[@class='item']/div[7]/a")));
+    driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
+    TimeUnit.SECONDS.sleep(7);
     assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
-
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

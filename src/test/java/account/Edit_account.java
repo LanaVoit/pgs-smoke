@@ -19,7 +19,7 @@ public class Edit_account extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Edit_account() throws Exception {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "customer/account/login/");
@@ -61,6 +61,7 @@ public class Edit_account extends PGS.pages.TestBase {
     actions.moveToElement(my_account).build().perform();
     signout.click();
     TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

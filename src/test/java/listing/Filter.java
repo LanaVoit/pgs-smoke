@@ -15,7 +15,7 @@ public class Filter extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Filter() throws Exception {
     driver.manage().window().maximize();
     TimeUnit.SECONDS.sleep(3);
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
@@ -34,6 +34,7 @@ public class Filter extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(3);
     assertEquals("1 to 29 of 583 items", driver.findElement(By.cssSelector("p.amount")).getText());
     TimeUnit.SECONDS.sleep(3);
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

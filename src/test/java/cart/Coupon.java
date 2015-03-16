@@ -18,7 +18,7 @@ public class Coupon extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled2() throws Exception {
+  public void Coupon() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
@@ -80,6 +80,7 @@ public class Coupon extends PGS.pages.TestBase {
     driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

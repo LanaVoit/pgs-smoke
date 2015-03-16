@@ -19,7 +19,7 @@ public class Search extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled2() throws Exception {
+  public void Search() throws Exception {
     Actions actions = new Actions(driver);
 	driver.manage().window().maximize();
 	driver.get(baseUrl);    
@@ -54,6 +54,7 @@ public class Search extends PGS.pages.TestBase {
     driver.findElement(By.xpath("//div[@id='search_autocomplete']/ul/li[2]")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("SEARCH RESULTS FOR 'PERSONALISED'", driver.findElement(By.cssSelector("h1")).getText());
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

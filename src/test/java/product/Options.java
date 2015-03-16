@@ -19,7 +19,7 @@ public class Options extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled7() throws Exception {
+  public void Options() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     assertEquals("£40.00", driver.findElement(By.xpath("//*[@id='product-price-1914']")).getText());
@@ -57,6 +57,7 @@ public class Options extends PGS.pages.TestBase {
     
     driver.findElement(By.cssSelector("div.item-remove.columns.medium-1.hide-for-small-only > a[title='Remove item']")).click();  
     TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

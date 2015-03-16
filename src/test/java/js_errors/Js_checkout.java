@@ -28,7 +28,7 @@ public class Js_checkout extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Js_checkout() throws Exception {
     	Actions actions = new Actions(driver);
     	driver.manage().window().maximize();
         driver.get(baseUrl + "personalised-door-plaque-for-girls-animal-alphabet.html");
@@ -58,6 +58,7 @@ public class Js_checkout extends PGS.pages.TestBase {
 		    TimeUnit.SECONDS.sleep(5);
 		    assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
 		   // driver.quit(); 
+		    TimeUnit.SECONDS.sleep(10);
 		    
   }
 

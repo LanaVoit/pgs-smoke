@@ -19,7 +19,7 @@ public class Add_to_wishlist extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled6() throws Exception {	
+  public void Add_to_wishlist() throws Exception {	
 	driver.manage().window().maximize(); 
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
@@ -85,6 +85,7 @@ public class Add_to_wishlist extends PGS.pages.TestBase {
     actions.moveToElement(my_account).build().perform();
     signout.click();
     TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

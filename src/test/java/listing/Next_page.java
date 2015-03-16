@@ -19,7 +19,7 @@ public class Next_page extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled2() throws Exception {
+  public void Next_page() throws Exception {
 	driver.manage().window().maximize(); 
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
@@ -31,6 +31,7 @@ public class Next_page extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     assertEquals("30 to 58 of 583 items", driver.findElement(By.cssSelector("p.amount")).getText());
     TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

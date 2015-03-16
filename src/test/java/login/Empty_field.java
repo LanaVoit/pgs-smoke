@@ -15,12 +15,13 @@ public class Empty_field extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Empty_field() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "customer/account/login/");
     driver.findElement(By.id("send2")).click();
     assertEquals("This is a required field.", driver.findElement(By.id("advice-required-entry-email")).getText());
     assertEquals("This is a required field.", driver.findElement(By.id("advice-required-entry-pass")).getText());
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

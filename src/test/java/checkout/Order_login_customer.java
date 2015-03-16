@@ -20,7 +20,7 @@ public class Order_login_customer extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled9() throws Exception {
+  public void Order_login_customer() throws Exception {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "customer/account/login/");
@@ -97,7 +97,7 @@ public class Order_login_customer extends PGS.pages.TestBase {
 
         TimeUnit.SECONDS.sleep(10);
         assertEquals("1 order(s) have been canceled.", driver.findElement(By.cssSelector("li > span")).getText());
-    	   
+        TimeUnit.SECONDS.sleep(10);
     }
     
   }

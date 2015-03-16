@@ -18,7 +18,7 @@ public class Checkout extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled3() throws Exception {
+  public void Checkout() throws Exception {
 	driver.manage().window().maximize();
 	driver.get("chrome://settings/clearBrowserData");
 
@@ -62,6 +62,7 @@ public class Checkout extends PGS.pages.TestBase {
     driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

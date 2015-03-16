@@ -15,7 +15,7 @@ public class Image extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled5() throws Exception {
+  public void Image() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     String img = "http://dev.personalisedgiftsshop.co.uk/media/catalog/product/cache/1/image/400x/9df78eab33525d08d6e5fb8d27136e95/p/e/personalised-swarovski-crystal-heart-vase.jpg";
@@ -35,7 +35,7 @@ public class Image extends PGS.pages.TestBase {
    // driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
    // driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
    // driver.findElement(By.cssSelector("button.mfp-close")).click();
-    
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

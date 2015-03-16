@@ -15,7 +15,7 @@ public class Invalid_field extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled() throws Exception {
+  public void Invalid_field() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "customer/account/login/");
     driver.findElement(By.id("email")).clear();
@@ -33,6 +33,7 @@ public class Invalid_field extends PGS.pages.TestBase {
     driver.findElement(By.id("send2")).click();
     TimeUnit.SECONDS.sleep(7);
     assertEquals("Invalid login or password.", driver.findElement(By.cssSelector("li > span")).getText());
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

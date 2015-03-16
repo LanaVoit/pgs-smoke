@@ -19,7 +19,7 @@ public class Add_cart extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled5() throws Exception {
+  public void Add_cart() throws Exception {
     	driver.manage().window().maximize();
     	Actions actions = new Actions(driver);
         driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
@@ -65,7 +65,7 @@ public class Add_cart extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     driver.get(baseUrl + "customer/account/logout");
     TimeUnit.SECONDS.sleep(7);
-
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

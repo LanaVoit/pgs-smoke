@@ -18,7 +18,7 @@ public class Empty_field extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled() throws Exception {
+  public void Empty_field() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "customer/account/create/");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
@@ -30,7 +30,7 @@ public class Empty_field extends PGS.pages.TestBase {
     assertEquals("This is a required field.", driver.findElement(By.id("advice-required-entry-password")).getText());
     assertEquals("This is a required field.", driver.findElement(By.id("advice-required-entry-confirmation")).getText());
     assertEquals("This is a required field.", driver.findElement(By.id("advice-required-entry-captcha_user_create")).getText());
-
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

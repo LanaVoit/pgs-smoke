@@ -19,7 +19,7 @@ public class Login extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled2() throws Exception {
+  public void Login() throws Exception {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "customer/account/login/");
@@ -34,6 +34,7 @@ public class Login extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(3);
     driver.get(baseUrl + "customer/account/logout");
     TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
 
   }
 

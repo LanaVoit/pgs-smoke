@@ -34,7 +34,7 @@ public class Share extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Share() throws Exception {
     	driver.manage().window().maximize();
     	Actions actions = new Actions(driver);
         driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
@@ -131,6 +131,7 @@ public class Share extends PGS.pages.TestBase {
 	        }
 	        inbox.close(false);
 	        store.close();  
+	        TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

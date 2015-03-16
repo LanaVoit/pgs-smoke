@@ -34,7 +34,7 @@ public class Email extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled4() throws Exception {
+  public void Email() throws Exception {
     	driver.manage().window().maximize();
     	driver.get(baseUrl);
     	class MailAuthenticator extends Authenticator {
@@ -79,6 +79,7 @@ public class Email extends PGS.pages.TestBase {
 
             inbox.close(false);
             store.close(); 
+            TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

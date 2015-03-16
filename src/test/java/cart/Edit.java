@@ -18,7 +18,7 @@ public class Edit extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled5() throws Exception {
+  public void Edit() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     TimeUnit.SECONDS.sleep(5);
@@ -48,6 +48,7 @@ public class Edit extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     
     assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

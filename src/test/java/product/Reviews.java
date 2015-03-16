@@ -18,7 +18,7 @@ public class Reviews extends PGS.pages.TestBase {
   private StringBuffer verificationErrors = new StringBuffer();
 
     @Test
-  public void testUntitled9() throws Exception {
+  public void Reviews() throws Exception {
     driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     TimeUnit.SECONDS.sleep(5);
@@ -38,6 +38,7 @@ public class Reviews extends PGS.pages.TestBase {
     assertEquals("LOAD MORE", driver.findElement(By.linkText("LOAD MORE")).getText());
     driver.findElement(By.linkText("LOAD MORE")).click();
     assertEquals("LOAD MORE", driver.findElement(By.linkText("LOAD MORE")).getText());
+    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

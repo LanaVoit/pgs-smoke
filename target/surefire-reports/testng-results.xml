@@ -1,492 +1,287 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="18" total="47" passed="29">
+<testng-results skipped="0" failed="6" total="47" passed="41">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="2253804" started-at="2015-03-16T06:30:33Z" finished-at="2015-03-16T07:08:07Z">
+  <suite name="Smoke test" duration-ms="2571798" started-at="2015-03-16T13:27:26Z" finished-at="2015-03-16T14:10:18Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="2253804" started-at="2015-03-16T06:30:33Z" finished-at="2015-03-16T07:08:07Z">
-      <class name="wishlist.Add_delete_wishlist">
-        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Add_delete_wishlist@97e1986]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:52:48Z" finished-at="2015-03-16T10:52:48Z">
+    <test name="JS Errors" duration-ms="196396" started-at="2015-03-16T13:27:26Z" finished-at="2015-03-16T13:30:43Z">
+      <class name="js_errors.Js_error_login">
+        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_login@3cda1055]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:28:24Z" finished-at="2015-03-16T17:28:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled8()[pri:0, instance:wishlist.Add_delete_wishlist@97e1986]" name="testUntitled8" duration-ms="39797" started-at="2015-03-16T10:52:48Z" finished-at="2015-03-16T10:53:28Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.02 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.02 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at wishlist.Add_delete_wishlist.testUntitled8(Add_delete_wishlist.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="Js_error_login()[pri:0, instance:js_errors.Js_error_login@3cda1055]" name="Js_error_login" duration-ms="12900" started-at="2015-03-16T17:28:24Z" finished-at="2015-03-16T17:28:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled8 -->
-      </class> <!-- wishlist.Add_delete_wishlist -->
-      <class name="login.Login">
-        <test-method status="PASS" signature="init()[pri:0, instance:login.Login@737996a0]" name="init" is-config="true" duration-ms="5" started-at="2015-03-16T10:47:49Z" finished-at="2015-03-16T10:47:49Z">
+        </test-method> <!-- Js_error_login -->
+      </class> <!-- js_errors.Js_error_login -->
+      <class name="js_errors.Js_error_listing">
+        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_listing@35f983a6]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:27:56Z" finished-at="2015-03-16T17:27:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled2()[pri:0, instance:login.Login@737996a0]" name="testUntitled2" duration-ms="9687" started-at="2015-03-16T10:47:49Z" finished-at="2015-03-16T10:47:59Z">
-          <exception class="org.junit.ComparisonFailure">
-            <message>
-              <![CDATA[expected:<[MY DASHBOARD]> but was:<[SHOPPING CART IS EMPTY]>]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.junit.ComparisonFailure: expected:<[MY DASHBOARD]> but was:<[SHOPPING CART IS EMPTY]>
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at login.Login.testUntitled2(Login.java:32)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.junit.ComparisonFailure -->
+        <test-method status="PASS" signature="Js_error_listing()[pri:0, instance:js_errors.Js_error_listing@35f983a6]" name="Js_error_listing" duration-ms="14150" started-at="2015-03-16T17:27:56Z" finished-at="2015-03-16T17:28:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled2 -->
-      </class> <!-- login.Login -->
-      <class name="wishlist.Share">
-        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Share@5cc7c2a6]" name="init" is-config="true" duration-ms="32" started-at="2015-03-16T10:53:28Z" finished-at="2015-03-16T10:53:28Z">
+        </test-method> <!-- Js_error_listing -->
+      </class> <!-- js_errors.Js_error_listing -->
+      <class name="js_errors.Js_error_account">
+        <test-method status="PASS" signature="Js_error_account()[pri:0, instance:js_errors.Js_error_account@6b2fad11]" name="Js_error_account" duration-ms="28065" started-at="2015-03-16T17:28:51Z" finished-at="2015-03-16T17:29:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Js_error_account -->
+        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_account@6b2fad11]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:28:51Z" finished-at="2015-03-16T17:28:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled4()[pri:0, instance:wishlist.Share@5cc7c2a6]" name="testUntitled4" duration-ms="40109" started-at="2015-03-16T10:53:28Z" finished-at="2015-03-16T10:54:08Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at wishlist.Share.testUntitled4(Share.java:45)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- wishlist.Share -->
-      <class name="listing.Next_page">
-        <test-method status="PASS" signature="init()[pri:0, instance:listing.Next_page@13a57a3b]" name="init" is-config="true" duration-ms="8" started-at="2015-03-16T10:37:02Z" finished-at="2015-03-16T10:37:02Z">
+      </class> <!-- js_errors.Js_error_account -->
+      <class name="js_errors.Js_error_register">
+        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_register@7a5d012c]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:28:37Z" finished-at="2015-03-16T17:28:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled2()[pri:0, instance:listing.Next_page@13a57a3b]" name="testUntitled2" duration-ms="19649" started-at="2015-03-16T10:37:02Z" finished-at="2015-03-16T10:37:22Z">
+        <test-method status="PASS" signature="Js_error_register()[pri:0, instance:js_errors.Js_error_register@7a5d012c]" name="Js_error_register" duration-ms="14382" started-at="2015-03-16T17:28:37Z" finished-at="2015-03-16T17:28:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled2 -->
-      </class> <!-- listing.Next_page -->
-      <class name="wishlist.Add_all_cart">
-        <test-method status="FAIL" signature="testUntitled8()[pri:0, instance:wishlist.Add_all_cart@7225790e]" name="testUntitled8" duration-ms="40038" started-at="2015-03-16T10:54:08Z" finished-at="2015-03-16T10:54:48Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.01 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.01 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at wishlist.Add_all_cart.testUntitled8(Add_all_cart.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- Js_error_register -->
+      </class> <!-- js_errors.Js_error_register -->
+      <class name="js_errors.Js_error_product">
+        <test-method status="PASS" signature="Js_error_product()[pri:0, instance:js_errors.Js_error_product@3fb6a447]" name="Js_error_product" duration-ms="14074" started-at="2015-03-16T17:28:10Z" finished-at="2015-03-16T17:28:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled8 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Add_all_cart@7225790e]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:54:08Z" finished-at="2015-03-16T10:54:08Z">
+        </test-method> <!-- Js_error_product -->
+        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_product@3fb6a447]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:28:10Z" finished-at="2015-03-16T17:28:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-      </class> <!-- wishlist.Add_all_cart -->
-      <class name="register.Invalide_fields">
-        <test-method status="PASS" signature="init()[pri:0, instance:register.Invalide_fields@52af6cff]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:48:34Z" finished-at="2015-03-16T10:48:34Z">
+      </class> <!-- js_errors.Js_error_product -->
+      <class name="js_errors.Js_cart">
+        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_cart@668bc3d5]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:29:19Z" finished-at="2015-03-16T17:29:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled2()[pri:0, instance:register.Invalide_fields@52af6cff]" name="testUntitled2" duration-ms="34337" started-at="2015-03-16T10:48:34Z" finished-at="2015-03-16T10:49:08Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.02 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.02 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at register.Invalide_fields.testUntitled2(Invalide_fields.java:24)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="Js_cart()[pri:0, instance:js_errors.Js_cart@668bc3d5]" name="Js_cart" duration-ms="42776" started-at="2015-03-16T17:29:19Z" finished-at="2015-03-16T17:30:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled2 -->
-      </class> <!-- register.Invalide_fields -->
+        </test-method> <!-- Js_cart -->
+      </class> <!-- js_errors.Js_cart -->
+      <class name="js_errors.Js_checkout">
+        <test-method status="PASS" signature="Js_checkout()[pri:0, instance:js_errors.Js_checkout@79698539]" name="Js_checkout" duration-ms="40580" started-at="2015-03-16T17:30:02Z" finished-at="2015-03-16T17:30:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Js_checkout -->
+        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_checkout@79698539]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:30:02Z" finished-at="2015-03-16T17:30:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- js_errors.Js_checkout -->
+      <class name="js_errors.Js_error_home">
+        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_home@79b4d0f]" name="init" is-config="true" duration-ms="2648" started-at="2015-03-16T17:27:26Z" finished-at="2015-03-16T17:27:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Js_error_home()[pri:0, instance:js_errors.Js_error_home@79b4d0f]" name="Js_error_home" duration-ms="26816" started-at="2015-03-16T17:27:29Z" finished-at="2015-03-16T17:27:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Js_error_home -->
+      </class> <!-- js_errors.Js_error_home -->
+    </test> <!-- JS Errors -->
+    <test name="Homepage" duration-ms="67192" started-at="2015-03-16T13:30:43Z" finished-at="2015-03-16T13:31:50Z">
+      <class name="home.Menu">
+        <test-method status="PASS" signature="init()[pri:0, instance:home.Menu@6fb554cc]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:31:37Z" finished-at="2015-03-16T17:31:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Menu()[pri:0, instance:home.Menu@6fb554cc]" name="Menu" duration-ms="13443" started-at="2015-03-16T17:31:37Z" finished-at="2015-03-16T17:31:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Menu -->
+      </class> <!-- home.Menu -->
       <class name="home.Search">
-        <test-method status="PASS" signature="init()[pri:0, instance:home.Search@5a61f5df]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:33:17Z" finished-at="2015-03-16T10:33:17Z">
+        <test-method status="PASS" signature="Search()[pri:0, instance:home.Search@614c5515]" name="Search" duration-ms="53749" started-at="2015-03-16T17:30:43Z" finished-at="2015-03-16T17:31:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Search -->
+        <test-method status="PASS" signature="init()[pri:0, instance:home.Search@614c5515]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:30:43Z" finished-at="2015-03-16T17:30:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled2()[pri:0, instance:home.Search@5a61f5df]" name="testUntitled2" duration-ms="44094" started-at="2015-03-16T10:33:17Z" finished-at="2015-03-16T10:34:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled2 -->
       </class> <!-- home.Search -->
-      <class name="product.Image">
-        <test-method status="PASS" signature="init()[pri:0, instance:product.Image@6574b225]" name="init" is-config="true" duration-ms="4" started-at="2015-03-16T10:37:41Z" finished-at="2015-03-16T10:37:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled5()[pri:0, instance:product.Image@6574b225]" name="testUntitled5" duration-ms="14445" started-at="2015-03-16T10:37:41Z" finished-at="2015-03-16T10:37:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled5 -->
-      </class> <!-- product.Image -->
+    </test> <!-- Homepage -->
+    <test name="Listing page" duration-ms="268295" started-at="2015-03-16T13:31:50Z" finished-at="2015-03-16T13:36:18Z">
       <class name="listing.Img_hover">
-        <test-method status="PASS" signature="init()[pri:0, instance:listing.Img_hover@9f70c54]" name="init" is-config="true" duration-ms="4" started-at="2015-03-16T10:36:54Z" finished-at="2015-03-16T10:36:54Z">
+        <test-method status="PASS" signature="Img_hover()[pri:0, instance:listing.Img_hover@6537cf78]" name="Img_hover" duration-ms="16225" started-at="2015-03-16T17:34:53Z" finished-at="2015-03-16T17:35:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Img_hover -->
+        <test-method status="PASS" signature="init()[pri:0, instance:listing.Img_hover@6537cf78]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:34:53Z" finished-at="2015-03-16T17:34:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:listing.Img_hover@9f70c54]" name="testUntitled" duration-ms="8446" started-at="2015-03-16T10:36:54Z" finished-at="2015-03-16T10:37:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled -->
       </class> <!-- listing.Img_hover -->
       <class name="listing.Sort">
-        <test-method status="PASS" signature="init()[pri:0, instance:listing.Sort@35fb3008]" name="init" is-config="true" duration-ms="5" started-at="2015-03-16T10:34:39Z" finished-at="2015-03-16T10:34:39Z">
+        <test-method status="PASS" signature="Sort()[pri:0, instance:listing.Sort@617c74e5]" name="Sort" duration-ms="35760" started-at="2015-03-16T17:32:19Z" finished-at="2015-03-16T17:32:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Sort -->
+        <test-method status="PASS" signature="init()[pri:0, instance:listing.Sort@617c74e5]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:32:19Z" finished-at="2015-03-16T17:32:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled5()[pri:0, instance:listing.Sort@35fb3008]" name="testUntitled5" duration-ms="26357" started-at="2015-03-16T10:34:39Z" finished-at="2015-03-16T10:35:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled5 -->
       </class> <!-- listing.Sort -->
-      <class name="cart.Edit">
-        <test-method status="PASS" signature="init()[pri:0, instance:cart.Edit@59e84876]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:42:59Z" finished-at="2015-03-16T10:42:59Z">
+      <class name="listing.Next_page">
+        <test-method status="PASS" signature="Next_page()[pri:0, instance:listing.Next_page@2d3fcdbd]" name="Next_page" duration-ms="29706" started-at="2015-03-16T17:35:09Z" finished-at="2015-03-16T17:35:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Next_page -->
+        <test-method status="PASS" signature="init()[pri:0, instance:listing.Next_page@2d3fcdbd]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:35:09Z" finished-at="2015-03-16T17:35:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled5()[pri:0, instance:cart.Edit@59e84876]" name="testUntitled5" duration-ms="53351" started-at="2015-03-16T10:42:59Z" finished-at="2015-03-16T10:43:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled5 -->
-      </class> <!-- cart.Edit -->
-      <class name="home.Menu">
-        <test-method status="PASS" signature="init()[pri:0, instance:home.Menu@2669b199]" name="init" is-config="true" duration-ms="4" started-at="2015-03-16T10:34:02Z" finished-at="2015-03-16T10:34:02Z">
+      </class> <!-- listing.Next_page -->
+      <class name="listing.Product_page">
+        <test-method status="PASS" signature="init()[pri:0, instance:listing.Product_page@67b6d4ae]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:35:39Z" finished-at="2015-03-16T17:35:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled3()[pri:0, instance:home.Menu@2669b199]" name="testUntitled3" duration-ms="4181" started-at="2015-03-16T10:34:02Z" finished-at="2015-03-16T10:34:06Z">
+        <test-method status="PASS" signature="Product_page()[pri:0, instance:listing.Product_page@67b6d4ae]" name="Product_page" duration-ms="22908" started-at="2015-03-16T17:35:39Z" finished-at="2015-03-16T17:36:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled3 -->
-      </class> <!-- home.Menu -->
-      <class name="cart.Delete_cart">
-        <test-method status="PASS" signature="init()[pri:0, instance:cart.Delete_cart@7ca48474]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:42:36Z" finished-at="2015-03-16T10:42:36Z">
+        </test-method> <!-- Product_page -->
+      </class> <!-- listing.Product_page -->
+      <class name="listing.Add_to_wishlist">
+        <test-method status="PASS" signature="Add_to_wishlist()[pri:0, instance:listing.Add_to_wishlist@4909b8da]" name="Add_to_wishlist" duration-ms="117751" started-at="2015-03-16T17:32:55Z" finished-at="2015-03-16T17:34:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:cart.Delete_cart@7ca48474]" name="testUntitled4" duration-ms="22815" started-at="2015-03-16T10:42:36Z" finished-at="2015-03-16T10:42:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- cart.Delete_cart -->
-      <class name="product.Reviews">
-        <test-method status="PASS" signature="init()[pri:0, instance:product.Reviews@26f67b76]" name="init" is-config="true" duration-ms="3" started-at="2015-03-16T10:39:27Z" finished-at="2015-03-16T10:39:27Z">
+        </test-method> <!-- Add_to_wishlist -->
+        <test-method status="PASS" signature="init()[pri:0, instance:listing.Add_to_wishlist@4909b8da]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:32:55Z" finished-at="2015-03-16T17:32:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled9()[pri:0, instance:product.Reviews@26f67b76]" name="testUntitled9" duration-ms="11802" started-at="2015-03-16T10:39:27Z" finished-at="2015-03-16T10:39:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled9 -->
-      </class> <!-- product.Reviews -->
+      </class> <!-- listing.Add_to_wishlist -->
       <class name="listing.Description">
-        <test-method status="PASS" signature="init()[pri:0, instance:listing.Description@12843fce]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:37:34Z" finished-at="2015-03-16T10:37:34Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:listing.Description@3a03464]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:36:01Z" finished-at="2015-03-16T17:36:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:listing.Description@12843fce]" name="testUntitled4" duration-ms="6517" started-at="2015-03-16T10:37:34Z" finished-at="2015-03-16T10:37:41Z">
+        <test-method status="PASS" signature="Description()[pri:0, instance:listing.Description@3a03464]" name="Description" duration-ms="16792" started-at="2015-03-16T17:36:01Z" finished-at="2015-03-16T17:36:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled4 -->
+        </test-method> <!-- Description -->
       </class> <!-- listing.Description -->
-      <class name="cart.Coupon">
-        <test-method status="PASS" signature="init()[pri:0, instance:cart.Coupon@153f5a29]" name="init" is-config="true" duration-ms="3" started-at="2015-03-16T10:45:43Z" finished-at="2015-03-16T10:45:43Z">
+      <class name="listing.Filter">
+        <test-method status="PASS" signature="Filter()[pri:0, instance:listing.Filter@6615435c]" name="Filter" duration-ms="29153" started-at="2015-03-16T17:31:50Z" finished-at="2015-03-16T17:32:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Filter -->
+        <test-method status="PASS" signature="init()[pri:0, instance:listing.Filter@6615435c]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:31:50Z" finished-at="2015-03-16T17:31:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled2()[pri:0, instance:cart.Coupon@153f5a29]" name="testUntitled2" duration-ms="13279" started-at="2015-03-16T10:45:43Z" finished-at="2015-03-16T10:45:56Z">
+      </class> <!-- listing.Filter -->
+    </test> <!-- Listing page -->
+    <test name="Product page" duration-ms="315064" started-at="2015-03-16T13:36:18Z" finished-at="2015-03-16T13:41:33Z">
+      <class name="product.Image">
+        <test-method status="PASS" signature="Image()[pri:0, instance:product.Image@52af6cff]" name="Image" duration-ms="24533" started-at="2015-03-16T17:36:18Z" finished-at="2015-03-16T17:36:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Image -->
+        <test-method status="PASS" signature="init()[pri:0, instance:product.Image@52af6cff]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:36:18Z" finished-at="2015-03-16T17:36:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- product.Image -->
+      <class name="product.Options">
+        <test-method status="PASS" signature="Options()[pri:0, instance:product.Options@735b478]" name="Options" duration-ms="46188" started-at="2015-03-16T17:36:43Z" finished-at="2015-03-16T17:37:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Options -->
+        <test-method status="PASS" signature="init()[pri:0, instance:product.Options@735b478]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:36:43Z" finished-at="2015-03-16T17:36:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- product.Options -->
+      <class name="product.Wishlist">
+        <test-method status="PASS" signature="Wishlist()[pri:0, instance:product.Wishlist@2096442d]" name="Wishlist" duration-ms="67565" started-at="2015-03-16T17:37:29Z" finished-at="2015-03-16T17:38:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wishlist -->
+        <test-method status="PASS" signature="init()[pri:0, instance:product.Wishlist@2096442d]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:37:29Z" finished-at="2015-03-16T17:37:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- product.Wishlist -->
+      <class name="product.Reviews">
+        <test-method status="PASS" signature="Reviews()[pri:0, instance:product.Reviews@2c9f9fb0]" name="Reviews" duration-ms="19511" started-at="2015-03-16T17:38:37Z" finished-at="2015-03-16T17:38:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Reviews -->
+        <test-method status="PASS" signature="init()[pri:0, instance:product.Reviews@2c9f9fb0]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:38:37Z" finished-at="2015-03-16T17:38:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- product.Reviews -->
+      <class name="product.Ask">
+        <test-method status="PASS" signature="Ask()[pri:0, instance:product.Ask@531be3c5]" name="Ask" duration-ms="157267" started-at="2015-03-16T17:38:56Z" finished-at="2015-03-16T17:41:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Ask -->
+        <test-method status="PASS" signature="init()[pri:0, instance:product.Ask@531be3c5]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:38:56Z" finished-at="2015-03-16T17:38:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- product.Ask -->
+    </test> <!-- Product page -->
+    <test name="Cart page" duration-ms="353442" started-at="2015-03-16T13:41:33Z" finished-at="2015-03-16T13:47:27Z">
+      <class name="cart.Edit">
+        <test-method status="PASS" signature="init()[pri:0, instance:cart.Edit@337d0578]" name="init" is-config="true" duration-ms="17" started-at="2015-03-16T17:42:21Z" finished-at="2015-03-16T17:42:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Edit()[pri:0, instance:cart.Edit@337d0578]" name="Edit" duration-ms="73235" started-at="2015-03-16T17:42:21Z" finished-at="2015-03-16T17:43:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Edit -->
+      </class> <!-- cart.Edit -->
+      <class name="cart.Add_cart">
+        <test-method status="PASS" signature="Add_cart()[pri:0, instance:cart.Add_cart@61a485d2]" name="Add_cart" duration-ms="37404" started-at="2015-03-16T17:41:33Z" finished-at="2015-03-16T17:42:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_cart -->
+        <test-method status="PASS" signature="init()[pri:0, instance:cart.Add_cart@61a485d2]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:41:33Z" finished-at="2015-03-16T17:41:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- cart.Add_cart -->
+      <class name="cart.Delete_cart">
+        <test-method status="PASS" signature="init()[pri:0, instance:cart.Delete_cart@59e84876]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:42:11Z" finished-at="2015-03-16T17:42:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="Delete_cart()[pri:0, instance:cart.Delete_cart@59e84876]" name="Delete_cart" duration-ms="10301" started-at="2015-03-16T17:42:11Z" finished-at="2015-03-16T17:42:21Z">
           <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
               <![CDATA[element not visible
   (Session info: chrome=40.0.2214.115)
   (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15 milliseconds
+Command duration or timeout: 22 milliseconds
 Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
 System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir8880_19903}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fcb1dff38833dcaeaf31c78f10dd773c]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
   (Session info: chrome=40.0.2214.115)
   (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15 milliseconds
+Command duration or timeout: 22 milliseconds
 Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
 System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir8880_19903}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fcb1dff38833dcaeaf31c78f10dd773c
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -496,7 +291,7 @@ Session ID: 3e93fc800797cf91e5935b56cba608c6
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at cart.Coupon.testUntitled2(Coupon.java:28)
+	at cart.Delete_cart.Delete_cart(Delete_cart.java:28)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -529,222 +324,52 @@ Session ID: 3e93fc800797cf91e5935b56cba608c6
           </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled2 -->
+        </test-method> <!-- Delete_cart -->
+      </class> <!-- cart.Delete_cart -->
+      <class name="cart.Coupon">
+        <test-method status="PASS" signature="init()[pri:0, instance:cart.Coupon@69d9c55]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:45:36Z" finished-at="2015-03-16T17:45:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Coupon()[pri:0, instance:cart.Coupon@69d9c55]" name="Coupon" duration-ms="79086" started-at="2015-03-16T17:45:36Z" finished-at="2015-03-16T17:46:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Coupon -->
       </class> <!-- cart.Coupon -->
-      <class name="register.Valide_fields">
-        <test-method status="FAIL" signature="testUntitled2()[pri:0, instance:register.Valide_fields@6be46e8f]" name="testUntitled2" duration-ms="34140" started-at="2015-03-16T10:49:08Z" finished-at="2015-03-16T10:49:42Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+      <class name="cart.Move_wishlist">
+        <test-method status="PASS" signature="init()[pri:0, instance:cart.Move_wishlist@7ca48474]" name="init" is-config="true" duration-ms="5" started-at="2015-03-16T17:44:00Z" finished-at="2015-03-16T17:44:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Move_wishlist()[pri:0, instance:cart.Move_wishlist@7ca48474]" name="Move_wishlist" duration-ms="95385" started-at="2015-03-16T17:44:00Z" finished-at="2015-03-16T17:45:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Move_wishlist -->
+      </class> <!-- cart.Move_wishlist -->
+      <class name="cart.Update">
+        <test-method status="FAIL" signature="Update()[pri:0, instance:cart.Update@7f560810]" name="Update" duration-ms="25915" started-at="2015-03-16T17:43:34Z" finished-at="2015-03-16T17:44:00Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[no such element
+              <![CDATA[unknown error: Element is not clickable at point (1152, 477). Other element would receive the click: <div class="item" id="cart-item-3128908">...</div>
   (Session info: chrome=40.0.2214.115)
   (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 109 milliseconds
 Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
 System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir8880_19903}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fcb1dff38833dcaeaf31c78f10dd773c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element is not clickable at point (1152, 477). Other element would receive the click: <div class="item" id="cart-item-3128908">...</div>
   (Session info: chrome=40.0.2214.115)
   (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 109 milliseconds
 Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
 System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at register.Valide_fields.testUntitled2(Valide_fields.java:47)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled2 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:register.Valide_fields@6be46e8f]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:49:08Z" finished-at="2015-03-16T10:49:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:register.Valide_fields@6be46e8f]" name="tearDown" is-config="true" duration-ms="1266" started-at="2015-03-16T11:08:07Z" finished-at="2015-03-16T11:08:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- register.Valide_fields -->
-      <class name="js_errors.Js_error_home">
-        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_home@458ad742]" name="init" is-config="true" duration-ms="7945" started-at="2015-03-16T10:30:33Z" finished-at="2015-03-16T10:30:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:js_errors.Js_error_home@458ad742]" name="testUntitled4" duration-ms="67101" started-at="2015-03-16T10:30:41Z" finished-at="2015-03-16T10:31:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- js_errors.Js_error_home -->
-      <class name="product.Ask">
-        <test-method status="PASS" signature="init()[pri:0, instance:product.Ask@6df97b55]" name="init" is-config="true" duration-ms="6" started-at="2015-03-16T10:39:39Z" finished-at="2015-03-16T10:39:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled10()[pri:0, instance:product.Ask@6df97b55]" name="testUntitled10" duration-ms="150089" started-at="2015-03-16T10:39:39Z" finished-at="2015-03-16T10:42:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled10 -->
-      </class> <!-- product.Ask -->
-      <class name="js_errors.Js_error_login">
-        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_login@234bef66]" name="init" is-config="true" duration-ms="4" started-at="2015-03-16T10:31:57Z" finished-at="2015-03-16T10:31:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:js_errors.Js_error_login@234bef66]" name="testUntitled4" duration-ms="3030" started-at="2015-03-16T10:31:57Z" finished-at="2015-03-16T10:32:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- js_errors.Js_error_login -->
-      <class name="register.Empty_field">
-        <test-method status="PASS" signature="init()[pri:0, instance:register.Empty_field@6276ae34]" name="init" is-config="true" duration-ms="3" started-at="2015-03-16T10:47:59Z" finished-at="2015-03-16T10:47:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled()[pri:0, instance:register.Empty_field@6276ae34]" name="testUntitled" duration-ms="34629" started-at="2015-03-16T10:47:59Z" finished-at="2015-03-16T10:48:34Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:426)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at register.Empty_field.testUntitled(Empty_field.java:25)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled -->
-      </class> <!-- register.Empty_field -->
-      <class name="checkout.Order_logout">
-        <test-method status="PASS" signature="init()[pri:0, instance:checkout.Order_logout@b97c004]" name="init" is-config="true" duration-ms="15" started-at="2015-03-16T10:55:28Z" finished-at="2015-03-16T10:55:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled10()[pri:0, instance:checkout.Order_logout@b97c004]" name="testUntitled10" duration-ms="35121" started-at="2015-03-16T10:55:28Z" finished-at="2015-03-16T10:56:03Z">
-          <exception class="org.openqa.selenium.InvalidElementStateException">
-            <message>
-              <![CDATA[invalid element state: Element is not currently interactable and may not be manipulated
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15 milliseconds
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15 milliseconds
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir8880_19903}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fcb1dff38833dcaeaf31c78f10dd773c
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -753,550 +378,8 @@ Session ID: 3e93fc800797cf91e5935b56cba608c6
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:113)
-	at checkout.Order_logout.testUntitled10(Order_logout.java:37)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidElementStateException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled10 -->
-      </class> <!-- checkout.Order_logout -->
-      <class name="cart.Add_cart">
-        <test-method status="PASS" signature="init()[pri:0, instance:cart.Add_cart@54a097cc]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:42:09Z" finished-at="2015-03-16T10:42:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled3()[pri:0, instance:cart.Add_cart@54a097cc]" name="testUntitled3" duration-ms="27086" started-at="2015-03-16T10:42:09Z" finished-at="2015-03-16T10:42:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled3 -->
-      </class> <!-- cart.Add_cart -->
-      <class name="login.Empty_field">
-        <test-method status="PASS" signature="init()[pri:0, instance:login.Empty_field@2344fc66]" name="init" is-config="true" duration-ms="19" started-at="2015-03-16T10:47:30Z" finished-at="2015-03-16T10:47:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:login.Empty_field@2344fc66]" name="testUntitled4" duration-ms="3514" started-at="2015-03-16T10:47:30Z" finished-at="2015-03-16T10:47:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- login.Empty_field -->
-      <class name="account.Address">
-        <test-method status="PASS" signature="init()[pri:0, instance:account.Address@4590c9c3]" name="init" is-config="true" duration-ms="16" started-at="2015-03-16T10:50:53Z" finished-at="2015-03-16T10:50:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled3()[pri:0, instance:account.Address@4590c9c3]" name="testUntitled3" duration-ms="39697" started-at="2015-03-16T10:50:53Z" finished-at="2015-03-16T10:51:32Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at account.Address.testUntitled3(Address.java:27)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled3 -->
-      </class> <!-- account.Address -->
-      <class name="js_errors.Js_error_listing">
-        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_listing@3c09711b]" name="init" is-config="true" duration-ms="69" started-at="2015-03-16T10:31:48Z" finished-at="2015-03-16T10:31:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:js_errors.Js_error_listing@3c09711b]" name="testUntitled4" duration-ms="3880" started-at="2015-03-16T10:31:48Z" finished-at="2015-03-16T10:31:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- js_errors.Js_error_listing -->
-      <class name="product.Options">
-        <test-method status="PASS" signature="init()[pri:0, instance:product.Options@39fb3ab6]" name="init" is-config="true" duration-ms="18" started-at="2015-03-16T10:37:55Z" finished-at="2015-03-16T10:37:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled7()[pri:0, instance:product.Options@39fb3ab6]" name="testUntitled7" duration-ms="35334" started-at="2015-03-16T10:37:55Z" finished-at="2015-03-16T10:38:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled7 -->
-      </class> <!-- product.Options -->
-      <class name="listing.Product_page">
-        <test-method status="PASS" signature="init()[pri:0, instance:listing.Product_page@2cb4c3ab]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:37:22Z" finished-at="2015-03-16T10:37:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled3()[pri:0, instance:listing.Product_page@2cb4c3ab]" name="testUntitled3" duration-ms="12496" started-at="2015-03-16T10:37:22Z" finished-at="2015-03-16T10:37:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled3 -->
-      </class> <!-- listing.Product_page -->
-      <class name="wishlist.Create_delete_wishlist">
-        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Create_delete_wishlist@3dd3bcd]" name="init" is-config="true" duration-ms="15" started-at="2015-03-16T10:51:32Z" finished-at="2015-03-16T10:51:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled7()[pri:0, instance:wishlist.Create_delete_wishlist@3dd3bcd]" name="testUntitled7" duration-ms="34526" started-at="2015-03-16T10:51:32Z" finished-at="2015-03-16T10:52:07Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at wishlist.Create_delete_wishlist.testUntitled7(Create_delete_wishlist.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled7 -->
-      </class> <!-- wishlist.Create_delete_wishlist -->
-      <class name="js_errors.Js_error_register">
-        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_register@50f8360d]" name="init" is-config="true" duration-ms="5" started-at="2015-03-16T10:32:00Z" finished-at="2015-03-16T10:32:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:js_errors.Js_error_register@50f8360d]" name="testUntitled4" duration-ms="2689" started-at="2015-03-16T10:32:00Z" finished-at="2015-03-16T10:32:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- js_errors.Js_error_register -->
-      <class name="listing.Add_to_wishlist">
-        <test-method status="PASS" signature="init()[pri:0, instance:listing.Add_to_wishlist@735b478]" name="init" is-config="true" duration-ms="6" started-at="2015-03-16T10:35:06Z" finished-at="2015-03-16T10:35:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled6()[pri:0, instance:listing.Add_to_wishlist@735b478]" name="testUntitled6" duration-ms="107820" started-at="2015-03-16T10:35:06Z" finished-at="2015-03-16T10:36:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled6 -->
-      </class> <!-- listing.Add_to_wishlist -->
-      <class name="account.Menu">
-        <test-method status="FAIL" signature="testUntitled7()[pri:0, instance:account.Menu@337d0578]" name="testUntitled7" duration-ms="39541" started-at="2015-03-16T10:50:13Z" finished-at="2015-03-16T10:50:53Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.05 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at account.Menu.testUntitled7(Menu.java:27)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled7 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:account.Menu@337d0578]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:50:13Z" finished-at="2015-03-16T10:50:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-      </class> <!-- account.Menu -->
-      <class name="js_errors.Js_cart">
-        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_cart@2096442d]" name="init" is-config="true" duration-ms="4" started-at="2015-03-16T10:32:22Z" finished-at="2015-03-16T10:32:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:js_errors.Js_cart@2096442d]" name="testUntitled4" duration-ms="25545" started-at="2015-03-16T10:32:22Z" finished-at="2015-03-16T10:32:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- js_errors.Js_cart -->
-      <class name="listing.Filter">
-        <test-method status="PASS" signature="init()[pri:0, instance:listing.Filter@7f560810]" name="init" is-config="true" duration-ms="16" started-at="2015-03-16T10:34:06Z" finished-at="2015-03-16T10:34:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled4()[pri:0, instance:listing.Filter@7f560810]" name="testUntitled4" duration-ms="33263" started-at="2015-03-16T10:34:06Z" finished-at="2015-03-16T10:34:39Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.06 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at listing.Filter.testUntitled4(Filter.java:22)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- listing.Filter -->
-      <class name="checkout.Order_login_customer">
-        <test-method status="FAIL" signature="testUntitled9()[pri:0, instance:checkout.Order_login_customer@5056dfcb]" name="testUntitled9" duration-ms="40178" started-at="2015-03-16T10:54:48Z" finished-at="2015-03-16T10:55:28Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at checkout.Order_login_customer.testUntitled9(Order_login_customer.java:28)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled9 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:checkout.Order_login_customer@5056dfcb]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:54:48Z" finished-at="2015-03-16T10:54:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-      </class> <!-- checkout.Order_login_customer -->
-      <class name="cart.Checkout">
-        <test-method status="PASS" signature="testUntitled3()[pri:0, instance:cart.Checkout@61a485d2]" name="testUntitled3" duration-ms="93932" started-at="2015-03-16T10:45:56Z" finished-at="2015-03-16T10:47:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled3 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:cart.Checkout@61a485d2]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:45:56Z" finished-at="2015-03-16T10:45:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-      </class> <!-- cart.Checkout -->
-      <class name="product.Recently_viewed">
-        <test-method status="PASS" signature="init()[pri:0, instance:product.Recently_viewed@5afa04c]" name="init" is-config="true" duration-ms="3" started-at="2015-03-16T10:56:40Z" finished-at="2015-03-16T10:56:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled5()[pri:0, instance:product.Recently_viewed@5afa04c]" name="testUntitled5" duration-ms="687171" started-at="2015-03-16T10:56:40Z" finished-at="2015-03-16T11:08:07Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[chrome not reachable
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.02 seconds
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.02 seconds
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:854)
-	at product.Recently_viewed.testUntitled5(Recently_viewed.java:36)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at cart.Update.Update(Update.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1329,14 +412,346 @@ Session ID: 3e93fc800797cf91e5935b56cba608c6
           </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled5 -->
-      </class> <!-- product.Recently_viewed -->
-      <class name="checkout.Email">
-        <test-method status="PASS" signature="init()[pri:0, instance:checkout.Email@69d9c55]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:56:03Z" finished-at="2015-03-16T10:56:03Z">
+        </test-method> <!-- Update -->
+        <test-method status="PASS" signature="init()[pri:0, instance:cart.Update@7f560810]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:43:34Z" finished-at="2015-03-16T17:43:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled4()[pri:0, instance:checkout.Email@69d9c55]" name="testUntitled4" duration-ms="36298" started-at="2015-03-16T10:56:03Z" finished-at="2015-03-16T10:56:40Z">
+      </class> <!-- cart.Update -->
+      <class name="cart.Checkout">
+        <test-method status="PASS" signature="init()[pri:0, instance:cart.Checkout@13a57a3b]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:46:55Z" finished-at="2015-03-16T17:46:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="Checkout()[pri:0, instance:cart.Checkout@13a57a3b]" name="Checkout" duration-ms="32070" started-at="2015-03-16T17:46:55Z" finished-at="2015-03-16T17:47:27Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir8880_19903}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fcb1dff38833dcaeaf31c78f10dd773c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir8880_19903}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fcb1dff38833dcaeaf31c78f10dd773c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at cart.Checkout.Checkout(Checkout.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Checkout -->
+      </class> <!-- cart.Checkout -->
+    </test> <!-- Cart page -->
+    <test name="Login page" duration-ms="70216" started-at="2015-03-16T13:47:27Z" finished-at="2015-03-16T13:48:37Z">
+      <class name="login.Login">
+        <test-method status="PASS" signature="init()[pri:0, instance:login.Login@2669b199]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:48:06Z" finished-at="2015-03-16T17:48:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:login.Login@2669b199]" name="Login" duration-ms="30653" started-at="2015-03-16T17:48:06Z" finished-at="2015-03-16T17:48:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+      </class> <!-- login.Login -->
+      <class name="login.Empty_field">
+        <test-method status="PASS" signature="init()[pri:0, instance:login.Empty_field@5056dfcb]" name="init" is-config="true" duration-ms="3" started-at="2015-03-16T17:47:27Z" finished-at="2015-03-16T17:47:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Empty_field()[pri:0, instance:login.Empty_field@5056dfcb]" name="Empty_field" duration-ms="14120" started-at="2015-03-16T17:47:27Z" finished-at="2015-03-16T17:47:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Empty_field -->
+      </class> <!-- login.Empty_field -->
+      <class name="login.Invalid_field">
+        <test-method status="PASS" signature="init()[pri:0, instance:login.Invalid_field@6574b225]" name="init" is-config="true" duration-ms="3" started-at="2015-03-16T17:47:41Z" finished-at="2015-03-16T17:47:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Invalid_field()[pri:0, instance:login.Invalid_field@6574b225]" name="Invalid_field" duration-ms="25437" started-at="2015-03-16T17:47:41Z" finished-at="2015-03-16T17:48:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Invalid_field -->
+      </class> <!-- login.Invalid_field -->
+    </test> <!-- Login page -->
+    <test name="Register page" duration-ms="187232" started-at="2015-03-16T13:48:37Z" finished-at="2015-03-16T13:51:44Z">
+      <class name="register.Empty_field">
+        <test-method status="PASS" signature="Empty_field()[pri:0, instance:register.Empty_field@1efbd816]" name="Empty_field" duration-ms="13337" started-at="2015-03-16T17:48:37Z" finished-at="2015-03-16T17:48:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Empty_field -->
+        <test-method status="PASS" signature="init()[pri:0, instance:register.Empty_field@1efbd816]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:48:37Z" finished-at="2015-03-16T17:48:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- register.Empty_field -->
+      <class name="register.Invalide_fields">
+        <test-method status="PASS" signature="init()[pri:0, instance:register.Invalide_fields@4de8b406]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:48:50Z" finished-at="2015-03-16T17:48:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Invalide_fields()[pri:0, instance:register.Invalide_fields@4de8b406]" name="Invalide_fields" duration-ms="19356" started-at="2015-03-16T17:48:50Z" finished-at="2015-03-16T17:49:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Invalide_fields -->
+      </class> <!-- register.Invalide_fields -->
+      <class name="register.Valide_fields">
+        <test-method status="PASS" signature="init()[pri:0, instance:register.Valide_fields@6a2bcfcb]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:49:10Z" finished-at="2015-03-16T17:49:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Valide_fields()[pri:0, instance:register.Valide_fields@6a2bcfcb]" name="Valide_fields" duration-ms="154539" started-at="2015-03-16T17:49:10Z" finished-at="2015-03-16T17:51:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Valide_fields -->
+      </class> <!-- register.Valide_fields -->
+    </test> <!-- Register page -->
+    <test name="Account page" duration-ms="179269" started-at="2015-03-16T13:51:44Z" finished-at="2015-03-16T13:54:44Z">
+      <class name="account.Address">
+        <test-method status="PASS" signature="init()[pri:0, instance:account.Address@50c87b21]" name="init" is-config="true" duration-ms="2" started-at="2015-03-16T17:53:34Z" finished-at="2015-03-16T17:53:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Address()[pri:0, instance:account.Address@50c87b21]" name="Address" duration-ms="69788" started-at="2015-03-16T17:53:34Z" finished-at="2015-03-16T17:54:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Address -->
+      </class> <!-- account.Address -->
+      <class name="account.Edit_account">
+        <test-method status="PASS" signature="Edit_account()[pri:0, instance:account.Edit_account@7ac7a4e4]" name="Edit_account" duration-ms="63120" started-at="2015-03-16T17:51:44Z" finished-at="2015-03-16T17:52:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Edit_account -->
+        <test-method status="PASS" signature="init()[pri:0, instance:account.Edit_account@7ac7a4e4]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:51:44Z" finished-at="2015-03-16T17:51:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- account.Edit_account -->
+      <class name="account.Menu">
+        <test-method status="PASS" signature="init()[pri:0, instance:account.Menu@6d78f375]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:52:47Z" finished-at="2015-03-16T17:52:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="Menu()[pri:0, instance:account.Menu@6d78f375]" name="Menu" duration-ms="46358" started-at="2015-03-16T17:52:47Z" finished-at="2015-03-16T17:53:34Z">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[YOU ARE NOW LOGGED OUT]> but was:<[]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[YOU ARE NOW LOGGED OUT]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at account.Menu.Menu(Menu.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Menu -->
+      </class> <!-- account.Menu -->
+    </test> <!-- Account page -->
+    <test name="Wishlist page" duration-ms="474380" started-at="2015-03-16T13:54:44Z" finished-at="2015-03-16T14:02:38Z">
+      <class name="wishlist.Add_delete_wishlist">
+        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Add_delete_wishlist@d2cc05a]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:57:17Z" finished-at="2015-03-16T17:57:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Add_delete_wishlist()[pri:0, instance:wishlist.Add_delete_wishlist@d2cc05a]" name="Add_delete_wishlist" duration-ms="69684" started-at="2015-03-16T17:57:17Z" finished-at="2015-03-16T17:58:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_delete_wishlist -->
+      </class> <!-- wishlist.Add_delete_wishlist -->
+      <class name="wishlist.Share">
+        <test-method status="PASS" signature="Share()[pri:0, instance:wishlist.Share@548a9f61]" name="Share" duration-ms="142736" started-at="2015-03-16T17:58:26Z" finished-at="2015-03-16T18:00:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Share -->
+        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Share@548a9f61]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:58:26Z" finished-at="2015-03-16T17:58:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+      </class> <!-- wishlist.Share -->
+      <class name="wishlist.Add_cart">
+        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Add_cart@4f933fd1]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:55:57Z" finished-at="2015-03-16T17:55:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Add_cart()[pri:0, instance:wishlist.Add_cart@4f933fd1]" name="Add_cart" duration-ms="79721" started-at="2015-03-16T17:55:57Z" finished-at="2015-03-16T17:57:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_cart -->
+      </class> <!-- wishlist.Add_cart -->
+      <class name="wishlist.Create_delete_wishlist">
+        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Create_delete_wishlist@7dc7cbad]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T17:54:44Z" finished-at="2015-03-16T17:54:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Create_delete_wishlist()[pri:0, instance:wishlist.Create_delete_wishlist@7dc7cbad]" name="Create_delete_wishlist" duration-ms="73416" started-at="2015-03-16T17:54:44Z" finished-at="2015-03-16T17:55:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Create_delete_wishlist -->
+      </class> <!-- wishlist.Create_delete_wishlist -->
+      <class name="wishlist.Add_all_cart">
+        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Add_all_cart@5419f379]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T18:00:49Z" finished-at="2015-03-16T18:00:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="Add_all_cart()[pri:0, instance:wishlist.Add_all_cart@5419f379]" name="Add_all_cart" duration-ms="108823" started-at="2015-03-16T18:00:49Z" finished-at="2015-03-16T18:02:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_all_cart -->
+      </class> <!-- wishlist.Add_all_cart -->
+    </test> <!-- Wishlist page -->
+    <test name="Checkout page" duration-ms="460213" started-at="2015-03-16T14:02:38Z" finished-at="2015-03-16T14:10:18Z">
+      <class name="checkout.Order_logout">
+        <test-method status="PASS" signature="Order_logout()[pri:0, instance:checkout.Order_logout@1593948d]" name="Order_logout" duration-ms="172387" started-at="2015-03-16T18:05:36Z" finished-at="2015-03-16T18:08:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Order_logout -->
+        <test-method status="PASS" signature="init()[pri:0, instance:checkout.Order_logout@1593948d]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T18:05:36Z" finished-at="2015-03-16T18:05:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:checkout.Order_logout@1593948d]" name="tearDown" is-config="true" duration-ms="2279" started-at="2015-03-16T18:10:18Z" finished-at="2015-03-16T18:10:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- checkout.Order_logout -->
+      <class name="product.Recently_viewed">
+        <test-method status="PASS" signature="init()[pri:0, instance:product.Recently_viewed@7823a2f9]" name="init" is-config="true" duration-ms="3" started-at="2015-03-16T18:08:36Z" finished-at="2015-03-16T18:08:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="Recently_viewed()[pri:0, instance:product.Recently_viewed@7823a2f9]" name="Recently_viewed" duration-ms="102015" started-at="2015-03-16T18:08:36Z" finished-at="2015-03-16T18:10:18Z">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<TOTAL [6] PRODUCTS VIEWED> but was:<TOTAL [8] PRODUCTS VIEWED>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<TOTAL [6] PRODUCTS VIEWED> but was:<TOTAL [8] PRODUCTS VIEWED>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at product.Recently_viewed.Recently_viewed(Recently_viewed.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Recently_viewed -->
+      </class> <!-- product.Recently_viewed -->
+      <class name="checkout.Email">
+        <test-method status="PASS" signature="init()[pri:0, instance:checkout.Email@4cc0edeb]" name="init" is-config="true" duration-ms="3" started-at="2015-03-16T18:08:28Z" finished-at="2015-03-16T18:08:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="Email()[pri:0, instance:checkout.Email@4cc0edeb]" name="Email" duration-ms="7606" started-at="2015-03-16T18:08:28Z" finished-at="2015-03-16T18:08:36Z">
           <exception class="java.lang.IllegalStateException">
             <message>
               <![CDATA[No match found]]>
@@ -1345,7 +760,7 @@ Session ID: 3e93fc800797cf91e5935b56cba608c6
               <![CDATA[java.lang.IllegalStateException: No match found
 	at java.util.regex.Matcher.group(Matcher.java:536)
 	at java.util.regex.Matcher.group(Matcher.java:496)
-	at checkout.Email.testUntitled4(Email.java:77)
+	at checkout.Email.Email(Email.java:77)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1378,230 +793,18 @@ Session ID: 3e93fc800797cf91e5935b56cba608c6
           </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled4 -->
+        </test-method> <!-- Email -->
       </class> <!-- checkout.Email -->
-      <class name="wishlist.Add_cart">
-        <test-method status="PASS" signature="init()[pri:0, instance:wishlist.Add_cart@36f6e879]" name="init" is-config="true" duration-ms="31" started-at="2015-03-16T10:52:07Z" finished-at="2015-03-16T10:52:07Z">
+      <class name="checkout.Order_login_customer">
+        <test-method status="PASS" signature="init()[pri:0, instance:checkout.Order_login_customer@1b604f19]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T18:02:38Z" finished-at="2015-03-16T18:02:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled5()[pri:0, instance:wishlist.Add_cart@36f6e879]" name="testUntitled5" duration-ms="40986" started-at="2015-03-16T10:52:07Z" finished-at="2015-03-16T10:52:48Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at wishlist.Add_cart.testUntitled5(Add_cart.java:30)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="Order_login_customer()[pri:0, instance:checkout.Order_login_customer@1b604f19]" name="Order_login_customer" duration-ms="178197" started-at="2015-03-16T18:02:38Z" finished-at="2015-03-16T18:05:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled5 -->
-      </class> <!-- wishlist.Add_cart -->
-      <class name="js_errors.Js_error_account">
-        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_account@13c78c0b]" name="init" is-config="true" duration-ms="7" started-at="2015-03-16T10:32:03Z" finished-at="2015-03-16T10:32:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:js_errors.Js_error_account@13c78c0b]" name="testUntitled4" duration-ms="18575" started-at="2015-03-16T10:32:03Z" finished-at="2015-03-16T10:32:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- js_errors.Js_error_account -->
-      <class name="product.Wishlist">
-        <test-method status="PASS" signature="init()[pri:0, instance:product.Wishlist@61dc03ce]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:38:31Z" finished-at="2015-03-16T10:38:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled8()[pri:0, instance:product.Wishlist@61dc03ce]" name="testUntitled8" duration-ms="56544" started-at="2015-03-16T10:38:31Z" finished-at="2015-03-16T10:39:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled8 -->
-      </class> <!-- product.Wishlist -->
-      <class name="login.Invalid_field">
-        <test-method status="PASS" signature="init()[pri:0, instance:login.Invalid_field@32e6e9c3]" name="init" is-config="true" duration-ms="9" started-at="2015-03-16T10:47:33Z" finished-at="2015-03-16T10:47:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:login.Invalid_field@32e6e9c3]" name="testUntitled" duration-ms="16121" started-at="2015-03-16T10:47:33Z" finished-at="2015-03-16T10:47:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled -->
-      </class> <!-- login.Invalid_field -->
-      <class name="account.Edit_account">
-        <test-method status="PASS" signature="init()[pri:0, instance:account.Edit_account@3cbbc1e0]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:49:42Z" finished-at="2015-03-16T10:49:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="FAIL" signature="testUntitled4()[pri:0, instance:account.Edit_account@3cbbc1e0]" name="testUntitled4" duration-ms="30936" started-at="2015-03-16T10:49:42Z" finished-at="2015-03-16T10:50:13Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 25.51 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element
-  (Session info: chrome=40.0.2214.115)
-  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 25.51 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
-System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3e93fc800797cf91e5935b56cba608c6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
-	at org.openqa.selenium.By$ById.findElement(By.java:214)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at account.Edit_account.testUntitled4(Edit_account.java:26)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:217)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:92)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- account.Edit_account -->
-      <class name="js_errors.Js_error_product">
-        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_error_product@3551a94]" name="init" is-config="true" duration-ms="4" started-at="2015-03-16T10:31:52Z" finished-at="2015-03-16T10:31:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:js_errors.Js_error_product@3551a94]" name="testUntitled4" duration-ms="5530" started-at="2015-03-16T10:31:52Z" finished-at="2015-03-16T10:31:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- js_errors.Js_error_product -->
-      <class name="cart.Move_wishlist">
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:cart.Move_wishlist@2c9f9fb0]" name="testUntitled" duration-ms="82144" started-at="2015-03-16T10:44:20Z" finished-at="2015-03-16T10:45:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="init()[pri:0, instance:cart.Move_wishlist@2c9f9fb0]" name="init" is-config="true" duration-ms="0" started-at="2015-03-16T10:44:20Z" finished-at="2015-03-16T10:44:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-      </class> <!-- cart.Move_wishlist -->
-      <class name="js_errors.Js_checkout">
-        <test-method status="PASS" signature="init()[pri:0, instance:js_errors.Js_checkout@531be3c5]" name="init" is-config="true" duration-ms="4" started-at="2015-03-16T10:32:47Z" finished-at="2015-03-16T10:32:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled4()[pri:0, instance:js_errors.Js_checkout@531be3c5]" name="testUntitled4" duration-ms="30116" started-at="2015-03-16T10:32:47Z" finished-at="2015-03-16T10:33:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled4 -->
-      </class> <!-- js_errors.Js_checkout -->
-      <class name="cart.Update">
-        <test-method status="PASS" signature="init()[pri:0, instance:cart.Update@7946e1f4]" name="init" is-config="true" duration-ms="16" started-at="2015-03-16T10:43:52Z" finished-at="2015-03-16T10:43:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled6()[pri:0, instance:cart.Update@7946e1f4]" name="testUntitled6" duration-ms="28139" started-at="2015-03-16T10:43:52Z" finished-at="2015-03-16T10:44:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUntitled6 -->
-      </class> <!-- cart.Update -->
-    </test> <!-- Test1 -->
-  </suite> <!-- Tests -->
+        </test-method> <!-- Order_login_customer -->
+      </class> <!-- checkout.Order_login_customer -->
+    </test> <!-- Checkout page -->
+  </suite> <!-- Smoke test -->
 </testng-results>
