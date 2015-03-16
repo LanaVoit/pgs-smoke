@@ -20,40 +20,47 @@ public class Add_delete_wishlist extends PGS.pages.TestBase {
 
     @Test
   public void testUntitled8() throws Exception {
-	driver.manage().window().maximize();
-	Actions actions = new Actions(driver);
-    driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
-    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.cssSelector("li > a.button > span")));
-    driver.findElement(By.cssSelector("li > a.button > span")).click();
-    TimeUnit.SECONDS.sleep(5);
-    driver.findElement(By.id("email")).clear();
-    driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
-    driver.findElement(By.id("pass")).clear();
-    driver.findElement(By.id("pass")).sendKeys("qwerty");
-    driver.findElement(By.id("send2")).click();
-    TimeUnit.SECONDS.sleep(10);
-    driver.findElement(By.cssSelector("span")).click();
-    TimeUnit.SECONDS.sleep(3);
-    driver.findElement(By.cssSelector("span")).click();
-    TimeUnit.SECONDS.sleep(3);
-    assertEquals("Engraved Swarovski Crystal Heart Vase has been added to your wishlist.", driver.findElement(By.cssSelector("span")).getText());
-    driver.findElement(By.cssSelector("button.mfp-close")).click();
-    TimeUnit.SECONDS.sleep(3);
-    WebElement my_account = driver.findElement(By.id("myaccount-menu-link"));
-    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,my_account);
-    TimeUnit.SECONDS.sleep(5);
-    actions.moveToElement(my_account).build().perform();
-    TimeUnit.SECONDS.sleep(5);
-    driver.findElement(By.linkText("My Wishlist")).click();
-    TimeUnit.SECONDS.sleep(5);
-    assertEquals("Engraved Swarovski Crystal Heart Vase", driver.findElement(By.cssSelector("div.columns.small-6 > h3.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")).getText());
-    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.cssSelector("div.columns.small-6 > h3.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")));
-    driver.findElement(By.cssSelector("div.r-tbody > div:last-child > div.columns.small-1 > a.btn-remove.btn-remove2")).click();
-    assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this product from your wishlist[\\s\\S]$"));
-    TimeUnit.SECONDS.sleep(10);
+    	driver.manage().window().maximize();
+    	Actions actions = new Actions(driver);
+        driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+                ,driver.findElement(By.cssSelector("li > a.button > span")));
+        driver.findElement(By.cssSelector("li > a.button > span")).click();
+        TimeUnit.SECONDS.sleep(5);
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
+        driver.findElement(By.id("pass")).clear();
+        driver.findElement(By.id("pass")).sendKeys("qwerty");
+        driver.findElement(By.id("send2")).click();
+        TimeUnit.SECONDS.sleep(10);
+        driver.findElement(By.cssSelector("span")).click();
+        TimeUnit.SECONDS.sleep(3);
+        driver.findElement(By.cssSelector("span")).click();
+        TimeUnit.SECONDS.sleep(3);
+        assertEquals("Engraved Swarovski Crystal Heart Vase has been added to your wishlist.", driver.findElement(By.cssSelector("span")).getText());
+        driver.findElement(By.cssSelector("button.mfp-close")).click();
+        TimeUnit.SECONDS.sleep(3);
+        /*WebElement my_account = driver.findElement(By.id("myaccount-menu-link"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+                ,my_account);
+        TimeUnit.SECONDS.sleep(5);
+        actions.moveToElement(my_account).build().perform();
+        driver.findElement(By.linkText("My Wishlist")).click();
+        TimeUnit.SECONDS.sleep(5);*/
+        driver.get(baseUrl + "wishlist/");
+        assertEquals("Engraved Swarovski Crystal Heart Vase", driver.findElement(By.cssSelector("div.columns.small-6 > h3.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")).getText());
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+                ,driver.findElement(By.cssSelector("div.columns.small-6 > h3.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")));
+        driver.findElement(By.cssSelector("div.r-tbody > div:last-child > div.columns.small-1 > a.btn-remove.btn-remove2")).click();
+        assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this product from your wishlist[\\s\\S]$"));
+        TimeUnit.SECONDS.sleep(10);
+        assertEquals("(0 items)", driver.findElement(By.cssSelector("span.item-count")).getText());  
+        TimeUnit.SECONDS.sleep(5);
+        WebElement signout = driver.findElement(By.linkText("Sign Out"));
+        WebElement my_account = driver.findElement(By.linkText("My Account"));
+        actions.moveToElement(my_account).build().perform();
+        signout.click();
+        TimeUnit.SECONDS.sleep(5);
     
 
   }

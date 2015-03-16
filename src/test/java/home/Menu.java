@@ -23,8 +23,15 @@ public class Menu extends PGS.pages.TestBase {
 	Actions actions = new Actions(driver);
 	driver.manage().window().maximize();
     driver.get(baseUrl);
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/a/span"))).build().perform();
-    assertEquals("alcohol\npersonalised champagne\npersonalised cava\npersonalised sparkling rose wines\npersonalised rose wines\npersonalised white wines\npersonalised red port\npersonalised vodka\npersonalised whisky\npersonalised beer / cider / lager\npersonalised alcohol sets\npersonalised champagne\npersonalised champagne\nshow more", driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li")).getText());
+    actions.moveToElement(driver.findElement(By.xpath("//*[@id='nav']/li[2]/a/span"))).build().perform();
+    //actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[1]/a/span"))).build().perform();
+    //assertEquals("alcohol\npersonalised champagne\npersonalised cava\npersonalised sparkling rose wines\npersonalised rose wines\npersonalised white wines\npersonalised red port\npersonalised vodka\npersonalised whisky\npersonalised beer / cider / lager\npersonalised alcohol sets\npersonalised champagne\npersonalised champagne\nshow more", driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li")).getText());
+    assertEquals("Personalised", driver.findElement(By.linkText("Personalised")).getText());
+    assertEquals("Family", driver.findElement(By.linkText("Family")).getText());
+    assertEquals("Years", driver.findElement(By.linkText("Years")).getText());
+    assertEquals("How About?",driver.findElement(By.linkText("How About?")).getText());
+    assertEquals("Trending", driver.findElement(By.linkText("Trending")).getText());
+
   }
 
    private boolean isElementPresent(By by) {

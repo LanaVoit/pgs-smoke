@@ -1,5 +1,6 @@
 package checkout;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 
@@ -23,46 +24,82 @@ public class Order_login_customer extends PGS.pages.TestBase {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "customer/account/login/");
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.id("email")).clear();
     driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
     driver.findElement(By.id("pass")).clear();
     driver.findElement(By.id("pass")).sendKeys("qwerty");
     driver.findElement(By.id("send2")).click();
-    assertEquals("My dashboard", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Great to see you, Tom Johns!", driver.findElement(By.cssSelector("h3.hello")).getText());
-    TimeUnit.SECONDS.sleep(3);
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("MY DASHBOARD", driver.findElement(By.cssSelector("h1")).getText());
+   
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+    TimeUnit.SECONDS.sleep(5);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")));
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")).click();
     TimeUnit.SECONDS.sleep(5);
-    driver.get(baseUrl + "/default/checkout/cart/");
-    driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+    driver.findElement(By.xpath("//a[2]/span")).click();
     TimeUnit.SECONDS.sleep(5);
-    driver.findElement(By.cssSelector("button.button.btn-primary")).click();
+    driver.get(baseUrl + "checkout/onepage/");
     TimeUnit.SECONDS.sleep(5);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.cssSelector("#billing-buttons-container > button.button.btn-primary")));
+    driver.findElement(By.cssSelector("#billing-buttons-container > button.button.btn-primary")).click();
+    TimeUnit.SECONDS.sleep(10);
+    driver.findElement(By.cssSelector("label[for='s_method_freeshipping_freeshipping']")).click();
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.cssSelector("#shipping-method-buttons-container > button.button.btn-primary")));
     driver.findElement(By.cssSelector("#shipping-method-buttons-container > button.button.btn-primary")).click();
-    driver.findElement(By.id("p_method_ccsave")).click();
-    TimeUnit.SECONDS.sleep(5);
-    driver.findElement(By.xpath("//ul[@id='checkout-payment-method-load']/li[4]/div/label")).click();
-    TimeUnit.SECONDS.sleep(5);
-    driver.findElement(By.id("ccsave_cc_owner")).clear();
-    driver.findElement(By.id("ccsave_cc_owner")).sendKeys("Tom Green");
-    new Select(driver.findElement(By.id("ccsave_cc_type"))).selectByVisibleText("Visa");
-    driver.findElement(By.id("ccsave_cc_number")).clear();
-    driver.findElement(By.id("ccsave_cc_number")).sendKeys("4444333322221111");
-    new Select(driver.findElement(By.id("ccsave_expiration"))).selectByVisibleText("01 - January");
-    new Select(driver.findElement(By.id("ccsave_expiration_yr"))).selectByVisibleText("2017");
+    TimeUnit.SECONDS.sleep(10);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.xpath("//*[@id='checkout-step-payment']/div[1]/h2")));
+    TimeUnit.SECONDS.sleep(7);
+    driver.findElement(By.cssSelector("label[for='p_method_checkmo']")).click();
+    TimeUnit.SECONDS.sleep(10);
+    driver.findElement(By.xpath("//ul[@id='checkout-payment-method-load']/li[5]/div/label")).click();
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.cssSelector("#payment-buttons-container > button.button.btn-primary")));
     driver.findElement(By.cssSelector("#payment-buttons-container > button.button.btn-primary")).click();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.xpath("//button[@type='submit']")));
     driver.findElement(By.xpath("//button[@type='submit']")).click();
-    TimeUnit.SECONDS.sleep(5);
-    assertEquals("A big thank you Tom now see below what you can do", driver.findElement(By.cssSelector("h1")).getText());
-    driver.findElement(By.cssSelector("div.order-success-block > a.button.btn-primary > span")).click();
-    assertEquals("Delivery", driver.findElement(By.cssSelector("div.box-title > h3")).getText());
-    assertEquals("Billing", driver.findElement(By.xpath("//div[2]/div/div/h3")).getText());
-    assertEquals("Items Ordered", driver.findElement(By.cssSelector("h2.table-caption")).getText());
-    assertEquals("£42.99", driver.findElement(By.cssSelector("strong > span.price")).getText());
-    assertEquals("Grand Total", driver.findElement(By.cssSelector("div.columns.small-3 > strong")).getText());
+    TimeUnit.SECONDS.sleep(10);
+    assertEquals("A BIG THANK YOU TOM NOW SEE BELOW WHAT YOU CAN DO", driver.findElement(By.cssSelector("h1")).getText());
+    String order = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div/strong")).getText();
+    String regex = "[0-9]\\d+";
+    Pattern p = Pattern.compile(regex);
+    Matcher m = p.matcher(order);
+    if (m.find()) {
+    	driver.get(baseUrl + "customer/account/logout");
+        TimeUnit.SECONDS.sleep(5);
+        driver.get(baseUrl + "admin");
+        /*driver.findElement(By.id("username")).clear();
+        driver.findElement(By.id("username")).sendKeys("admin1");
+        driver.findElement(By.id("login")).clear();
+        driver.findElement(By.id("login")).sendKeys("alex2014");
+        driver.findElement(By.cssSelector("input.form-button")).click();
+        driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();*/
+        actions.moveToElement(driver.findElement(By.xpath("//*[@id='nav']/li[2]/a/span"))).build().perform();
+        driver.findElement(By.xpath("//*[@id='nav']/li[2]/ul/li[1]/a/span")).click();
+        TimeUnit.SECONDS.sleep(5);
+	    driver.findElement(By.id("sales_order_grid_filter_am_real_order_id")).clear();
+	    driver.findElement(By.id("sales_order_grid_filter_am_real_order_id")).sendKeys(m.group());
+    	TimeUnit.SECONDS.sleep(5);
+    	driver.findElement(By.cssSelector("button[title=\"Search\"]")).click();
+        TimeUnit.SECONDS.sleep(10);
+        driver.findElement(By.cssSelector("input[name=\"order_ids\"]")).click();
+        TimeUnit.SECONDS.sleep(5);
+        new Select(driver.findElement(By.id("sales_order_grid_massaction-select"))).selectByVisibleText("Cancel");
+        driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
 
+        TimeUnit.SECONDS.sleep(10);
+        assertEquals("1 order(s) have been canceled.", driver.findElement(By.cssSelector("li > span")).getText());
+    	   
+    }
+    
   }
 
    private boolean isElementPresent(By by) {

@@ -40,21 +40,27 @@ public class Wishlist extends PGS.pages.TestBase {
     assertEquals("Engraved Swarovski Crystal Heart Vase has been added to your wishlist.", driver.findElement(By.cssSelector("span")).getText());
     driver.findElement(By.cssSelector("button.mfp-close")).click();
     TimeUnit.SECONDS.sleep(3);
-    WebElement my_account = driver.findElement(By.id("myaccount-menu-link"));
+    /*WebElement my_account = driver.findElement(By.id("myaccount-menu-link"));
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,my_account);
     TimeUnit.SECONDS.sleep(5);
     actions.moveToElement(my_account).build().perform();
-    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.linkText("My Wishlist")).click();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(5);*/
+    driver.get(baseUrl + "wishlist/");
     assertEquals("Engraved Swarovski Crystal Heart Vase", driver.findElement(By.cssSelector("div.columns.small-6 > h3.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")).getText());
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("div.columns.small-6 > h3.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")));
     driver.findElement(By.cssSelector("div.r-tbody > div:last-child > div.columns.small-1 > a.btn-remove.btn-remove2")).click();
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this product from your wishlist[\\s\\S]$"));
     TimeUnit.SECONDS.sleep(10);
-    
+    assertEquals("(0 items)", driver.findElement(By.cssSelector("span.item-count")).getText());  
+    TimeUnit.SECONDS.sleep(5);
+    WebElement signout = driver.findElement(By.linkText("Sign Out"));
+    WebElement my_account = driver.findElement(By.linkText("My Account"));
+    actions.moveToElement(my_account).build().perform();
+    signout.click();
+    TimeUnit.SECONDS.sleep(5);
 
   }
 

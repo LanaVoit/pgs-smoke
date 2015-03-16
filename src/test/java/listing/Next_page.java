@@ -22,14 +22,14 @@ public class Next_page extends PGS.pages.TestBase {
   public void testUntitled2() throws Exception {
 	driver.manage().window().maximize(); 
 	Actions actions = new Actions(driver);
-    driver.get(baseUrl + "crystal-gifts");
+    driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     TimeUnit.SECONDS.sleep(3);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("a.next-page > img")));
-    assertEquals("1 to 29 of 52 items", driver.findElement(By.cssSelector("div.toolbar-bottom > div.toolbar > div.pager > p.amount")).getText());
+    assertEquals("1 to 29 of 583 items", driver.findElement(By.cssSelector("div.toolbar-bottom > div.toolbar > div.pager > p.amount")).getText());
     driver.findElement(By.cssSelector("a.next-page > img")).click();
     TimeUnit.SECONDS.sleep(5);
-    assertEquals("30 to 52 of 52 items", driver.findElement(By.cssSelector("p.amount")).getText());
+    assertEquals("30 to 58 of 583 items", driver.findElement(By.cssSelector("p.amount")).getText());
     TimeUnit.SECONDS.sleep(5);
   }
 

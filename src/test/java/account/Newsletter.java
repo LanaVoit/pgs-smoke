@@ -28,12 +28,13 @@ public class Newsletter extends PGS.pages.TestBase {
     driver.findElement(By.id("pass")).clear();
     driver.findElement(By.id("pass")).sendKeys("qwerty");
     driver.findElement(By.id("send2")).click();
-    assertEquals("My dashboard", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Great to see you, Tom Johns!", driver.findElement(By.cssSelector("h3.hello")).getText());
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("MY DASHBOARD", driver.findElement(By.cssSelector("h1")).getText());
+    assertEquals("GREAT TO SEE YOU, TOM JOHNS!", driver.findElement(By.cssSelector("h3.hello")).getText());
     TimeUnit.SECONDS.sleep(3);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.linkText("Newsletter Subscriptions")));
-    driver.findElement(By.linkText("Newsletter Subscriptions")).click();
+            ,driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[13]/a")));
+    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[13]/a")).click();   
     TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.id("list-1b734fadd7")).click();
     driver.findElement(By.id("list-76ad4233d2")).click();
@@ -43,6 +44,11 @@ public class Newsletter extends PGS.pages.TestBase {
     driver.findElement(By.id("list-1b734fadd7")).click();
     driver.findElement(By.cssSelector("div.buttons-set > button.button")).click();
     TimeUnit.SECONDS.sleep(3);
+    WebElement signout = driver.findElement(By.linkText("Sign Out"));
+    WebElement my_account = driver.findElement(By.linkText("My Account"));
+    actions.moveToElement(my_account).build().perform();
+    signout.click();
+    TimeUnit.SECONDS.sleep(5);
   }
 
    private boolean isElementPresent(By by) {

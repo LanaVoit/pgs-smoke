@@ -34,8 +34,8 @@ public class Move_wishlist extends PGS.pages.TestBase {
             ,driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")));
     driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")).click();
     TimeUnit.SECONDS.sleep(5);
-    driver.findElement(By.xpath("//a[2]/span")).click();
-    TimeUnit.SECONDS.sleep(5);
+    driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/div[1]/a[2]/span")).click();
+    TimeUnit.SECONDS.sleep(7);
     assertEquals("YOUR SHOPPING BASKET", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("ENGRAVED SWAROVSKI CRYSTAL HEART VASE", driver.findElement(By.xpath("(//a[contains(text(),'Engraved Swarovski Crystal Heart Vase')])[3]")).getText());
     driver.findElement(By.xpath("//div[@class='item']/div[3]/div/a[2]/span")).click();
@@ -43,10 +43,10 @@ public class Move_wishlist extends PGS.pages.TestBase {
     driver.findElement(By.cssSelector("span")).click();
     TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.cssSelector("span")).click();
-    TimeUnit.SECONDS.sleep(3);
+    TimeUnit.SECONDS.sleep(5);
     assertEquals("Engraved Swarovski Crystal Heart Vase has been added to your wishlist.", driver.findElement(By.cssSelector("span")).getText());
     driver.findElement(By.cssSelector("button.mfp-close")).click();
-    assertEquals("Shopping Cart is Empty", driver.findElement(By.cssSelector("h1")).getText());
+    assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
     WebElement my_account = driver.findElement(By.id("myaccount-menu-link"));
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,my_account);
@@ -61,6 +61,10 @@ public class Move_wishlist extends PGS.pages.TestBase {
     driver.findElement(By.cssSelector("div.r-tbody > div:last-child > div.columns.small-1 > a.btn-remove.btn-remove2")).click();
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this product from your wishlist[\\s\\S]$"));
     TimeUnit.SECONDS.sleep(10);
+    WebElement signout = driver.findElement(By.linkText("Sign Out"));
+    actions.moveToElement(driver.findElement(By.linkText("My Account"))).build().perform();
+    signout.click();
+    TimeUnit.SECONDS.sleep(5);
   }
 
    private boolean isElementPresent(By by) {

@@ -18,20 +18,23 @@ public class Image extends PGS.pages.TestBase {
   public void testUntitled5() throws Exception {
 	driver.manage().window().maximize();
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
-    String img = "http://dev-mage.com/store53/store/media/catalog/product/cache/1/image/400x/9df78eab33525d08d6e5fb8d27136e95/p/e/personalised-swarovski-crystal-heart-vase.jpg";
+    String img = "http://dev.personalisedgiftsshop.co.uk/media/catalog/product/cache/1/image/400x/9df78eab33525d08d6e5fb8d27136e95/p/e/personalised-swarovski-crystal-heart-vase.jpg";
     assertEquals(img, driver.findElement(By.cssSelector("div.product-image.product-image-zoom a img")).getAttribute("src").toString());
-    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.cssSelector("button.slick-next")));
-    driver.findElement(By.cssSelector("button.slick-next")).click();
-    driver.findElement(By.cssSelector("button.slick-prev")).click();   
-    driver.findElement(By.xpath("//img[contains(@src,'http://dev-mage.com/store53/store/media/catalog/product/cache/1/thumbnail/110x/9df78eab33525d08d6e5fb8d27136e95/s/c/screenshot_2_5.jpg')]")).click();
+   /* ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.xpath("(//img[@alt='Engraved Swarovski Crystal Heart Vase'])[4]")));*/
+   // driver.findElement(By.cssSelector("button.slick-next")).click();
+   // driver.findElement(By.cssSelector("button.slick-prev")).click();   
+  //  driver.findElement(By.xpath("//img[contains(@src,'http://dev-mage.com/store53/store/media/catalog/product/cache/1/thumbnail/110x/9df78eab33525d08d6e5fb8d27136e95/s/c/screenshot_2_5.jpg')]")).click();
+    driver.findElement(By.cssSelector("div.product-image.product-image-zoom a img")).click();
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.xpath("(//button[@title='Next (Right arrow key)'])")).click();
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-    driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-    driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-    driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-    driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-    driver.findElement(By.cssSelector("button.mfp-close")).click();
+    //driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+    //driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+   // driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+   // driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
+   // driver.findElement(By.cssSelector("button.mfp-close")).click();
     
   }
 

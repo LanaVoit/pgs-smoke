@@ -21,14 +21,17 @@ public class Invalid_field extends PGS.pages.TestBase {
     driver.findElement(By.id("email")).clear();
     driver.findElement(By.id("email")).sendKeys("qatestingtestqa");
     driver.findElement(By.id("pass")).clear();
-    driver.findElement(By.id("pass")).sendKeys("qwert");
+    driver.findElement(By.id("pass")).sendKeys("qw");
+    driver.findElement(By.id("email")).click();
     assertEquals("Please enter 6 or more characters. Leading or trailing spaces will be ignored.", driver.findElement(By.id("advice-validate-password-pass")).getText());
-    assertEquals("Please enter a valid email address. For example johndoe@domain.com.", driver.findElement(By.id("advice-validate-email-email")).getText());  
+    assertEquals("Please enter a valid email address. For example johndoe@example.com.", driver.findElement(By.id("advice-validate-email-email")).getText());  
     driver.findElement(By.id("email")).clear();
     driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
     driver.findElement(By.id("pass")).clear();
     driver.findElement(By.id("pass")).sendKeys("qwertyu");
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.id("send2")).click();
+    TimeUnit.SECONDS.sleep(7);
     assertEquals("Invalid login or password.", driver.findElement(By.cssSelector("li > span")).getText());
   }
 

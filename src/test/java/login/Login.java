@@ -28,23 +28,11 @@ public class Login extends PGS.pages.TestBase {
     driver.findElement(By.id("pass")).clear();
     driver.findElement(By.id("pass")).sendKeys("qwerty");
     driver.findElement(By.id("send2")).click();
-    assertEquals("My dashboard", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Great to see you, Tom Johns!", driver.findElement(By.cssSelector("h3.hello")).getText());
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("MY DASHBOARD", driver.findElement(By.cssSelector("h1")).getText());
+    assertEquals("GREAT TO SEE YOU, TOM JOHNS!", driver.findElement(By.cssSelector("h3.hello")).getText());
     TimeUnit.SECONDS.sleep(3);
-    WebElement my_account = driver.findElement(By.id("myaccount-menu-link"));
-    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,my_account);
-    TimeUnit.SECONDS.sleep(5);
-    actions.moveToElement(my_account).build().perform();
-    TimeUnit.SECONDS.sleep(5);
-    driver.findElement(By.xpath("(//a[contains(text(),'Sign Out')])[2]")).click();
-    TimeUnit.SECONDS.sleep(5);
-    assertEquals("Sign In", driver.findElement(By.linkText("Sign In")).getText());
-    assertEquals("register", driver.findElement(By.linkText("register")).getText());
-    String title = driver.getTitle();
-    String title_test = "Home page";
-    TimeUnit.SECONDS.sleep(5);
-    assertEquals(title_test, title);
+    driver.get(baseUrl + "customer/account/logout");
     TimeUnit.SECONDS.sleep(5);
 
   }

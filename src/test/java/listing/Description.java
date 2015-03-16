@@ -21,15 +21,15 @@ public class Description extends PGS.pages.TestBase {
     @Test
   public void testUntitled4() throws Exception {
 	driver.manage().window().maximize(); 
-    driver.get(baseUrl + "crystal-gifts");
+    driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     TimeUnit.SECONDS.sleep(3);
-    assertEquals("Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal... READ MORE [+]", driver.findElement(By.cssSelector("div.short-desc > p")).getText());
+    assertEquals("If you're struggling to find those special birthday gifts for babies look no further than our fantastic range of presents.... READ MORE [+]", driver.findElement(By.cssSelector("div.short-desc > p")).getText());
     assertEquals("READ MORE [+]", driver.findElement(By.linkText("READ MORE [+]")).getText());
     driver.findElement(By.linkText("READ MORE [+]")).click();
-    assertEquals("Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal gifts. Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal gifts. Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal gifts. Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal gifts.Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal gifts.Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal gifts. Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal gifts. Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal gifts. Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal gifts. READ LESS [-]", driver.findElement(By.cssSelector("div.full-desc")).getText());
+    assertEquals("If you're struggling to find those special birthday gifts for babies look no further than our fantastic range of presents. From personalised breakfast sets to personalised name frames, personalised money boxes to personalised soft toys, we have 100's of unique and unusual birthday gift ideas for babies. Alternatively, take a look at our birthday gifts for kids and 1st Birthday Gifts, where you will find a huge range of birthday gifts. READ LESS [-]", driver.findElement(By.cssSelector("div.full-desc")).getText());
     assertEquals("READ LESS [-]", driver.findElement(By.linkText("READ LESS [-]")).getText());
     driver.findElement(By.linkText("READ LESS [-]")).click();
-    assertEquals("Stunning Engraved Crystal Gifts :: Vases, glasses, trophies, tokens just to name a few - Fast UK DELIVERY on all crystal... READ MORE [+]", driver.findElement(By.cssSelector("div.short-desc > p")).getText());
+    assertEquals("If you're struggling to find those special birthday gifts for babies look no further than our fantastic range of presents.... READ MORE [+]", driver.findElement(By.cssSelector("div.short-desc > p")).getText());
     
   }
 

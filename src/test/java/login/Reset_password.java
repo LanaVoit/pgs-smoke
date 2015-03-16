@@ -41,14 +41,59 @@ public class Reset_password extends PGS.pages.TestBase {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "customer/account/login/");
-    driver.findElement(By.linkText("forgot?")).click();
+   /* driver.findElement(By.linkText("forgot?")).click();
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.id("email_address")).clear();
-    driver.findElement(By.id("email_address")).sendKeys("qatestingtestqa@gmail.com");
+    driver.findElement(By.id("email_address")).sendKeys("quality_assurance@bk.ru");
     driver.findElement(By.cssSelector("button.button.btn-primary")).click();
     TimeUnit.SECONDS.sleep(5);
-    assertEquals("If there is an account associated with qatestingtestqa@gmail.com you will receive an email with a link to reset your password.", driver.findElement(By.cssSelector("li > span")).getText());
-    TimeUnit.SECONDS.sleep(60);
+    assertEquals("If there is an account associated with quality_assurance@bk.ru you will receive an email with a link to reset your password.", driver.findElement(By.cssSelector("li > span")).getText());
+    TimeUnit.SECONDS.sleep(60);*/
+    class MailAuthenticator extends Authenticator {
+		 
+	    public PasswordAuthentication getPasswordAuthentication() {
+	         return new PasswordAuthentication("quality_assurance@bk.ru", "parol123");
+	    }
+	}
+	
+    String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
+	Properties props = new Properties();
+	props.setProperty("mail.pop3.socketFactory.class", SSL_FACTORY);
+	props.setProperty("mail.pop3.socketFactory.fallback", "false");
+	props.setProperty("mail.pop3.port", "995");
+	props.setProperty("mail.pop3.socketFactory.port", "995");
+       String host = "pop.mail.ru";
+       String provider = "pop3";
+        Session session = Session.getDefaultInstance(props,
+                new MailAuthenticator());
+        
+        
+        Store store = session.getStore(provider);
+        store.connect(host, null, null);
+ 
+        Folder inbox = store.getFolder("INBOX");
+        inbox.open(Folder.READ_ONLY);
+        
+        Message[] messages = inbox.getMessages();
+        
+           
+        GetMulti gmulti = new GetMulti();
+        String textMessage = gmulti.getText(messages[messages.length - 1]);
+        String regex = "https?://(.*)/customer/account/resetpassword/(.*)";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(textMessage);
+        m.find(); 
+        driver.get(baseUrl);
+    	driver.findElement(By.id("search")).clear();
+    	driver.findElement(By.id("search")).sendKeys(m.group(2));
+    	TimeUnit.SECONDS.sleep(5); 
+        	    
+        	TimeUnit.SECONDS.sleep(10);
+    
+    
+    
+    
+   /* 
     class MailAuthenticator extends Authenticator {
   		 
 	    public PasswordAuthentication getPasswordAuthentication() {
@@ -87,14 +132,18 @@ public class Reset_password extends PGS.pages.TestBase {
            
         GetMulti gmulti = new GetMulti();
         String textMessage = gmulti.getText(messages[messages.length - 1]);
+        String regex = "http://mandrillapp.com/track/click/(.*)\\S ";
         String regex = "https?://(.*)/customer/account/resetpassword/(.*)\\S ";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(textMessage);
-       // if (m.find()) {     
+        if (m.find()) {     
         m.find();
-        TimeUnit.SECONDS.sleep(30);
+        TimeUnit.SECONDS.sleep(60);
 	        	String testtest = "http://dev.personalisedgiftsshop.co.uk/default/customer/account/resetpassword/";
-	        	driver.get(testtest + m.group(2));
+	        	driver.findElement(By.id("email")).clear();
+	        	driver.findElement(By.id("email")).sendKeys(m.group(1));
+	        	TimeUnit.SECONDS.sleep(5);
+	        	driver.get(testtest + m.group());
 			    assertEquals("RESET A PASSWORD", driver.findElement(By.cssSelector("h1")).getText());
 			    driver.findElement(By.cssSelector("div.buttons-set > button.button.btn-primary")).click();
 			    assertEquals("This is a required field.", driver.findElement(By.id("advice-required-entry-password")).getText());
@@ -131,8 +180,8 @@ public class Reset_password extends PGS.pages.TestBase {
 			    String title_test = "Home page";
 			    TimeUnit.SECONDS.sleep(5);
 			    assertEquals(title_test, title);
-			    TimeUnit.SECONDS.sleep(5);
-      //  }
+			    TimeUnit.SECONDS.sleep(5);*/
+        
         inbox.close(false);
         store.close();  
   }

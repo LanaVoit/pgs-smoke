@@ -3,8 +3,71 @@
 <suite name="Tests" verbose="5" data-provider-thread-count="1">
 	<test name="Test1">
 		<parameter name="path" value="/"/>
-		<classes>
-			<class name="checkout.Email"/>		
+		<classes>	
+				
+			<class name="js_errors.Js_error_home"/>
+			<class name="js_errors.Js_error_listing"/>
+			<class name="js_errors.Js_error_product"/>
+			<class name="js_errors.Js_error_login"/>
+			<class name="js_errors.Js_error_register"/>
+			<class name="js_errors.Js_error_account"/>
+			<class name="js_errors.Js_cart"/>
+			<class name="js_errors.Js_checkout"/>
+			
+			<class name="home.Search"/>	
+			<class name="home.Menu"/>	
+			
+			<class name="listing.Filter"/>
+			<class name="listing.Sort"/>
+			<class name="listing.Add_to_wishlist"/>
+			<class name="listing.Img_hover"/>
+			<class name="listing.Next_page"/>
+			<class name="listing.Product_page"/>
+			<class name="listing.Description"/>
+			
+			<class name="product.Image"/>
+			<class name="product.Options"/>	
+			<class name="product.Wishlist"/>
+			<class name="product.Reviews"/>	
+			<class name="product.Ask"/>
+			
+			
+			<class name="cart.Add_cart"/>	
+			<class name="cart.Delete_cart"/>
+			<class name="cart.Edit"/>	
+			<class name="cart.Update"/>
+			<class name="cart.Move_wishlist"/>
+			<class name="cart.Coupon"/>	
+			<class name="cart.Checkout"/>
+			
+			<class name="login.Empty_field"/>
+			<class name="login.Invalid_field"/>
+			<class name="login.Login"/>	
+			
+			<class name="register.Empty_field"/>
+			<class name="register.Invalide_fields"/>
+			<class name="register.Valide_fields"/>	
+			
+			<class name="account.Edit_account"/>
+			<class name="account.Menu"/>	
+			<class name="account.Address"/>	
+			
+			<class name="wishlist.Create_delete_wishlist"/>	
+			<class name="wishlist.Add_cart"/>	
+			<class name="wishlist.Add_delete_wishlist"/>
+			<class name="wishlist.Share"/>
+			<class name="wishlist.Add_all_cart"/>
+			
+			<class name="checkout.Order_login_customer"/>	
+			<class name="checkout.Order_logout"/>	
+			<class name="checkout.Email"/>	
+			<class name="product.Recently_viewed"/>		
+	
 		</classes>
 	</test>  
 </suite>
+
+
+
+
+

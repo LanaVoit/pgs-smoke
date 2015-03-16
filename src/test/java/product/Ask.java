@@ -27,10 +27,7 @@ public class Ask extends PGS.pages.TestBase {
   
     @Test
   public void testUntitled10() throws Exception {
-    	
- 
-    	
-    	driver.manage().window().maximize();
+    driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     TimeUnit.SECONDS.sleep(5);
@@ -44,11 +41,11 @@ public class Ask extends PGS.pages.TestBase {
     assertEquals("Email Address", driver.findElement(By.id("advice-required-entry-question_author_email")).getText());
     assertEquals("Question Content", driver.findElement(By.id("advice-required-entry-question_content")).getText());
     driver.findElement(By.id("question_author_name")).clear();
-    driver.findElement(By.id("question_author_name")).sendKeys("test");
+    driver.findElement(By.id("question_author_name")).sendKeys("testpgs");
     driver.findElement(By.id("question_author_email")).clear();
-    driver.findElement(By.id("question_author_email")).sendKeys("test@test.com");
+    driver.findElement(By.id("question_author_email")).sendKeys("testpgs@test.com");
     driver.findElement(By.id("question_content")).clear();
-    driver.findElement(By.id("question_content")).sendKeys("test");
+    driver.findElement(By.id("question_content")).sendKeys("testpgs");
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("#aw-pq2-question-form > div.buttons-set > button.button.btn-primary.aw-pq2-form__button")).click();
     HttpClient client = new DefaultHttpClient();
@@ -60,17 +57,17 @@ public class Ask extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     driver.get(baseUrl + "admin");
     driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("admin");
+    driver.findElement(By.id("username")).sendKeys("admin1");
     driver.findElement(By.id("login")).clear();
-    driver.findElement(By.id("login")).sendKeys("admin123");
+    driver.findElement(By.id("login")).sendKeys("alex2014");
     driver.findElement(By.cssSelector("input.form-button")).click();
     driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();
     TimeUnit.SECONDS.sleep(5);
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/a/span"))).build().perform();
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li[10]/a/span"))).build().perform();
-    driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li[10]/ul/li/a/span")).click();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li[11]/a/span"))).build().perform();
+    driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li[11]/ul/li/a/span")).click();
     driver.findElement(By.id("pq2QuestionPendingGrid_filter_author_email")).clear();
-    driver.findElement(By.id("pq2QuestionPendingGrid_filter_author_email")).sendKeys("test@test.com");
+    driver.findElement(By.id("pq2QuestionPendingGrid_filter_author_email")).sendKeys("testpgs@test.com");
     driver.findElement(By.cssSelector("button[title=\"Search\"]")).click();
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("input[name=\"id\"]")).click();
@@ -86,8 +83,24 @@ public class Ask extends PGS.pages.TestBase {
             ,driver.findElement(By.cssSelector("dt.tab.last > span")));
     driver.findElement(By.cssSelector("dt.tab.last > span")).click();
     TimeUnit.SECONDS.sleep(5);
-    assertEquals("test", driver.findElement(By.cssSelector("ul.aw-pq2-list > li:last-child > div.aw-pq2-list__question-wrapper > div.aw-pq2-list__question > span.aw-pq2-list__question-content")).getText());
+    assertEquals("testpgs", driver.findElement(By.cssSelector("ul.aw-pq2-list > li:last-child > div.aw-pq2-list__question-wrapper > div.aw-pq2-list__question > span.aw-pq2-list__question-content")).getText());
     TimeUnit.SECONDS.sleep(10);
+    driver.get(baseUrl + "admin");
+    TimeUnit.SECONDS.sleep(5);
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/a/span"))).build().perform();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li[11]/a/span"))).build().perform();
+    driver.findElement(By.xpath("//*[@id=\"nav\"]/li[3]/ul/li[11]/ul/li[2]/a/span")).click();
+    driver.findElement(By.id("pq2QuestionGrid_filter_author_email")).clear();
+    driver.findElement(By.id("pq2QuestionGrid_filter_author_email")).sendKeys("testpgs@test.com");
+    driver.findElement(By.cssSelector("button[title=\"Search\"]")).click();
+    TimeUnit.SECONDS.sleep(5);
+    driver.findElement(By.cssSelector("input[name=\"id\"]")).click();
+    TimeUnit.SECONDS.sleep(5);
+    new Select(driver.findElement(By.id("pq2QuestionGrid_massaction-select"))).selectByVisibleText("Delete");
+    driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
+    assertTrue(closeAlertAndGetItsText().matches("^Are you sure[\\s\\S]$"));
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("1 question has been deleted successfully", driver.findElement(By.cssSelector("li > span")).getText());
   }
     
     public void waitForAjax(int timeoutInSeconds) {

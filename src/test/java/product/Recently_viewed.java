@@ -2,12 +2,16 @@ package product;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class Recently_viewed extends PGS.pages.TestBase {
@@ -17,32 +21,61 @@ public class Recently_viewed extends PGS.pages.TestBase {
     @Test
   public void testUntitled5() throws Exception {
 	driver.manage().window().maximize();
+	Actions actions = new Actions(driver);
+	driver.get(baseUrl);
+	driver.findElement(By.xpath("//*[@id='header']/div/div[2]/div/div[1]/ul/li/a")).click();
+	TimeUnit.SECONDS.sleep(5);
+	driver.get("chrome://settings/clearBrowserData");
+
+	final By cleanCacheIframe = By.xpath("//iframe[@src='chrome://settings-frame/clearBrowserData']");
+	driver.switchTo().frame(driver.findElement(cleanCacheIframe));
+	 
+	driver.findElement(By.id("clear-browser-data-commit")).click();
+	TimeUnit.SECONDS.sleep(5);
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
-    driver.get(baseUrl + "personalised-10-things-i-love-about-you-box.html");
-    driver.get(baseUrl + "personalised-valentine-bear.html");
-    driver.get(baseUrl + "personalised-candle-for-boys-church-design.html");
-    driver.get(baseUrl + "personalised-candle-for-girls-church-design.html");
-    driver.get(baseUrl + "personalised-pink-polka-dot-rocking-horse-photo-album.html");
-    driver.get(baseUrl + "personalised-babys-first-christmas-bauble.html");
-    driver.get(baseUrl + "engraved-shot-glass.html");
-    driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");   
+    driver.navigate().refresh();
+    TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-silver-plated-baby-photo-album.html");
+    TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-purple-ronnie-godfather-chocolate-bar.html");
+    TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-swarovski-diamante-vase-mr-and-mrs.html");
+    TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-keep-calm-toffee-jar.html");
+    TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-door-plaque-for-girls-animal-alphabet.html");
+    TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-baby-blanket.html");
+    TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-crystal-pint-tankard.html");
+    TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html"); 
+    driver.navigate().refresh();
+    TimeUnit.SECONDS.sleep(5);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("//div[5]/div/div/h2/span")));
-    assertEquals("My Recently Viewed Items", driver.findElement(By.xpath("//div[5]/div/div/h2/span")).getText());
-    assertEquals("Total 7 products viewed", driver.findElement(By.cssSelector("div.left")).getText());
-    assertEquals("View all", driver.findElement(By.id("recently_view_all")).getText());
-    assertEquals("Clear all", driver.findElement(By.id("recently_clear_all")).getText());
+    assertEquals("MY RECENTLY VIEWED ITEMS", driver.findElement(By.xpath("//div[5]/div/div/h2/span")).getText());
+    assertEquals("TOTAL 6 PRODUCTS VIEWED", driver.findElement(By.cssSelector("div.left")).getText());
+    assertEquals("VIEW ALL", driver.findElement(By.id("recently_view_all")).getText());
+    assertEquals("CLEAR ALL", driver.findElement(By.id("recently_clear_all")).getText());
+    actions.moveToElement(driver.findElement(By.xpath("//*[@id=\"recently-viewed-items\"]/li[1]/a[1]/img"))).build().perform();
     driver.findElement(By.cssSelector("ul#recently-viewed-items > li:first-child > a.recently_delete_item")).click();
-    TimeUnit.SECONDS.sleep(5);
-    assertEquals("Total 6 products viewed", driver.findElement(By.cssSelector("div.left")).getText());
+    TimeUnit.SECONDS.sleep(10);
+    assertEquals("TOTAL 5 PRODUCTS VIEWED", driver.findElement(By.cssSelector("div.left")).getText());
     driver.findElement(By.id("recently_view_all")).click();
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("ul.products-grid.row"));
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.xpath("//div[5]/div/div/h2/span")));
     driver.findElement(By.id("recently_clear_all")).click();
     TimeUnit.SECONDS.sleep(5);
-    assertNotEquals("My Recently Viewed Items", driver.findElement(By.xpath("//div[5]/div/div/h2/span")).getText());
+    assertNotEquals("MY RECENTLY VIEWED ITEMS", driver.findElement(By.xpath("//div[5]/div/div/h2/span")).getText());
     TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.xpath("//div[5]/div/div/h2/span")));
+    assertNotEquals("MY RECENTLY VIEWED ITEMS", driver.findElement(By.xpath("//div[5]/div/div/h2/span")).getText());
   }
 
    private boolean isElementPresent(By by) {

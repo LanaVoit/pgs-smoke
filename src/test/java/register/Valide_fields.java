@@ -37,25 +37,28 @@ public class Valide_fields extends PGS.pages.TestBase {
         
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
-	driver.get(baseUrl + "/default/admin");
-    driver.findElement(By.id("username")).clear();
+	driver.get(baseUrl + "admin");
+    /*driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin1");
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("alex2014");
     driver.findElement(By.cssSelector("input.form-button")).click();
-    driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();
+    driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();*/
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[14]/a/span"))).build().perform();
-    driver.findElement(By.xpath("//ul[@id='nav']/li[14]/ul/li[21]/a/span")).click();
+    driver.findElement(By.xpath("//ul[@id='nav']/li[14]/ul/li[22]/a/span")).click();
     TimeUnit.SECONDS.sleep(5);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[8]/dl/dd[2]/a/span")));
-    driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[8]/dl/dd[2]/a/span")).click();
-    driver.findElement(By.id("customer_captcha-head")).click();
+            ,driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[7]/dl/dd[1]/a/span")));
+    TimeUnit.SECONDS.sleep(5);
+    driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[8]/dl/dd[2]/a")).click();
+    TimeUnit.SECONDS.sleep(5);
+    //driver.findElement(By.id("customer_captcha-head")).click();
+   // TimeUnit.SECONDS.sleep(3);
     new Select(driver.findElement(By.id("customer_captcha_enable"))).selectByVisibleText("No");
     driver.findElement(By.cssSelector("button[title=\"Save Config\"]")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("The configuration has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
-
+    String email_test = email+"@"+email+".com";
 	
     driver.get(baseUrl + "customer/account/create/");    
     driver.findElement(By.id("firstname")).clear();
@@ -63,7 +66,7 @@ public class Valide_fields extends PGS.pages.TestBase {
     driver.findElement(By.id("lastname")).clear();
     driver.findElement(By.id("lastname")).sendKeys("Test");
     driver.findElement(By.id("email_address")).clear();
-    driver.findElement(By.id("email_address")).sendKeys(email+"@"+email+".com");
+    driver.findElement(By.id("email_address")).sendKeys(email_test);
     driver.findElement(By.id("password")).clear();
     driver.findElement(By.id("password")).sendKeys("qwerty");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
@@ -78,21 +81,46 @@ public class Valide_fields extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Thank you for registering with Personalised Gifts Shop.", driver.findElement(By.cssSelector("li > span")).getText());
     assertEquals("MY DASHBOARD", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Great to see you, Tom Test!", driver.findElement(By.cssSelector("h3.hello")).getText());
-
+    assertEquals("GREAT TO SEE YOU, TOM TEST!", driver.findElement(By.cssSelector("h3.hello")).getText());
+    WebElement my_account = driver.findElement(By.id("myaccount-menu-link"));
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,my_account);
+    TimeUnit.SECONDS.sleep(5);
+    actions.moveToElement(my_account).build().perform();
+    TimeUnit.SECONDS.sleep(5);
+    driver.findElement(By.xpath("(//a[contains(text(),'Sign Out')])[2]")).click();
+    TimeUnit.SECONDS.sleep(10);
     
-    driver.get(baseUrl + "/default/admin");
+    driver.get(baseUrl + "admin");
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[14]/a/span"))).build().perform();
-    driver.findElement(By.xpath("//ul[@id='nav']/li[14]/ul/li[21]/a/span")).click();
+    driver.findElement(By.xpath("//ul[@id='nav']/li[14]/ul/li[22]/a/span")).click();
     TimeUnit.SECONDS.sleep(5);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[8]/dl/dd[2]/a/span")));
+            ,driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[7]/dl/dd[1]/a/span")));
     driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[8]/dl/dd[2]/a/span")).click();
-    driver.findElement(By.id("customer_captcha-head")).click();
+   //driver.findElement(By.id("customer_captcha-head")).click();
+   // TimeUnit.SECONDS.sleep(3);
     new Select(driver.findElement(By.id("customer_captcha_enable"))).selectByVisibleText("Yes");
     driver.findElement(By.cssSelector("button[title=\"Save Config\"]")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("The configuration has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
+    TimeUnit.SECONDS.sleep(5);
+    actions.moveToElement(driver.findElement(By.xpath("//*[@id='nav']/li[5]/a/span"))).build().perform();
+    driver.findElement(By.xpath("//*[@id='nav']/li[5]/ul/li[1]/a/span")).click();
+    TimeUnit.SECONDS.sleep(5);
+    driver.findElement(By.id("customerGrid_filter_email")).clear();
+    driver.findElement(By.id("customerGrid_filter_email")).sendKeys(email_test);
+    driver.findElement(By.cssSelector("button[title=\"Search\"]")).click();
+    TimeUnit.SECONDS.sleep(5);
+    driver.findElement(By.cssSelector("input[name=\"customer\"]")).click();
+    TimeUnit.SECONDS.sleep(5);
+    new Select(driver.findElement(By.id("customerGrid_massaction-select"))).selectByVisibleText("Delete");
+    driver.findElement(By.cssSelector("button[title=\"Submit\"]")).click();
+    assertTrue(closeAlertAndGetItsText().matches("^Are you sure[\\s\\S]$"));
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("Total of 1 record(s) were deleted.", driver.findElement(By.cssSelector("li > span")).getText());
+    
+    
   }
 
    private boolean isElementPresent(By by) {

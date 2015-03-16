@@ -28,7 +28,7 @@ public class Js_error_listing extends PGS.pages.TestBase {
   public void testUntitled4() throws Exception {
 
     	driver.manage().window().maximize();
-        driver.get(baseUrl + "engraved-gifts/crystal-gifts");
+        driver.get(baseUrl + "personalised-birthday-gifts/for-her.html");
         
         Logs log = driver.manage().logs();
         List<LogEntry> logsEntries = log.get("browser").getAll();

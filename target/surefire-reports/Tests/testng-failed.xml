@@ -5,13 +5,260 @@
   <test name="Test1(failed)">
     <parameter name="path" value="/"/>
     <classes>
-      <class name="register.Invalide_fields">
+      <class name="register.Valide_fields">
         <methods>
-          <include name="init"/>
           <include name="tearDown"/>
           <include name="testUntitled2"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- register.Valide_fields -->
+      <class name="product.Ask">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- product.Ask -->
+      <class name="account.Edit_account">
+        <methods>
+          <include name="testUntitled4"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- account.Edit_account -->
+      <class name="wishlist.Add_all_cart">
+        <methods>
+          <include name="testUntitled8"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- wishlist.Add_all_cart -->
+      <class name="listing.Sort">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- listing.Sort -->
+      <class name="cart.Add_cart">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- cart.Add_cart -->
+      <class name="wishlist.Add_cart">
+        <methods>
+          <include name="testUntitled5"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- wishlist.Add_cart -->
+      <class name="home.Search">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- home.Search -->
+      <class name="js_errors.Js_error_product">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- js_errors.Js_error_product -->
+      <class name="register.Invalide_fields">
+        <methods>
+          <include name="testUntitled2"/>
+          <include name="init"/>
         </methods>
       </class> <!-- register.Invalide_fields -->
+      <class name="js_errors.Js_checkout">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- js_errors.Js_checkout -->
+      <class name="listing.Add_to_wishlist">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- listing.Add_to_wishlist -->
+      <class name="cart.Move_wishlist">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- cart.Move_wishlist -->
+      <class name="js_errors.Js_cart">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- js_errors.Js_cart -->
+      <class name="login.Login">
+        <methods>
+          <include name="testUntitled2"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- login.Login -->
+      <class name="js_errors.Js_error_login">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- js_errors.Js_error_login -->
+      <class name="listing.Img_hover">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- listing.Img_hover -->
+      <class name="product.Wishlist">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- product.Wishlist -->
+      <class name="js_errors.Js_error_register">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- js_errors.Js_error_register -->
+      <class name="listing.Product_page">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- listing.Product_page -->
+      <class name="js_errors.Js_error_account">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- js_errors.Js_error_account -->
+      <class name="listing.Description">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- listing.Description -->
+      <class name="wishlist.Create_delete_wishlist">
+        <methods>
+          <include name="testUntitled7"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- wishlist.Create_delete_wishlist -->
+      <class name="wishlist.Add_delete_wishlist">
+        <methods>
+          <include name="testUntitled8"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- wishlist.Add_delete_wishlist -->
+      <class name="cart.Coupon">
+        <methods>
+          <include name="testUntitled2"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- cart.Coupon -->
+      <class name="product.Reviews">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- product.Reviews -->
+      <class name="checkout.Email">
+        <methods>
+          <include name="testUntitled4"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- checkout.Email -->
+      <class name="listing.Filter">
+        <methods>
+          <include name="testUntitled4"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- listing.Filter -->
+      <class name="listing.Next_page">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- listing.Next_page -->
+      <class name="cart.Delete_cart">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- cart.Delete_cart -->
+      <class name="account.Menu">
+        <methods>
+          <include name="testUntitled7"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- account.Menu -->
+      <class name="cart.Checkout">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- cart.Checkout -->
+      <class name="cart.Edit">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- cart.Edit -->
+      <class name="product.Options">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- product.Options -->
+      <class name="register.Empty_field">
+        <methods>
+          <include name="testUntitled"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- register.Empty_field -->
+      <class name="js_errors.Js_error_listing">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- js_errors.Js_error_listing -->
+      <class name="cart.Update">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- cart.Update -->
+      <class name="wishlist.Share">
+        <methods>
+          <include name="testUntitled4"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- wishlist.Share -->
+      <class name="checkout.Order_logout">
+        <methods>
+          <include name="testUntitled10"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- checkout.Order_logout -->
+      <class name="account.Address">
+        <methods>
+          <include name="testUntitled3"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- account.Address -->
+      <class name="checkout.Order_login_customer">
+        <methods>
+          <include name="testUntitled9"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- checkout.Order_login_customer -->
+      <class name="login.Invalid_field">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- login.Invalid_field -->
+      <class name="product.Image">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- product.Image -->
+      <class name="login.Empty_field">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- login.Empty_field -->
+      <class name="home.Menu">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- home.Menu -->
+      <class name="product.Recently_viewed">
+        <methods>
+          <include name="testUntitled5"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- product.Recently_viewed -->
+      <class name="js_errors.Js_error_home">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- js_errors.Js_error_home -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Tests] -->

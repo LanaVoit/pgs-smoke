@@ -28,22 +28,32 @@ public class Create_delete_wishlist extends PGS.pages.TestBase {
     driver.findElement(By.id("pass")).clear();
     driver.findElement(By.id("pass")).sendKeys("qwerty");
     driver.findElement(By.id("send2")).click();
-    assertEquals("My dashboard", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Great to see you, Tom Johns!", driver.findElement(By.cssSelector("h3.hello")).getText());
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("MY DASHBOARD", driver.findElement(By.cssSelector("h1")).getText());
+    assertEquals("GREAT TO SEE YOU, TOM JOHNS!", driver.findElement(By.cssSelector("h3.hello")).getText());
     TimeUnit.SECONDS.sleep(3);
-    driver.get(baseUrl + "wishlist/");
+    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[8]/a")).click();
+    assertEquals("MY WISHLISTS", driver.findElement(By.cssSelector("h1")).getText());
+    TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.id("wishlist-create-button")).click();
     TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.id("wishlist-name")).clear();
     driver.findElement(By.id("wishlist-name")).sendKeys("Test 123");
     driver.findElement(By.cssSelector("button.button.btn-save")).click();
-    TimeUnit.SECONDS.sleep(3);
+    TimeUnit.SECONDS.sleep(10);
     assertEquals("Wishlist \"Test 123\" was successfully saved", driver.findElement(By.cssSelector("li > span")).getText());
     assertEquals("Test 123 / Edit (0 items)", driver.findElement(By.cssSelector("div.box-title > h3")).getText());
-    driver.findElement(By.xpath("//button[@onclick='return deleteWishlist(31);']")).click();
+    driver.findElement(By.xpath("//*[@id='wishlist-view-form']/fieldset/div/button/span/span")).click();
+    TimeUnit.SECONDS.sleep(7);
     assertTrue(closeAlertAndGetItsText().matches("^You are about to delete your wish list\\.\nThis action cannot be undone\\.\nDo you want to proceed[\\s\\S]$"));
+    TimeUnit.SECONDS.sleep(7);
     assertEquals("Wishlist \"Test 123\" has been deleted.", driver.findElement(By.cssSelector("li > span")).getText());
-
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[19]/a")));
+    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[19]/a")).click();
+    TimeUnit.SECONDS.sleep(3);
+    assertEquals("YOU ARE NOW LOGGED OUT", driver.findElement(By.cssSelector("h1")).getText());
+    driver.get(baseUrl + "customer/account/login/");
   }
 
    private boolean isElementPresent(By by) {

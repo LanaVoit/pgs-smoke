@@ -35,60 +35,50 @@ public class Email extends PGS.pages.TestBase {
 
     @Test
   public void testUntitled4() throws Exception {
-	
-    class MailAuthenticator extends Authenticator {
-  		 
-	    public PasswordAuthentication getPasswordAuthentication() {
-	         return new PasswordAuthentication("qatestingtestqa@gmail.com", "parol123");
-	    }
-	}
-	
-	Properties props = new Properties();
-	
-	props.put("mail.smtp.user", "qatestingtestqa@gmail.com");
-	props.put("mail.host", "pop.gmail.com");
-	props.put("mail.store.protocol", "pop3s");
-    props.put("mail.pop3s.auth", "true");
-    props.put("mail.pop3s.port", 995);
-	props.put("mail.smtp.starttls.enable","true");
-	props.put("mail.smtp.debug", "true");
-	props.put("mail.smtp.auth", "true");
-	props.put("mail.smtp.socketFactory.port", 995);
-	props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-	props.put("mail.smtp.socketFactory.fallback", "false");
-
-	Session session = Session.getInstance(props, new MailAuthenticator());
-	session.setDebug(true);
-       	  
-	
-
-	
-        Store store = session.getStore("pop3s");
-        store.connect("pop.gmail.com", "qatestingtestqa@gmail.com", "parol123");
- 
-        Folder inbox = store.getFolder("INBOX");
-        inbox.open(Folder.READ_ONLY);
+    	driver.manage().window().maximize();
+    	driver.get(baseUrl);
+    	class MailAuthenticator extends Authenticator {
+     		 
+    	    public PasswordAuthentication getPasswordAuthentication() {
+    	         return new PasswordAuthentication("qatestingtestqa@mail.ru", "parol123");
+    	    }	
+    	}
         
-        Message[] messages = inbox.getMessages();
-        
-           
-        GetMulti gmulti = new GetMulti();
-        String textMessage = gmulti.getText(messages[messages.length - 1]);
-        String regex = "Your Order #";
-        Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(textMessage);       
-        TimeUnit.SECONDS.sleep(5);
-        try {
-        	m.find();
-        	driver.get(baseUrl);
-        	driver.findElement(By.id("search")).clear();
-        	driver.findElement(By.id("search")).sendKeys(m.group());
-        	}
-        catch (Error e) {
-  	      verificationErrors.append(e.toString());
-  	    }      
-        inbox.close(false);
-        store.close(); 
+    	String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
+    	Properties props = new Properties();
+    	props.setProperty("mail.pop3.socketFactory.class", SSL_FACTORY);
+    	props.setProperty("mail.pop3.socketFactory.fallback", "false");
+    	props.setProperty("mail.pop3.port", "995");
+    	props.setProperty("mail.pop3.socketFactory.port", "995");
+           String host = "pop.mail.ru";
+           String provider = "pop3";
+     
+            Session session = Session.getDefaultInstance(props,
+                    new MailAuthenticator());
+            
+            
+            Store store = session.getStore(provider);
+            store.connect(host, null, null);
+     
+            Folder inbox = store.getFolder("INBOX");
+            inbox.open(Folder.READ_ONLY);
+            
+            Message[] messages = inbox.getMessages();
+            
+               
+            GetMulti gmulti = new GetMulti();
+            String textMessage = gmulti.getText(messages[messages.length - 1]);
+            String regex = "Your Order #(.*)";
+            Pattern p = Pattern.compile(regex);
+            Matcher m = p.matcher(textMessage);
+            m.find(); 
+            	driver.get(baseUrl);
+            	driver.findElement(By.id("search")).clear();
+            	driver.findElement(By.id("search")).sendKeys(m.group());
+            	TimeUnit.SECONDS.sleep(5); 
+
+            inbox.close(false);
+            store.close(); 
   }
 
    private boolean isElementPresent(By by) {

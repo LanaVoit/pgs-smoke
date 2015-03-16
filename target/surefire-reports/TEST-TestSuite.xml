@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="23.431" tests="1" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="2,245.517" tests="47" errors="0" skipped="0" failures="18">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_45\jre\bin"/>
-    <property name="java.vm.version" value="24.45-b08"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\bin"/>
+    <property name="java.vm.version" value="25.25-b02"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
@@ -16,9 +16,9 @@
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\temp\pgs-smoke\pgs-smoke"/>
-    <property name="java.runtime.version" value="1.7.0_45-b18"/>
+    <property name="java.runtime.version" value="1.8.0_25-b18"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Users\Lana\AppData\Local\Temp\"/>
     <property name="line.separator" value="&#10;"/>
@@ -27,38 +27,473 @@
     <property name="os.name" value="Windows 8"/>
     <property name="classworlds.conf" value="C:\Program Files\maven\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;%M2_HOME%\bin;C:\Program Files (x86)\Git\cmd;C:\Tools;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Python27\sqlmap-dev\Python27;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Tools\Selenium;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.7.0_45\bin;C:\Users\Lana\AppData\Roaming\npm;C:\Tools;C:\Tools\apache-maven-3.2.1\bin;C:\Python27\sqlmap-dev\Python27;C:\Tools\Selenium;C:\Tools\apache-jmeter-2.11\lib;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;%M2_HOME%\bin;C:\Program Files (x86)\Git\cmd;C:\Tools;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Python27\sqlmap-dev\Python27;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Tools\Selenium;C:\Program Files\TortoiseSVN\bin;C:\Windows\Microsoft.NET\Framework\v2.0.50727;C:\Program Files\Java\jdk1.8.0_25\bin;C:\Users\Lana\AppData\Roaming\npm;C:\Tools;C:\Tools\apache-maven-3.2.1\bin;C:\Python27\sqlmap-dev\Python27;C:\Tools\Selenium;C:\Tools\apache-jmeter-2.11\lib;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="java.class.version" value="51.0"/>
+    <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="6.2"/>
     <property name="user.home" value="C:\Users\Lana"/>
     <property name="user.timezone" value="Europe/Moscow"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
-    <property name="java.specification.version" value="1.7"/>
+    <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="Cp1251"/>
     <property name="user.name" value="Lana"/>
     <property name="java.class.path" value="C:\Program Files\maven\boot\plexus-classworlds-2.5.1.jar"/>
     <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
-    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_45\jre"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_25\jre"/>
     <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="ru"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.7.0_45"/>
-    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.7.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.7.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.7.0_45\jre\classes"/>
+    <property name="java.version" value="1.8.0_25"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_25\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_25\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_25\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp866"/>
     <property name="java.vendor" value="Oracle Corporation"/>
     <property name="maven.home" value="C:\Program Files\maven"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp866"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testUntitled2" classname="register.Invalide_fields" time="23.431"/>
+  <testcase name="testUntitled4" classname="js_errors.Js_error_home" time="67.101"/>
+  <testcase name="testUntitled4" classname="js_errors.Js_error_listing" time="3.881"/>
+  <testcase name="testUntitled4" classname="js_errors.Js_error_product" time="5.531"/>
+  <testcase name="testUntitled4" classname="js_errors.Js_error_login" time="3.03"/>
+  <testcase name="testUntitled4" classname="js_errors.Js_error_register" time="2.689"/>
+  <testcase name="testUntitled4" classname="js_errors.Js_error_account" time="18.574"/>
+  <testcase name="testUntitled4" classname="js_errors.Js_cart" time="25.545"/>
+  <testcase name="testUntitled4" classname="js_errors.Js_checkout" time="30.115"/>
+  <testcase name="testUntitled2" classname="home.Search" time="44.095"/>
+  <testcase name="testUntitled3" classname="home.Menu" time="4.181"/>
+  <testcase name="testUntitled4" classname="listing.Filter" time="33.673">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.06 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at listing.Filter.testUntitled4(Filter.java:22)
+</failure>
+  </testcase>
+  <testcase name="testUntitled5" classname="listing.Sort" time="26.357"/>
+  <testcase name="testUntitled6" classname="listing.Add_to_wishlist" time="107.82"/>
+  <testcase name="testUntitled" classname="listing.Img_hover" time="8.447"/>
+  <testcase name="testUntitled2" classname="listing.Next_page" time="19.649"/>
+  <testcase name="testUntitled3" classname="listing.Product_page" time="12.496"/>
+  <testcase name="testUntitled4" classname="listing.Description" time="6.517"/>
+  <testcase name="testUntitled5" classname="product.Image" time="14.445"/>
+  <testcase name="testUntitled7" classname="product.Options" time="35.332"/>
+  <testcase name="testUntitled8" classname="product.Wishlist" time="56.544"/>
+  <testcase name="testUntitled9" classname="product.Reviews" time="11.802"/>
+  <testcase name="testUntitled10" classname="product.Ask" time="150.089"/>
+  <testcase name="testUntitled3" classname="cart.Add_cart" time="27.086"/>
+  <testcase name="testUntitled4" classname="cart.Delete_cart" time="22.815"/>
+  <testcase name="testUntitled5" classname="cart.Edit" time="53.351"/>
+  <testcase name="testUntitled6" classname="cart.Update" time="28.139"/>
+  <testcase name="testUntitled" classname="cart.Move_wishlist" time="82.144"/>
+  <testcase name="testUntitled2" classname="cart.Coupon" time="13.279">
+    <failure message="element not visible&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 15 milliseconds&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.ElementNotVisibleException">org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15 milliseconds
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at cart.Coupon.testUntitled2(Coupon.java:28)
+</failure>
+  </testcase>
+  <testcase name="testUntitled3" classname="cart.Checkout" time="93.932"/>
+  <testcase name="testUntitled4" classname="login.Empty_field" time="3.514"/>
+  <testcase name="testUntitled" classname="login.Invalid_field" time="16.12"/>
+  <testcase name="testUntitled2" classname="login.Login" time="9.687">
+    <failure message="expected:&lt;[MY DASHBOARD]&gt; but was:&lt;[SHOPPING CART IS EMPTY]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[MY DASHBOARD]> but was:<[SHOPPING CART IS EMPTY]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at login.Login.testUntitled2(Login.java:32)
+]]></failure>
+  </testcase>
+  <testcase name="testUntitled" classname="register.Empty_field" time="34.629">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.03 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:441)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:426)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at register.Empty_field.testUntitled(Empty_field.java:25)
+</failure>
+  </testcase>
+  <testcase name="testUntitled2" classname="register.Invalide_fields" time="34.337">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.02 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at register.Invalide_fields.testUntitled2(Invalide_fields.java:24)
+</failure>
+  </testcase>
+  <testcase name="testUntitled2" classname="register.Valide_fields" time="34.14">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.05 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:449)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:357)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at register.Valide_fields.testUntitled2(Valide_fields.java:47)
+</failure>
+  </testcase>
+  <testcase name="testUntitled4" classname="account.Edit_account" time="30.936">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 25.51 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 25.51 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at account.Edit_account.testUntitled4(Edit_account.java:26)
+</failure>
+  </testcase>
+  <testcase name="testUntitled7" classname="account.Menu" time="39.541">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.05 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at account.Menu.testUntitled7(Menu.java:27)
+</failure>
+  </testcase>
+  <testcase name="testUntitled3" classname="account.Address" time="39.698">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.03 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at account.Address.testUntitled3(Address.java:27)
+</failure>
+  </testcase>
+  <testcase name="testUntitled7" classname="wishlist.Create_delete_wishlist" time="34.542">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.05 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at wishlist.Create_delete_wishlist.testUntitled7(Create_delete_wishlist.java:26)
+</failure>
+  </testcase>
+  <testcase name="testUntitled5" classname="wishlist.Add_cart" time="40.986">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.07 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at wishlist.Add_cart.testUntitled5(Add_cart.java:30)
+</failure>
+  </testcase>
+  <testcase name="testUntitled8" classname="wishlist.Add_delete_wishlist" time="39.813">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.02 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at wishlist.Add_delete_wishlist.testUntitled8(Add_delete_wishlist.java:30)
+</failure>
+  </testcase>
+  <testcase name="testUntitled4" classname="wishlist.Share" time="40.109">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.04 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at wishlist.Share.testUntitled4(Share.java:45)
+</failure>
+  </testcase>
+  <testcase name="testUntitled8" classname="wishlist.Add_all_cart" time="40.038">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.01 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at wishlist.Add_all_cart.testUntitled8(Add_all_cart.java:30)
+</failure>
+  </testcase>
+  <testcase name="testUntitled9" classname="checkout.Order_login_customer" time="40.178">
+    <failure message="no such element&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 30.04 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 30.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at checkout.Order_login_customer.testUntitled9(Order_login_customer.java:28)
+</failure>
+  </testcase>
+  <testcase name="testUntitled10" classname="checkout.Order_logout" time="35.121">
+    <failure message="invalid element state: Element is not currently interactable and may not be manipulated&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 15 milliseconds&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.InvalidElementStateException">org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15 milliseconds
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:113)
+	at checkout.Order_logout.testUntitled10(Order_logout.java:37)
+</failure>
+  </testcase>
+  <testcase name="testUntitled4" classname="checkout.Email" time="36.298">
+    <failure message="No match found" type="java.lang.IllegalStateException">java.lang.IllegalStateException: No match found
+	at java.util.regex.Matcher.group(Matcher.java:536)
+	at java.util.regex.Matcher.group(Matcher.java:496)
+	at checkout.Email.testUntitled4(Email.java:77)
+</failure>
+  </testcase>
+  <testcase name="testUntitled5" classname="product.Recently_viewed" time="687.171">
+    <failure message="chrome not reachable&#10;  (Session info: chrome=40.0.2214.115)&#10;  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 2.02 seconds&#10;Build info: version: &apos;2.43.1&apos;, revision: &apos;5163bce&apos;, time: &apos;2014-09-10 16:27:58&apos;&#10;System info: host: &apos;PC-SBARANOVA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 8&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.2&apos;, java.version: &apos;1.8.0_25&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 3e93fc800797cf91e5935b56cba608c6" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=40.0.2214.115)
+  (Driver info: chromedriver=2.9.248315,platform=Windows NT 6.2 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.02 seconds
+Build info: version: '2.43.1', revision: '5163bce', time: '2014-09-10 16:27:58'
+System info: host: 'PC-SBARANOVA', ip: '192.168.56.1', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Lana\AppData\Local\Temp\scoped_dir6368_15064}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=40.0.2214.115, platform=WIN8, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3e93fc800797cf91e5935b56cba608c6
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:408)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:614)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.refresh(RemoteWebDriver.java:854)
+	at product.Recently_viewed.testUntitled5(Recently_viewed.java:36)
+</failure>
+  </testcase>
 </testsuite>

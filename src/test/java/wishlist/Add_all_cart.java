@@ -20,47 +20,68 @@ public class Add_all_cart extends PGS.pages.TestBase {
 
     @Test
   public void testUntitled8() throws Exception {
-	driver.manage().window().maximize();
-	Actions actions = new Actions(driver);
-    driver.get(baseUrl + "customer/account/login/");
-    driver.findElement(By.id("email")).clear();
-    driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
-    driver.findElement(By.id("pass")).clear();
-    driver.findElement(By.id("pass")).sendKeys("qwerty");
-    driver.findElement(By.id("send2")).click();
-    assertEquals("My dashboard", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Great to see you, Tom Johns!", driver.findElement(By.cssSelector("h3.hello")).getText());
+    	driver.manage().window().maximize();
+    	Actions actions = new Actions(driver);
+        driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+                ,driver.findElement(By.cssSelector("li > a.button > span")));
+        driver.findElement(By.cssSelector("li > a.button > span")).click();
+        TimeUnit.SECONDS.sleep(5);
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
+        driver.findElement(By.id("pass")).clear();
+        driver.findElement(By.id("pass")).sendKeys("qwerty");
+        driver.findElement(By.id("send2")).click();
+        TimeUnit.SECONDS.sleep(10);
+        driver.findElement(By.cssSelector("span")).click();
+        TimeUnit.SECONDS.sleep(3);
+        driver.findElement(By.cssSelector("span")).click();
+        TimeUnit.SECONDS.sleep(3);
+        assertEquals("Engraved Swarovski Crystal Heart Vase has been added to your wishlist.", driver.findElement(By.cssSelector("span")).getText());
+        driver.findElement(By.cssSelector("button.mfp-close")).click();
+        TimeUnit.SECONDS.sleep(3);
+    driver.get(baseUrl + "personalised-swarovski-big-heart-diamante-vase.html");
+    TimeUnit.SECONDS.sleep(5);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.cssSelector("li > a.button > span")));
+    driver.findElement(By.cssSelector("li > a.button > span")).click();
     TimeUnit.SECONDS.sleep(3);
+    driver.findElement(By.cssSelector("span")).click();
+    TimeUnit.SECONDS.sleep(3);
+    driver.findElement(By.cssSelector("span")).click();
+    TimeUnit.SECONDS.sleep(3);
+    driver.findElement(By.cssSelector("button.mfp-close")).click();
     driver.get(baseUrl + "wishlist/");
-    driver.findElement(By.linkText("Rtttt")).click();
+
     TimeUnit.SECONDS.sleep(3);
-    driver.findElement(By.id("select-all")).click();
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("button.button.btn-add")));
     driver.findElement(By.cssSelector("button.button.btn-add")).click();
+    try {
+      assertEquals("2 product(s) have been added to shopping cart: \"Engraved Swarovski Crystal Heart Vase\", \"Personalised Swarovski Diamante Vase - Big Heart Design\".", driver.findElement(By.cssSelector("li > span")).getText());
+    } catch (Error e) {
+      verificationErrors.append(e.toString());
+    }
+    try {
+      assertEquals("You have no items in your wishlist.", driver.findElement(By.cssSelector("p.wishlist-empty")).getText());
+    } catch (Error e) {
+      verificationErrors.append(e.toString());
+    }    
     driver.get(baseUrl + "checkout/cart/");
     assertEquals("YOUR SHOPPING BASKET", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Personalised Months of the Year Book", driver.findElement(By.xpath("(//a[contains(text(),'Personalised Months of the Year Book')])[3]")).getText());
-    assertEquals("Personalised Designer Wedding Pilsner Glass - Hats Design", driver.findElement(By.xpath("(//a[contains(text(),'Personalised Designer Wedding Pilsner Glass - Hats Design')])[3]")).getText());
-    driver.findElement(By.xpath("//div[@id='cart-item-2481389']/div[3]/div/a[2]/span")).click();
-    TimeUnit.SECONDS.sleep(3);
-	driver.findElement(By.cssSelector("span")).click();
-	TimeUnit.SECONDS.sleep(3);
-	driver.findElement(By.xpath("(//a[@id='6446']/span)[4]")).click();
-	TimeUnit.SECONDS.sleep(5);
-	assertEquals("Personalised Months of the Year Book has been added to your wishlist.", driver.findElement(By.cssSelector("span")).getText());
-	driver.findElement(By.cssSelector("button.mfp-close")).click();
-	
-	driver.findElement(By.xpath("//div[@id='cart-item-2481390']/div[3]/div/a[2]/span")).click();
-    TimeUnit.SECONDS.sleep(3);
-	driver.findElement(By.cssSelector("span")).click();
-	TimeUnit.SECONDS.sleep(3);
-	driver.findElement(By.xpath("(//a[@id='2662']/span)[4]")).click();
-	TimeUnit.SECONDS.sleep(5);
-	assertEquals("Personalised Designer Wedding Pilsner Glass - Hats Design has been added to your wishlist.", driver.findElement(By.cssSelector("span")).getText());
-	driver.findElement(By.cssSelector("button.mfp-close")).click();
-	assertEquals("Shopping Cart is Empty", driver.findElement(By.cssSelector("h1")).getText());
-	
+    try {
+        assertEquals("Engraved Swarovski Crystal Heart Vase", driver.findElement(By.xpath("(//a[contains(text(),'Engraved Swarovski Crystal Heart Vase')])[3]")).getText());
+      } catch (Error e) {
+        verificationErrors.append(e.toString());
+      }
+      driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
+      TimeUnit.SECONDS.sleep(7);
+      driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
+      TimeUnit.SECONDS.sleep(5);
+      assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
+      TimeUnit.SECONDS.sleep(5);
+      driver.get(baseUrl + "customer/account/logout");
+      TimeUnit.SECONDS.sleep(5);
 
   }
 

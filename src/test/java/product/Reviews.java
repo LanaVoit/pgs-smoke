@@ -30,14 +30,14 @@ public class Reviews extends PGS.pages.TestBase {
             ,driver.findElement(By.cssSelector("div.reviews-legend-content > p")));
     assertEquals("We have chosen to work with one of the the most trusted independent customer feedback forum, FEEFO. All reviews collected by FEEFO after real purchases and published on product pages.", driver.findElement(By.cssSelector("div.reviews-legend-content > p")).getText());
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.linkText("READ ALL CUSTOMER REVIEWS")));
-    assertEquals("READ ALL CUSTOMER REVIEWS", driver.findElement(By.linkText("READ ALL CUSTOMER REVIEWS")).getText());
-    driver.findElement(By.linkText("READ ALL CUSTOMER REVIEWS")).click();
+            ,driver.findElement(By.linkText("LOAD MORE")));
+    assertEquals("LOAD MORE", driver.findElement(By.linkText("LOAD MORE")).getText());
+    driver.findElement(By.linkText("LOAD MORE")).click();
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.linkText("READ LESS CUSTOMER REVIEWS")));
-    assertEquals("READ LESS CUSTOMER REVIEWS", driver.findElement(By.linkText("READ LESS CUSTOMER REVIEWS")).getText());
-    driver.findElement(By.linkText("READ LESS CUSTOMER REVIEWS")).click();
-    assertEquals("READ ALL CUSTOMER REVIEWS", driver.findElement(By.linkText("READ ALL CUSTOMER REVIEWS")).getText());
+            ,driver.findElement(By.linkText("LOAD MORE")));
+    assertEquals("LOAD MORE", driver.findElement(By.linkText("LOAD MORE")).getText());
+    driver.findElement(By.linkText("LOAD MORE")).click();
+    assertEquals("LOAD MORE", driver.findElement(By.linkText("LOAD MORE")).getText());
   }
 
    private boolean isElementPresent(By by) {

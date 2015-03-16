@@ -35,19 +35,32 @@ public class Share extends PGS.pages.TestBase {
 
     @Test
   public void testUntitled4() throws Exception {
-	driver.manage().window().maximize();
-	Actions actions = new Actions(driver);
-    driver.get(baseUrl + "customer/account/login/");
-    driver.findElement(By.id("email")).clear();
-    driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
-    driver.findElement(By.id("pass")).clear();
-    driver.findElement(By.id("pass")).sendKeys("qwerty");
-    driver.findElement(By.id("send2")).click();
-    assertEquals("My dashboard", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Great to see you, Tom Johns!", driver.findElement(By.cssSelector("h3.hello")).getText());
-    TimeUnit.SECONDS.sleep(3);
+    	driver.manage().window().maximize();
+    	Actions actions = new Actions(driver);
+        driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+                ,driver.findElement(By.cssSelector("li > a.button > span")));
+        driver.findElement(By.cssSelector("li > a.button > span")).click();
+        TimeUnit.SECONDS.sleep(5);
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
+        driver.findElement(By.id("pass")).clear();
+        driver.findElement(By.id("pass")).sendKeys("qwerty");
+        driver.findElement(By.id("send2")).click();
+        TimeUnit.SECONDS.sleep(10);
+        driver.findElement(By.cssSelector("span")).click();
+        TimeUnit.SECONDS.sleep(3);
+        driver.findElement(By.cssSelector("span")).click();
+        TimeUnit.SECONDS.sleep(3);
+        assertEquals("Engraved Swarovski Crystal Heart Vase has been added to your wishlist.", driver.findElement(By.cssSelector("span")).getText());
+        driver.findElement(By.cssSelector("button.mfp-close")).click();
+        TimeUnit.SECONDS.sleep(3);
+    
+        driver.get(baseUrl + "wishlist/");
+        assertEquals("Engraved Swarovski Crystal Heart Vase", driver.findElement(By.cssSelector("div.columns.small-6 > h3.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")).getText());
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+                ,driver.findElement(By.cssSelector("div.columns.small-6 > h3.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")));
         
-    driver.get(baseUrl + "wishlist/");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.name("save_and_share")));
     driver.findElement(By.name("save_and_share")).click();
@@ -56,63 +69,68 @@ public class Share extends PGS.pages.TestBase {
     driver.findElement(By.id("email_address")).sendKeys("qatestingtestqa@gmail.com");
     driver.findElement(By.id("message")).clear();
     driver.findElement(By.id("message")).sendKeys("test share");
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.xpath("(//button[@type='submit'])[2]")));
     driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Your Wishlist has been shared.", driver.findElement(By.cssSelector("li > span")).getText());
+    WebElement signout = driver.findElement(By.linkText("Sign Out"));
+    WebElement my_account = driver.findElement(By.linkText("My Account"));
+    actions.moveToElement(my_account).build().perform();
+    signout.click();
+    TimeUnit.SECONDS.sleep(5);
     TimeUnit.SECONDS.sleep(60);
-    class MailAuthenticator extends Authenticator {
-  		 
-	    public PasswordAuthentication getPasswordAuthentication() {
-	         return new PasswordAuthentication("qatestingtestqa@gmail.com", "parol123");
-	    }
-	}
-	
-	Properties props = new Properties();
-	
-	props.put("mail.smtp.user", "qatestingtestqa@gmail.com");
-	props.put("mail.host", "pop.gmail.com");
-	props.put("mail.store.protocol", "pop3s");
-    props.put("mail.pop3s.auth", "true");
-    props.put("mail.pop3s.port", 995);
-	props.put("mail.smtp.starttls.enable","true");
-	props.put("mail.smtp.debug", "true");
-	props.put("mail.smtp.auth", "true");
-	props.put("mail.smtp.socketFactory.port", 995);
-	props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-	props.put("mail.smtp.socketFactory.fallback", "false");
+    
+        class MailAuthenticator extends Authenticator {
+      		 
+    	    public PasswordAuthentication getPasswordAuthentication() {
+    	         return new PasswordAuthentication("qatestingtestqa@gmail.com", "parol123");
+    	    }
+    	}
+    	
+    	Properties props = new Properties();
+    	
+    	props.put("mail.smtp.user", "qatestingtestqa@gmail.com");
+    	props.put("mail.host", "pop.gmail.com");
+    	props.put("mail.store.protocol", "pop3s");
+        props.put("mail.pop3s.auth", "true");
+        props.put("mail.pop3s.port", 995);
+    	props.put("mail.smtp.starttls.enable","true");
+    	props.put("mail.smtp.debug", "true");
+    	props.put("mail.smtp.auth", "true");
+    	props.put("mail.smtp.socketFactory.port", 995);
+    	props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+    	props.put("mail.smtp.socketFactory.fallback", "false");
 
-	Session session = Session.getInstance(props, new MailAuthenticator());
-	session.setDebug(true);
-       	  
-	
+    	Session session = Session.getInstance(props, new MailAuthenticator());
+    	session.setDebug(true);
+	       	  
+    	
 
-	
-        Store store = session.getStore("pop3s");
-        store.connect("pop.gmail.com", "qatestingtestqa@gmail.com", "parol123");
- 
-        Folder inbox = store.getFolder("INBOX");
-        inbox.open(Folder.READ_ONLY);
-        
-        Message[] messages = inbox.getMessages();
-        
-           
-        GetMulti gmulti = new GetMulti();
-        String textMessage = gmulti.getText(messages[messages.length - 1]);
-        String regex = "test share";
-        Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(textMessage);       
-        TimeUnit.SECONDS.sleep(5);
-        try {
-        	m.find();
-        	driver.get(baseUrl);
-        	driver.findElement(By.id("search")).clear();
-        	driver.findElement(By.id("search")).sendKeys(m.group());
-        	}
-        catch (Error e) {
-  	      verificationErrors.append(e.toString());
-  	    }      
-        inbox.close(false);
-        store.close(); 
+    	
+	        Store store = session.getStore("pop3s");
+	        store.connect("pop.gmail.com", "qatestingtestqa@gmail.com", "parol123");
+	 
+	        Folder inbox = store.getFolder("INBOX");
+	        inbox.open(Folder.READ_ONLY);
+	        
+	        Message[] messages = inbox.getMessages();
+	        
+	           
+	        GetMulti gmulti = new GetMulti();
+	        String textMessage = gmulti.getText(messages[messages.length - 1]);
+	        String regex = "test share";
+	        Pattern p = Pattern.compile(regex);
+	        Matcher m = p.matcher(textMessage);
+	        if (m.find()) {
+	        	    driver.get(baseUrl);
+	        	    driver.findElement(By.id("search")).clear();
+	        	    driver.findElement(By.id("search")).sendKeys(m.group());
+	        	TimeUnit.SECONDS.sleep(5);
+	        	   
+	        }
+	        inbox.close(false);
+	        store.close();  
   }
 
    private boolean isElementPresent(By by) {

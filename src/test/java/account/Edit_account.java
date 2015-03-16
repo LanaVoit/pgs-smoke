@@ -28,27 +28,39 @@ public class Edit_account extends PGS.pages.TestBase {
     driver.findElement(By.id("pass")).clear();
     driver.findElement(By.id("pass")).sendKeys("qwerty");
     driver.findElement(By.id("send2")).click();
-    assertEquals("My dashboard", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("Great to see you, Tom Johns!", driver.findElement(By.cssSelector("h3.hello")).getText());
+    TimeUnit.SECONDS.sleep(5);
+    assertEquals("MY DASHBOARD", driver.findElement(By.cssSelector("h1")).getText());
+    assertEquals("GREAT TO SEE YOU, TOM JOHNS!", driver.findElement(By.cssSelector("h3.hello")).getText());
     TimeUnit.SECONDS.sleep(3);
-    driver.findElement(By.linkText("Edit")).click();
+  //  driver.findElement(By.linkText("Edit")).click();  
+    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[4]/div[1]/div/div[2]/div[1]/div[1]/div[1]/a")).click();
     TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.id("firstname")).clear();
     driver.findElement(By.id("firstname")).sendKeys("Tom2");
     driver.findElement(By.id("lastname")).clear();
     driver.findElement(By.id("lastname")).sendKeys("Johns2");
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.xpath("(//button[@type='submit'])[2]")));
     driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
     TimeUnit.SECONDS.sleep(3);
     assertEquals("The account information has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
-    assertEquals("Great to see you, Tom2 Johns2!", driver.findElement(By.cssSelector("h3.hello")).getText());
-    driver.findElement(By.linkText("Edit")).click();
+    assertEquals("GREAT TO SEE YOU, TOM2 JOHNS2!", driver.findElement(By.cssSelector("h3.hello")).getText());
+    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[4]/div[1]/div/div[2]/div[1]/div[1]/div[1]/a")).click();
     TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.id("firstname")).clear();
     driver.findElement(By.id("firstname")).sendKeys("Tom");
     driver.findElement(By.id("lastname")).clear();
     driver.findElement(By.id("lastname")).sendKeys("Johns");
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.xpath("(//button[@type='submit'])[2]")));
+
     driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
     TimeUnit.SECONDS.sleep(3);
+    WebElement signout = driver.findElement(By.linkText("Sign Out"));
+    WebElement my_account = driver.findElement(By.linkText("My Account"));
+    actions.moveToElement(my_account).build().perform();
+    signout.click();
+    TimeUnit.SECONDS.sleep(5);
   }
 
    private boolean isElementPresent(By by) {

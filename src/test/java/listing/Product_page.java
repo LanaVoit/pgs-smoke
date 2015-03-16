@@ -22,13 +22,13 @@ public class Product_page extends PGS.pages.TestBase {
   public void testUntitled3() throws Exception {
 	driver.manage().window().maximize(); 
 	Actions actions = new Actions(driver);
-    driver.get(baseUrl + "crystal-gifts");
+    driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     TimeUnit.SECONDS.sleep(3);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.cssSelector("h2.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")));
-    driver.findElement(By.cssSelector("h2.product-name > a[title=\"Engraved Swarovski Crystal Heart Vase\"]")).click();
+            ,driver.findElement(By.cssSelector("h2.product-name > a[title=\"Personalised Children's Pirate Ship Money Box\"]")));
+    driver.findElement(By.cssSelector("h2.product-name > a[title=\"Personalised Children's Pirate Ship Money Box\"]")).click();
     TimeUnit.SECONDS.sleep(3);
-    assertEquals("Engraved Swarovski Crystal Heart Vase", driver.findElement(By.cssSelector("h1 > span")).getText());
+    assertEquals("Personalised Children's Pirate Ship Money Box", driver.findElement(By.cssSelector("h1 > span")).getText());
   }
 
    private boolean isElementPresent(By by) {

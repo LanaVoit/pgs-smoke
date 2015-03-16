@@ -17,21 +17,22 @@ public class Sort extends PGS.pages.TestBase {
     @Test
   public void testUntitled5() throws Exception {
 	driver.manage().window().maximize();
-    driver.get(baseUrl + "crystal-gifts");
-    driver.get(baseUrl + "crystal-gifts?dir=asc&order=price");
+    driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
+    driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html?dir=asc&order=price");
     TimeUnit.SECONDS.sleep(3);
-    assertEquals("£11.99", driver.findElement(By.cssSelector("#product-price-388 > span.price")).getText());
-    assertEquals("£12.99", driver.findElement(By.cssSelector("#product-price-292 > span.price")).getText());
-    assertEquals("£14.99", driver.findElement(By.cssSelector("#product-price-85 > span.price")).getText());
-    driver.get(baseUrl + "crystal-gifts?dir=asc&order=name");
+    assertEquals("£5.99", driver.findElement(By.cssSelector("#product-price-777 > span.price")).getText());
+    assertEquals("£5.99", driver.findElement(By.cssSelector("#product-price-778 > span.price")).getText());
+    assertEquals("£5.99", driver.findElement(By.cssSelector("#product-price-1282 > span.price")).getText());
+    driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html?dir=asc&order=name");
     TimeUnit.SECONDS.sleep(3);
-    assertEquals("Engraved Anniversary Crystal Wine Glasses", driver.findElement(By.linkText("Engraved Anniversary Crystal Wine Glasses")).getText());
-    assertEquals("Engraved Birthday Crystal Whisky Glass", driver.findElement(By.linkText("Engraved Birthday Crystal Whisky Glass")).getText());
-    assertEquals("Engraved Crystal Bible Book", driver.findElement(By.linkText("Engraved Crystal Bible Book")).getText());
+    assertEquals("Baby Boy Photo Frame Token", driver.findElement(By.linkText("Baby Boy Photo Frame Token")).getText());
+    assertEquals("Baby Girl Photo Frame Token", driver.findElement(By.linkText("Baby Girl Photo Frame Token")).getText());
+    assertEquals("Baby Prints On Canvas Gift Box", driver.findElement(By.linkText("Baby Prints On Canvas Gift Box")).getText());
     driver.findElement(By.linkText("2")).click();
     TimeUnit.SECONDS.sleep(3);
-    assertEquals("30 to 52 of 52 items", driver.findElement(By.cssSelector("p.amount")).getText());
+    assertEquals("30 to 58 of 583 items", driver.findElement(By.cssSelector("p.amount")).getText());
     TimeUnit.SECONDS.sleep(3);
+    driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html?dir=desc&order=bestsellers");
   }
 
    private boolean isElementPresent(By by) {
