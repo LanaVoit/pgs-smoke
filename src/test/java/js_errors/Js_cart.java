@@ -36,7 +36,7 @@ public class Js_cart extends PGS.pages.TestBase {
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
                 ,add_to_cart);      
         add_to_cart.click();      
-        TimeUnit.SECONDS.sleep(5);
+        TimeUnit.SECONDS.sleep(10);
         driver.get(baseUrl + "checkout/cart/");     
         TimeUnit.SECONDS.sleep(5);
         
