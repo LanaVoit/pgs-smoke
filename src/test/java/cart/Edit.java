@@ -48,7 +48,7 @@ public class Edit extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     
     assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

@@ -36,12 +36,11 @@ public class Js_error_home extends PGS.pages.TestBase {
         list.isEmpty();
         for (LogEntry entry: logsEntries) {        	
     		System.out.println(entry.getMessage());  
-    		//driver.quit();
+
         }
         
 		    assertEquals(list, logsEntries);
-		   // driver.quit();
-		    TimeUnit.SECONDS.sleep(10);
+
 		    
   }
 

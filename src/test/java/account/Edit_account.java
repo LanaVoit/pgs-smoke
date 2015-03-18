@@ -32,7 +32,6 @@ public class Edit_account extends PGS.pages.TestBase {
     assertEquals("MY DASHBOARD", driver.findElement(By.cssSelector("h1")).getText());
     assertEquals("GREAT TO SEE YOU, TOM JOHNS!", driver.findElement(By.cssSelector("h3.hello")).getText());
     TimeUnit.SECONDS.sleep(3);
-  //  driver.findElement(By.linkText("Edit")).click();  
     driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[4]/div[1]/div/div[2]/div[1]/div[1]/div[1]/a")).click();
     TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.id("firstname")).clear();
@@ -60,8 +59,7 @@ public class Edit_account extends PGS.pages.TestBase {
     WebElement my_account = driver.findElement(By.linkText("My Account"));
     actions.moveToElement(my_account).build().perform();
     signout.click();
-    TimeUnit.SECONDS.sleep(5);
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

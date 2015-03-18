@@ -23,7 +23,7 @@ public class Recently_viewed extends PGS.pages.TestBase {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
 	driver.get(baseUrl);
-	driver.findElement(By.xpath("//*[@id='header']/div/div[2]/div/div[1]/ul/li/a")).click();
+	/*driver.findElement(By.xpath("//*[@id='header']/div/div[2]/div/div[1]/ul/li/a")).click();
 	TimeUnit.SECONDS.sleep(5);
 	driver.get("chrome://settings/clearBrowserData");
 
@@ -31,7 +31,7 @@ public class Recently_viewed extends PGS.pages.TestBase {
 	driver.switchTo().frame(driver.findElement(cleanCacheIframe));
 	 
 	driver.findElement(By.id("clear-browser-data-commit")).click();
-	TimeUnit.SECONDS.sleep(5);
+	TimeUnit.SECONDS.sleep(5);*/
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     driver.navigate().refresh();
     TimeUnit.SECONDS.sleep(5);
@@ -76,7 +76,6 @@ public class Recently_viewed extends PGS.pages.TestBase {
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("//div[5]/div/div/h2/span")));
     assertNotEquals("MY RECENTLY VIEWED ITEMS", driver.findElement(By.xpath("//div[5]/div/div/h2/span")).getText());
-    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

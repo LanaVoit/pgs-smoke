@@ -31,7 +31,7 @@ public class Menu extends PGS.pages.TestBase {
     assertEquals("Years", driver.findElement(By.linkText("Years")).getText());
     assertEquals("How About?",driver.findElement(By.linkText("How About?")).getText());
     assertEquals("Trending", driver.findElement(By.linkText("Trending")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

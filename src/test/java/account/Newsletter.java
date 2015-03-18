@@ -48,8 +48,7 @@ public class Newsletter extends PGS.pages.TestBase {
     WebElement my_account = driver.findElement(By.linkText("My Account"));
     actions.moveToElement(my_account).build().perform();
     signout.click();
-    TimeUnit.SECONDS.sleep(5);
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

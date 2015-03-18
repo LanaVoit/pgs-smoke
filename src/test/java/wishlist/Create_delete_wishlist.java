@@ -54,7 +54,6 @@ public class Create_delete_wishlist extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(3);
     assertEquals("YOU ARE NOW LOGGED OUT", driver.findElement(By.cssSelector("h1")).getText());
     driver.get(baseUrl + "customer/account/login/");
-    TimeUnit.SECONDS.sleep(10);
   }
 
    private boolean isElementPresent(By by) {

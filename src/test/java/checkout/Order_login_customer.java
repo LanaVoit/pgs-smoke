@@ -97,7 +97,7 @@ public class Order_login_customer extends PGS.pages.TestBase {
 
         TimeUnit.SECONDS.sleep(10);
         assertEquals("1 order(s) have been canceled.", driver.findElement(By.cssSelector("li > span")).getText());
-        TimeUnit.SECONDS.sleep(10);
+
     }
     
   }

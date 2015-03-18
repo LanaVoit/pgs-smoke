@@ -2,6 +2,8 @@ package PGS.pages;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
@@ -9,6 +11,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.ScreenshotException;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -39,7 +43,7 @@ public class TestBase {
 	
 
 	@BeforeClass
-	public void init() {
+	public void init() throws MalformedURLException {
 		baseUrl = PropertyLoader.loadProperty("site.url");
 		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
 
@@ -51,9 +55,21 @@ public class TestBase {
 		String username = PropertyLoader.loadProperty("user.username");
 		String password = PropertyLoader.loadProperty("user.password");
 		
-		driver = WebDriverFactory.getInstance(gridHubUrl, browser, username,
-				password);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		DesiredCapabilities capabillities = DesiredCapabilities.chrome();
+	        //capabillities.setCapability("platform", Platform.LINUX);
+	        capabillities.setCapability("screen-resolution", "1280x1024");
+	        capabillities.setCapability("passed", "true");	 
+	        capabillities.setCapability("name", "turnkeye.ru");	
+	        driver = new RemoteWebDriver(
+	                    new URL("http://127.0.0.1:4444/wd/hub"),
+	                    capabillities);
+	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+	}  
+	  
+	@AfterMethod
+	public void stopDriver()throws Exception{
+	driver.quit();
 	}
 	
 	

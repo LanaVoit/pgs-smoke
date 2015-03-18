@@ -28,7 +28,7 @@ public class Img_hover extends PGS.pages.TestBase {
             ,driver.findElement(By.cssSelector("li#item-12 a.product-image")));
     String img_test = "http://dev.personalisedgiftsshop.co.uk/media/catalog/product/cache/1/small_image/335x/9df78eab33525d08d6e5fb8d27136e95/p/0/p010257.jpg";
     assertEquals(img_test, driver.findElement(By.cssSelector("li#item-12 a.product-image img")).getAttribute("src").toString());
-    TimeUnit.SECONDS.sleep(10);
+
     
   }
 

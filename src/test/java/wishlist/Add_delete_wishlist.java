@@ -60,8 +60,7 @@ public class Add_delete_wishlist extends PGS.pages.TestBase {
         WebElement my_account = driver.findElement(By.linkText("My Account"));
         actions.moveToElement(my_account).build().perform();
         signout.click();
-        TimeUnit.SECONDS.sleep(5);
-        TimeUnit.SECONDS.sleep(10);
+
 
   }
 

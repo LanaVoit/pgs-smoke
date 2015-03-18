@@ -40,8 +40,7 @@ public class Js_error_listing extends PGS.pages.TestBase {
         }
         
 		    assertEquals(list, logsEntries);
-		   // driver.quit(); 
-		    TimeUnit.SECONDS.sleep(10);
+
 		    
   }
 

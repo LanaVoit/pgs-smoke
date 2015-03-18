@@ -103,7 +103,7 @@ public class Order_logout extends PGS.pages.TestBase {
         assertEquals("1 order(s) have been canceled.", driver.findElement(By.cssSelector("li > span")).getText());
     	   
     }
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

@@ -58,8 +58,7 @@ public class Js_error_account extends PGS.pages.TestBase {
         signout.click();
         TimeUnit.SECONDS.sleep(5);
 		    assertEquals(list, logsEntries);
-		   // driver.quit(); 
-		    TimeUnit.SECONDS.sleep(10);
+
 		    
   }
 

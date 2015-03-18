@@ -64,8 +64,7 @@ public class Move_wishlist extends PGS.pages.TestBase {
     WebElement signout = driver.findElement(By.linkText("Sign Out"));
     actions.moveToElement(driver.findElement(By.linkText("My Account"))).build().perform();
     signout.click();
-    TimeUnit.SECONDS.sleep(5);
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

@@ -40,7 +40,7 @@ public class Update extends PGS.pages.TestBase {
     driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
     TimeUnit.SECONDS.sleep(7);
     assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

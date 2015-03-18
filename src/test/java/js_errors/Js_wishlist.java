@@ -59,8 +59,7 @@ public class Js_wishlist extends PGS.pages.TestBase {
         signout.click();
         TimeUnit.SECONDS.sleep(5);
 		    assertEquals(list, logsEntries);
-		   // driver.quit(); 
-		    TimeUnit.SECONDS.sleep(10);
+
 		    
   }
 

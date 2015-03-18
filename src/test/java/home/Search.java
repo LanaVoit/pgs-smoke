@@ -54,7 +54,7 @@ public class Search extends PGS.pages.TestBase {
     driver.findElement(By.xpath("//div[@id='search_autocomplete']/ul/li[2]")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("SEARCH RESULTS FOR 'PERSONALISED'", driver.findElement(By.cssSelector("h1")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

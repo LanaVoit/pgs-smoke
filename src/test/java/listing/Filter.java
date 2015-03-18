@@ -33,8 +33,7 @@ public class Filter extends PGS.pages.TestBase {
     driver.findElement(By.linkText("reset")).click();
     TimeUnit.SECONDS.sleep(3);
     assertEquals("1 to 29 of 583 items", driver.findElement(By.cssSelector("p.amount")).getText());
-    TimeUnit.SECONDS.sleep(3);
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

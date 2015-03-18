@@ -20,13 +20,13 @@ public class Checkout extends PGS.pages.TestBase {
     @Test
   public void Checkout() throws Exception {
 	driver.manage().window().maximize();
-	driver.get("chrome://settings/clearBrowserData");
+	/*driver.get("chrome://settings/clearBrowserData");
 
 	final By cleanCacheIframe = By.xpath("//iframe[@src='chrome://settings-frame/clearBrowserData']");
 	//driver.switchTo().frame(driver.findElement(cleanCacheIframe));
 	 
 	driver.findElement(By.id("clear-browser-data-commit")).click();
-	TimeUnit.SECONDS.sleep(5);
+	TimeUnit.SECONDS.sleep(5);*/
 	driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")));
@@ -62,7 +62,7 @@ public class Checkout extends PGS.pages.TestBase {
     driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

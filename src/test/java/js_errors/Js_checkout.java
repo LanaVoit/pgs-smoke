@@ -57,8 +57,7 @@ public class Js_checkout extends PGS.pages.TestBase {
 		    driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
 		    TimeUnit.SECONDS.sleep(5);
 		    assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
-		   // driver.quit(); 
-		    TimeUnit.SECONDS.sleep(10);
+
 		    
   }
 

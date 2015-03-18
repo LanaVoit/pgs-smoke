@@ -131,7 +131,7 @@ public class Share extends PGS.pages.TestBase {
 	        }
 	        inbox.close(false);
 	        store.close();  
-	        TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

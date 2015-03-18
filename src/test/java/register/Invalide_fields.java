@@ -55,7 +55,7 @@ public class Invalide_fields extends PGS.pages.TestBase {
             ,driver.findElement(By.cssSelector("div.buttons-set > button.button.btn-primary")));
     driver.findElement(By.cssSelector("div.buttons-set > button.button.btn-primary")).click();
     assertEquals("Incorrect CAPTCHA.", driver.findElement(By.cssSelector("li > span")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

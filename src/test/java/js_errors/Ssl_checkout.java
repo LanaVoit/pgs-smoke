@@ -55,8 +55,7 @@ public class Ssl_checkout extends PGS.pages.TestBase {
         }
 
 		    assertEquals(list, logsEntries);
-		   // driver.quit(); 
-		    TimeUnit.SECONDS.sleep(10);
+
 		    
   }
 

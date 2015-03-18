@@ -35,7 +35,7 @@ public class Image extends PGS.pages.TestBase {
    // driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
    // driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
    // driver.findElement(By.cssSelector("button.mfp-close")).click();
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

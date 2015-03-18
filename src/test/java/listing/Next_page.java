@@ -30,8 +30,7 @@ public class Next_page extends PGS.pages.TestBase {
     driver.findElement(By.cssSelector("a.next-page > img")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("30 to 58 of 583 items", driver.findElement(By.cssSelector("p.amount")).getText());
-    TimeUnit.SECONDS.sleep(5);
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

@@ -29,7 +29,7 @@ public class Product_page extends PGS.pages.TestBase {
     driver.findElement(By.cssSelector("h2.product-name > a[title=\"Personalised Children's Pirate Ship Money Box\"]")).click();
     TimeUnit.SECONDS.sleep(3);
     assertEquals("Personalised Children's Pirate Ship Money Box", driver.findElement(By.cssSelector("h1 > span")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

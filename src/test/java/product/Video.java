@@ -25,7 +25,7 @@ public class Video extends PGS.pages.TestBase {
             ,driver.findElement(By.cssSelector("a.video-link.slick-slide.slick-active")));
     driver.findElement(By.cssSelector("a.video-link.slick-slide.slick-active")).click();
     driver.findElement(By.cssSelector("button.mfp-close")).click();
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

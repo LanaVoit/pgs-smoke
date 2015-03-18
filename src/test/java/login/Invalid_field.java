@@ -33,7 +33,7 @@ public class Invalid_field extends PGS.pages.TestBase {
     driver.findElement(By.id("send2")).click();
     TimeUnit.SECONDS.sleep(7);
     assertEquals("Invalid login or password.", driver.findElement(By.cssSelector("li > span")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

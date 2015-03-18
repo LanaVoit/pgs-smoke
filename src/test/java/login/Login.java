@@ -33,8 +33,7 @@ public class Login extends PGS.pages.TestBase {
     assertEquals("GREAT TO SEE YOU, TOM JOHNS!", driver.findElement(By.cssSelector("h3.hello")).getText());
     TimeUnit.SECONDS.sleep(3);
     driver.get(baseUrl + "customer/account/logout");
-    TimeUnit.SECONDS.sleep(5);
-    TimeUnit.SECONDS.sleep(10);
+
 
   }
 

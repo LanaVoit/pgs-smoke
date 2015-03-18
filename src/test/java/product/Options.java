@@ -56,8 +56,7 @@ public class Options extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     
     driver.findElement(By.cssSelector("div.item-remove.columns.medium-1.hide-for-small-only > a[title='Remove item']")).click();  
-    TimeUnit.SECONDS.sleep(5);
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

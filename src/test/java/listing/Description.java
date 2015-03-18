@@ -30,7 +30,7 @@ public class Description extends PGS.pages.TestBase {
     assertEquals("READ LESS [-]", driver.findElement(By.linkText("READ LESS [-]")).getText());
     driver.findElement(By.linkText("READ LESS [-]")).click();
     assertEquals("If you're struggling to find those special birthday gifts for babies look no further than our fantastic range of presents.... READ MORE [+]", driver.findElement(By.cssSelector("div.short-desc > p")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
   }
 
    private boolean isElementPresent(By by) {

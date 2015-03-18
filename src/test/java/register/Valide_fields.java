@@ -38,12 +38,12 @@ public class Valide_fields extends PGS.pages.TestBase {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
 	driver.get(baseUrl + "admin");
-    /*driver.findElement(By.id("username")).clear();
+    driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("admin1");
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("alex2014");
     driver.findElement(By.cssSelector("input.form-button")).click();
-    driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();*/
+    driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[14]/a/span"))).build().perform();
     driver.findElement(By.xpath("//ul[@id='nav']/li[14]/ul/li[22]/a/span")).click();
     TimeUnit.SECONDS.sleep(5);
@@ -119,7 +119,7 @@ public class Valide_fields extends PGS.pages.TestBase {
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure[\\s\\S]$"));
     TimeUnit.SECONDS.sleep(5);
     assertEquals("Total of 1 record(s) were deleted.", driver.findElement(By.cssSelector("li > span")).getText());
-    TimeUnit.SECONDS.sleep(10);
+
     
   }
 
