@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +15,7 @@ import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.ScreenshotException;
+import org.openqa.selenium.security.UserAndPassword;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -63,6 +65,8 @@ public class TestBase {
 	        driver = new RemoteWebDriver(
 	                    new URL("http://127.0.0.1:4444/wd/hub"),
 	                    capabillities);
+	        Alert alert = driver.switchTo().alert();
+	        alert.authenticateUsing(new UserAndPassword("username", "password"));
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}  
