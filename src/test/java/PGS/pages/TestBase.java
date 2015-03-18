@@ -16,6 +16,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.ScreenshotException;
 import org.openqa.selenium.security.UserAndPassword;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -65,7 +67,9 @@ public class TestBase {
 	        driver = new RemoteWebDriver(
 	                    new URL("http://127.0.0.1:4444/wd/hub"),
 	                    capabillities);
-	        Alert alert = driver.switchTo().alert();
+	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 	        alert.authenticateUsing(new UserAndPassword("username", "password"));
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
