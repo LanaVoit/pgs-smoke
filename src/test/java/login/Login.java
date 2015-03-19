@@ -27,6 +27,7 @@ public class Login extends PGS.pages.TestBase {
     driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
     driver.findElement(By.id("pass")).clear();
     driver.findElement(By.id("pass")).sendKeys("qwerty");
+    TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.id("send2")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("MY DASHBOARD", driver.findElement(By.cssSelector("h1")).getText());

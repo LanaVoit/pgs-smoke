@@ -23,12 +23,10 @@ public class Search extends PGS.pages.TestBase {
     Actions actions = new Actions(driver);
 	driver.manage().window().maximize();
 	driver.get(baseUrl);    
-    //WebElement find = driver.findElement(By.cssSelector("button[title=\"Find\"]"));
-   // WebElement search = driver.findElement(By.id("search"));
-    
+	
     assertEquals("", driver.findElement(By.id("search")).getText());
     assertEquals("FIND", driver.findElement(By.cssSelector("button[title=\"Find\"]")).getText());
-    driver.findElement(By.cssSelector("button[title=\"Find\"]")).click();
+    //driver.findElement(By.cssSelector("button[title=\"Find\"]")).click();
     
     driver.findElement(By.id("search")).clear();
     driver.findElement(By.id("search")).sendKeys("1");

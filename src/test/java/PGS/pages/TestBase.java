@@ -4,14 +4,18 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.Augmenter;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.ScreenshotException;
@@ -22,10 +26,11 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import PGS.util.PropertyLoader;
 import PGS.util.Browser;
-import PGS.webdriver.WebDriverFactory;
+
 
 /*
  * Base class for all the test classes
@@ -43,11 +48,13 @@ public class TestBase {
 
 	protected String baseUrl;
 
-	protected Browser browser;
+	protected Browser browser;	
+	
+	 
+	@BeforeClass
 	
 
-	@BeforeClass
-	public void init() throws MalformedURLException {
+	public void init() throws MalformedURLException{
 		baseUrl = PropertyLoader.loadProperty("site.url");
 		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
 
@@ -57,20 +64,16 @@ public class TestBase {
 		browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
 
 		String username = PropertyLoader.loadProperty("user.username");
-		String password = PropertyLoader.loadProperty("user.password");
-		
+		String password = PropertyLoader.loadProperty("user.password");	   
+        
 		DesiredCapabilities capabillities = DesiredCapabilities.chrome();
-	        //capabillities.setCapability("platform", Platform.LINUX);
 	        capabillities.setCapability("screen-resolution", "1280x1024");
 	        capabillities.setCapability("passed", "true");	 
 	        capabillities.setCapability("name", "turnkeye.ru");	
 	        driver = new RemoteWebDriver(
 	                    new URL("http://127.0.0.1:4444/wd/hub"),
 	                    capabillities);
-	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	        WebDriverWait wait = new WebDriverWait(driver, 10);
-	        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-	        alert.authenticateUsing(new UserAndPassword("username", "password"));
+	       
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}  
@@ -78,6 +81,7 @@ public class TestBase {
 	@AfterMethod
 	public void stopDriver()throws Exception{
 	driver.quit();
+
 	}
 	
 	

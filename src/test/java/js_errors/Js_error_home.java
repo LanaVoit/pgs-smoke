@@ -16,7 +16,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.Logs;
+import org.openqa.selenium.security.UserAndPassword;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
 
@@ -29,6 +33,7 @@ public class Js_error_home extends PGS.pages.TestBase {
 
     	driver.manage().window().maximize();
         driver.get(baseUrl);
+        
         
         Logs log = driver.manage().logs();
         List<LogEntry> logsEntries = log.get("browser").getAll();    

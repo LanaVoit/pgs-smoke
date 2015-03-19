@@ -43,7 +43,9 @@ public class Options extends PGS.pages.TestBase {
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("//a[2]/span")));
     driver.findElement(By.xpath("//a[2]/span")).click();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.cssSelector("div.item-name.columns.medium-5.hide-for-small-only > div.product-links > span")));
     driver.findElement(By.cssSelector("div.item-name.columns.medium-5.hide-for-small-only > div.product-links > span")).click();
     TimeUnit.SECONDS.sleep(5);
     

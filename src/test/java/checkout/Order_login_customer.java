@@ -76,12 +76,12 @@ public class Order_login_customer extends PGS.pages.TestBase {
     	driver.get(baseUrl + "customer/account/logout");
         TimeUnit.SECONDS.sleep(5);
         driver.get(baseUrl + "admin");
-        /*driver.findElement(By.id("username")).clear();
+        driver.findElement(By.id("username")).clear();
         driver.findElement(By.id("username")).sendKeys("admin1");
         driver.findElement(By.id("login")).clear();
         driver.findElement(By.id("login")).sendKeys("alex2014");
         driver.findElement(By.cssSelector("input.form-button")).click();
-        driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();*/
+        driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();
         actions.moveToElement(driver.findElement(By.xpath("//*[@id='nav']/li[2]/a/span"))).build().perform();
         driver.findElement(By.xpath("//*[@id='nav']/li[2]/ul/li[1]/a/span")).click();
         TimeUnit.SECONDS.sleep(5);

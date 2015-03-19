@@ -43,6 +43,23 @@
       <version>1.5</version>
     </dependency>
     <dependency>
+    <groupId>net.lightbody.bmp</groupId>
+    <artifactId>browsermob-proxy</artifactId>
+    <version>2.0-beta-8</version>
+    <scope>test</scope>
+    <exclusions>
+        <exclusion>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+        </exclusion>
+    </exclusions>
+	</dependency>
+	<dependency>
+       <groupId>org.apache.httpcomponents</groupId>
+       <artifactId>httpclient</artifactId>
+       <version>4.3.4</version>
+   </dependency>
+    <dependency>
       <groupId>com.github.detro.ghostdriver</groupId>
       <artifactId>phantomjsdriver</artifactId>
       <version>1.1.0</version>
@@ -96,14 +113,14 @@
   <!-- profiles -->
   <profiles>
     <profile>
-      <id>local</id>
+      <id>Chrome</id>
       <properties>
         <env>local</env>
-        <user.username></user.username>
-        <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
+        <user.username>pgs</user.username>
+        <user.password>pgs321</user.password>
+        <grid2.hub>http://127.0.0.1:4444/wd/hub</grid2.hub>
+        <site.url>http://dev.personalisedgiftsshop.co.uk/default/</site.url>
+        <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>

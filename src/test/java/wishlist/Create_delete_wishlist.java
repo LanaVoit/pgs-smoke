@@ -48,12 +48,8 @@ public class Create_delete_wishlist extends PGS.pages.TestBase {
     assertTrue(closeAlertAndGetItsText().matches("^You are about to delete your wish list\\.\nThis action cannot be undone\\.\nDo you want to proceed[\\s\\S]$"));
     TimeUnit.SECONDS.sleep(7);
     assertEquals("Wishlist \"Test 123\" has been deleted.", driver.findElement(By.cssSelector("li > span")).getText());
-    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[19]/a")));
-    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[19]/a")).click();
-    TimeUnit.SECONDS.sleep(3);
-    assertEquals("YOU ARE NOW LOGGED OUT", driver.findElement(By.cssSelector("h1")).getText());
-    driver.get(baseUrl + "customer/account/login/");
+    driver.get(baseUrl + "customer/account/logout");
+    TimeUnit.SECONDS.sleep(7);
   }
 
    private boolean isElementPresent(By by) {
