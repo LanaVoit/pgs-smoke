@@ -2,14 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Smoke test" verbose="5" data-provider-thread-count="1">
 	
-	<test name="Homepage">
-		<parameter name="path" value="/"/>
-		<classes>
-				
-			<class name="home.Search"/>	
 	
-		</classes>
-	</test>
 	<test name="Listing page">
 		<parameter name="path" value="/"/>
 		<classes>		
@@ -23,7 +16,6 @@
 		<classes>			
 		
 			<class name="product.Options"/>	
-			<class name="product.Wishlist"/>
 
 		</classes>
 	</test>			
@@ -34,7 +26,7 @@
 		<classes>				
 				
 			<class name="wishlist.Add_delete_wishlist"/>
-			<class name="wishlist.Share"/>
+		
 	
 		</classes>
 	</test>
