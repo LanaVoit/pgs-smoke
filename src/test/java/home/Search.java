@@ -47,7 +47,7 @@ public class Search extends PGS.pages.TestBase {
     driver.get(baseUrl);
     driver.findElement(By.id("search")).clear();
     driver.findElement(By.id("search")).sendKeys("perso");
-    TimeUnit.SECONDS.sleep(3);
+    TimeUnit.SECONDS.sleep(7);
     actions.moveToElement(driver.findElement(By.xpath("//div[@id='search_autocomplete']/ul/li[2]"))).build().perform();
     driver.findElement(By.xpath("//div[@id='search_autocomplete']/ul/li[2]")).click();
     TimeUnit.SECONDS.sleep(5);

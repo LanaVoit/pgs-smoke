@@ -23,14 +23,17 @@ public class Wishlist extends PGS.pages.TestBase {
 	driver.manage().window().maximize();
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+    TimeUnit.SECONDS.sleep(5);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("li > a.button > span")));
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("li > a.button > span")).click();
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.id("email")).clear();
     driver.findElement(By.id("email")).sendKeys("qatestingtestqa@gmail.com");
     driver.findElement(By.id("pass")).clear();
     driver.findElement(By.id("pass")).sendKeys("qwerty");
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.id("send2")).click();
     TimeUnit.SECONDS.sleep(10);
     driver.findElement(By.cssSelector("span")).click();

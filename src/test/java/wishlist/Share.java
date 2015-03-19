@@ -104,10 +104,7 @@ public class Share extends PGS.pages.TestBase {
 
     	Session session = Session.getInstance(props, new MailAuthenticator());
     	session.setDebug(true);
-	       	  
-    	
-
-    	
+   	
 	        Store store = session.getStore("pop3s");
 	        store.connect("pop.gmail.com", "qatestingtestqa@gmail.com", "parol123");
 	 

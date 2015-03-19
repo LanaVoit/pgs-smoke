@@ -32,7 +32,7 @@ public class Add_delete_wishlist extends PGS.pages.TestBase {
         driver.findElement(By.id("pass")).clear();
         driver.findElement(By.id("pass")).sendKeys("qwerty");
         driver.findElement(By.id("send2")).click();
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(5);
         driver.findElement(By.cssSelector("span")).click();
         TimeUnit.SECONDS.sleep(3);
         driver.findElement(By.cssSelector("span")).click();
