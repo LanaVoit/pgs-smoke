@@ -21,7 +21,7 @@ public class Order_login_customer extends PGS.pages.TestBase {
 
     @Test
   public void Order_login_customer() throws Exception {
-	driver.manage().window().maximize();
+    driver.manage().window().setSize(new Dimension(1366, 1050));
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "customer/account/login/");
     TimeUnit.SECONDS.sleep(5);

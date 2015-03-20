@@ -38,7 +38,7 @@ public class Reset_password extends PGS.pages.TestBase {
 
     @Test
   public void Reset_password() throws Exception {
-	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "customer/account/login/");
    /* driver.findElement(By.linkText("forgot?")).click();

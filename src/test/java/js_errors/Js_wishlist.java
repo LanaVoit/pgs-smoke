@@ -30,7 +30,7 @@ public class Js_wishlist extends PGS.pages.TestBase {
     @Test
   public void Js_wishlist() throws Exception {
     	Actions actions = new Actions(driver);
-    	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
         driver.get(baseUrl + "customer/account/login/");
         WebElement email = driver.findElement(By.id("email"));
         email.clear();

@@ -35,7 +35,7 @@ public class Valide_fields extends PGS.pages.TestBase {
         }
         String email = generator.toString();
         
-	driver.manage().window().maximize();
+        driver.manage().window().setSize(new Dimension(1366, 1050));
 	Actions actions = new Actions(driver);
 	driver.get(baseUrl + "admin");
     driver.findElement(By.id("username")).clear();

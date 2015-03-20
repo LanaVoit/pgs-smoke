@@ -19,7 +19,7 @@ public class Invalide_fields extends PGS.pages.TestBase {
 
     @Test
   public void Invalide_fields() throws Exception {
-	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "customer/account/create/");    
     driver.findElement(By.id("firstname")).clear();
     driver.findElement(By.id("firstname")).sendKeys("<script>alert();</script>");

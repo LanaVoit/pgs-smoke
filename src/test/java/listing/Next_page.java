@@ -20,7 +20,7 @@ public class Next_page extends PGS.pages.TestBase {
 
     @Test
   public void Next_page() throws Exception {
-	driver.manage().window().maximize(); 
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     TimeUnit.SECONDS.sleep(3);

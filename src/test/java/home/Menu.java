@@ -21,7 +21,7 @@ public class Menu extends PGS.pages.TestBase {
     @Test
   public void Menu() throws Exception {
 	Actions actions = new Actions(driver);
-	driver.manage().window().maximize();
+	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl);
     actions.moveToElement(driver.findElement(By.xpath("//*[@id='nav']/li[2]/a/span"))).build().perform();
     //actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[1]/a/span"))).build().perform();

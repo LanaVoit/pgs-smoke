@@ -20,7 +20,7 @@ public class Description extends PGS.pages.TestBase {
 
     @Test
   public void Description() throws Exception {
-	driver.manage().window().maximize(); 
+    driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     TimeUnit.SECONDS.sleep(3);
     assertEquals("If you're struggling to find those special birthday gifts for babies look no further than our fantastic range of presents.... READ MORE [+]", driver.findElement(By.cssSelector("div.short-desc > p")).getText());

@@ -20,7 +20,7 @@ public class Recently_viewed extends PGS.pages.TestBase {
 
     @Test
   public void Recently_viewed() throws Exception {
-	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
 	Actions actions = new Actions(driver);
 	driver.get(baseUrl);
 	/*driver.findElement(By.xpath("//*[@id='header']/div/div[2]/div/div[1]/ul/li/a")).click();

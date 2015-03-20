@@ -20,7 +20,7 @@ public class Add_all_cart extends PGS.pages.TestBase {
 
     @Test
   public void Add_all_cart() throws Exception {
-    	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
     	Actions actions = new Actions(driver);
         driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
         TimeUnit.SECONDS.sleep(5);

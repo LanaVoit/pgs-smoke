@@ -2,10 +2,13 @@ package listing;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -16,7 +19,7 @@ public class Sort extends PGS.pages.TestBase {
 
     @Test
   public void Sort() throws Exception {
-	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html?dir=asc&order=price");
     TimeUnit.SECONDS.sleep(3);

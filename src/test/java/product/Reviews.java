@@ -19,7 +19,7 @@ public class Reviews extends PGS.pages.TestBase {
 
     @Test
   public void Reviews() throws Exception {
-    driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     TimeUnit.SECONDS.sleep(5);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"

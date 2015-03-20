@@ -2,10 +2,13 @@ package product;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -16,7 +19,7 @@ public class Image extends PGS.pages.TestBase {
 
     @Test
   public void Image() throws Exception {
-	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     String img = "http://dev.personalisedgiftsshop.co.uk/media/catalog/product/cache/1/image/400x/9df78eab33525d08d6e5fb8d27136e95/p/e/personalised-swarovski-crystal-heart-vase.jpg";
     assertEquals(img, driver.findElement(By.cssSelector("div.product-image.product-image-zoom a img")).getAttribute("src").toString());

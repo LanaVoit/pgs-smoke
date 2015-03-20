@@ -35,7 +35,7 @@ public class Email extends PGS.pages.TestBase {
 
     @Test
   public void Email() throws Exception {
-    	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
     	driver.get(baseUrl);
     	TimeUnit.SECONDS.sleep(300); 
     	class MailAuthenticator extends Authenticator {

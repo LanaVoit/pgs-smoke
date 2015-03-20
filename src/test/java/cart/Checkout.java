@@ -19,7 +19,7 @@ public class Checkout extends PGS.pages.TestBase {
 
     @Test
   public void Checkout() throws Exception {
-	driver.manage().window().maximize();
+    driver.manage().window().setSize(new Dimension(1366, 1050));
 	/*driver.get("chrome://settings/clearBrowserData");
 
 	final By cleanCacheIframe = By.xpath("//iframe[@src='chrome://settings-frame/clearBrowserData']");

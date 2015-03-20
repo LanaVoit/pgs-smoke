@@ -31,7 +31,7 @@ public class Ssl_checkout extends PGS.pages.TestBase {
     @Test
   public void Ssl_checkout() throws Exception {
     	Actions actions = new Actions(driver);
-    	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
         driver.get(baseUrl);
         /*WebElement add_to_cart = driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]"));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"

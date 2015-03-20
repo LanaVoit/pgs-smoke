@@ -20,7 +20,7 @@ public class Img_hover extends PGS.pages.TestBase {
 
     @Test
   public void Img_hover() throws Exception {
-	driver.manage().window().maximize(); 
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
 	Actions actions = new Actions(driver);
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     TimeUnit.SECONDS.sleep(3);

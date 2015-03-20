@@ -20,7 +20,7 @@ public class Move_wishlist extends PGS.pages.TestBase {
 
     @Test
   public void Move_wishlist() throws Exception {
-	driver.manage().window().maximize();
+    driver.manage().window().setSize(new Dimension(1366, 1050));
 	Actions actions = new Actions(driver);
 	driver.get(baseUrl + "customer/account/login/");
 	driver.findElement(By.id("email")).clear();

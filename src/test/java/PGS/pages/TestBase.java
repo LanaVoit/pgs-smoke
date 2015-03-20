@@ -52,9 +52,7 @@ public class TestBase {
 	
 	 
 	@BeforeClass
-	
-
-	public void init() throws MalformedURLException{
+	public void init() throws MalformedURLException {
 		baseUrl = PropertyLoader.loadProperty("site.url");
 		gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
 
@@ -64,16 +62,19 @@ public class TestBase {
 		browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
 
 		String username = PropertyLoader.loadProperty("user.username");
-		String password = PropertyLoader.loadProperty("user.password");	   
-        
+		String password = PropertyLoader.loadProperty("user.password");
+		
+		
+		
 		DesiredCapabilities capabillities = DesiredCapabilities.chrome();
-	        capabillities.setCapability("screen-resolution", "1280x1024");
-	        capabillities.setCapability("passed", "true");	 
-	        capabillities.setCapability("name", "turnkeye.ru");	
+	        //capabillities.setCapability("platform", Platform.LINUX);
+	        //capabillities.setCapability("screen-resolution", "1280x1024");
+	        capabillities.setBrowserName("chrome");
+	        capabillities.setPlatform(org.openqa.selenium.Platform.LINUX);
+		    System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/tools/chromedriver/chromedriver");
 	        driver = new RemoteWebDriver(
-	                    new URL("http://127.0.0.1:4444/wd/hub"),
+	                    new URL("http://148.251.21.174:4444/wd/hub"),
 	                    capabillities);
-	       
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}  

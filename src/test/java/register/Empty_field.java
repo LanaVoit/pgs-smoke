@@ -19,7 +19,7 @@ public class Empty_field extends PGS.pages.TestBase {
 
     @Test
   public void Empty_field() throws Exception {
-	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "customer/account/create/");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("div.buttons-set > button.button.btn-primary")));

@@ -2,10 +2,13 @@ package login;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
+
 import org.testng.*;
 import org.testng.annotations.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -16,7 +19,7 @@ public class Empty_field extends PGS.pages.TestBase {
 
     @Test
   public void Empty_field() throws Exception {
-	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "customer/account/login/");
     driver.findElement(By.id("send2")).click();
     assertEquals("This is a required field.", driver.findElement(By.id("advice-required-entry-email")).getText());

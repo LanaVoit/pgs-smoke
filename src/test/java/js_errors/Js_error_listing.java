@@ -17,6 +17,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.Logs;
 import org.openqa.selenium.support.ui.Select;
+
 import net.jsourcerer.webdriver.jserrorcollector.JavaScriptError;
 
 
@@ -27,7 +28,7 @@ public class Js_error_listing extends PGS.pages.TestBase {
     @Test
   public void Js_error_listing() throws Exception {
 
-    	driver.manage().window().maximize();
+    	driver.manage().window().setSize(new Dimension(1366, 1050));
         driver.get(baseUrl + "personalised-birthday-gifts/for-her.html");
         
         Logs log = driver.manage().logs();
