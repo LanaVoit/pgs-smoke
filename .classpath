@@ -77,5 +77,6 @@
 	<classpathentry kind="var" path="M2_REPO/net/lightbody/bmp/browsermob-proxy/2.0-beta-8/browsermob-proxy-2.0-beta-8.jar"/>
 	<classpathentry kind="var" path="M2_REPO/net/lightbody/bmp/browsermob-proxy-2.0.0/browsermob-proxy-2.0.0-javadoc.jar"/>
 	<classpathentry kind="var" path="M2_REPO/net/lightbody/bmp/browsermob-proxy-2.0.0/browsermob-proxy-2.0.0-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-server/2.44.0/selenium-server-2.44.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -2,35 +2,57 @@ package PGS.pages;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.UnknownHostException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Alert;
+import org.junit.Before;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Proxy;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.Augmenter;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.ScreenshotException;
-import org.openqa.selenium.security.UserAndPassword;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Optional;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+
+import org.testng.*;
+import org.testng.annotations.*;
+
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import static org.testng.Assert.assertEquals;
 
 import PGS.util.PropertyLoader;
 import PGS.util.Browser;
-
+import PGS.webdriver.WebDriverFactory;
 
 /*
  * Base class for all the test classes
@@ -48,9 +70,10 @@ public class TestBase {
 
 	protected String baseUrl;
 
-	protected Browser browser;	
+	protected Browser browser;
 	
 	 
+
 	@BeforeClass
 	public void init() throws MalformedURLException {
 		baseUrl = PropertyLoader.loadProperty("site.url");
@@ -82,12 +105,9 @@ public class TestBase {
 	@AfterMethod
 	public void stopDriver()throws Exception{
 	driver.quit();
-
 	}
 	
-	
-
-	@AfterSuite(alwaysRun = true)
+	@AfterSuite
 	public void tearDown() {
 		if (driver != null) {
 			driver.quit();
@@ -114,4 +134,5 @@ public class TestBase {
 //			}
 //		}
 //	}
+	
 }

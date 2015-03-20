@@ -6,11 +6,12 @@
   <artifactId>pgs-smoke</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
-<dependencies>
+<name>sauce_quickstart</name>
+    <description>A sample Maven project that demonstrates how to integrate Sauce OnDemand with WebDriver tests
+        that run using TestNG
+    </description>
+    
+  <dependencies>
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
@@ -22,19 +23,9 @@
       <version>4.11</version>
     </dependency>
     <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>2.43.1</version>
-    </dependency>
-    <dependency>
-      <groupId>javamail</groupId>
-      <artifactId>mail</artifactId>
-      <version>1.4.7</version>
-    </dependency>
-    <dependency>
-      <groupId>javamail</groupId>
-      <artifactId>mail</artifactId>
-      <version>1.4.7</version>
+      <groupId>javax.mail</groupId>
+	  <artifactId>mail</artifactId>
+	  <version>1.4</version>
     </dependency>
     <dependency>
 		<groupId>net.jsourcerer.webdriver</groupId>
@@ -42,27 +33,10 @@
 	    <version>0.5</version>	    	    
 	</dependency>
     <dependency>
-      <groupId>com.opera</groupId>
-      <artifactId>operadriver</artifactId>
-      <version>1.5</version>
-    </dependency>
-    <dependency>
-    <groupId>net.lightbody.bmp</groupId>
-    <artifactId>browsermob-proxy</artifactId>
-    <version>2.0-beta-8</version>
-    <scope>test</scope>
-    <exclusions>
-        <exclusion>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-        </exclusion>
-    </exclusions>
-	</dependency>
-	<dependency>
-       <groupId>org.apache.httpcomponents</groupId>
-       <artifactId>httpclient</artifactId>
-       <version>4.3.4</version>
-   </dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>2.44.0</version>
+    </dependency> 
     <dependency>
       <groupId>com.github.detro.ghostdriver</groupId>
       <artifactId>phantomjsdriver</artifactId>
@@ -78,6 +52,38 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <dependency>  
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-server</artifactId>
+      <version>2.44.0</version>
+	</dependency>  
+	<dependency>  
+	      <groupId>org.seleniumhq.selenium</groupId>
+	      <artifactId>selenium-api</artifactId>
+	      <version>2.44.0</version>
+	</dependency>  
+	<dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>2.44.0</version>
+     </dependency>  
+   <dependency>
+         <groupId>com.saucelabs</groupId>
+         <artifactId>sauce_testng</artifactId>
+         <version>[1.0.0,)</version>
+         <scope>test</scope>
+     </dependency>
+    <dependency>
+      <groupId>com.opera</groupId>
+      <artifactId>operadriver</artifactId>
+      <version>1.5</version>
+    </dependency>
+
+    <dependency>
+	    <groupId>com.codeborne</groupId>
+	    <artifactId>phantomjsdriver</artifactId>
+	    <version>1.2.1</version>
+	</dependency>
   </dependencies>
   <build>
     <resources> 
@@ -92,8 +98,8 @@
         <artifactId>maven-resources-plugin</artifactId>
         <version>2.6</version>
         <configuration>
-          <encoding>UTF-8</encoding>
-        </configuration>
+	       <encoding>UTF-8</encoding>
+	   </configuration>
       </plugin> 
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -110,21 +116,22 @@
         <configuration>
           <source>1.6</source>
           <target>1.6</target>
+          <encoding>Cp1251</encoding>
         </configuration>
       </plugin>
     </plugins>
   </build>
   <!-- profiles -->
   <profiles>
-    <profile>
-      <id>Chrome</id>
+     <profile>
+      <id>firefox</id>
       <properties>
-        <env>local</env>
-        <user.username>pgs</user.username>
-        <user.password>pgs321</user.password>
-        <grid2.hub>http://127.0.0.1:4444/wd/hub</grid2.hub>
-        <site.url>http://dev.personalisedgiftsshop.co.uk/default/</site.url>
-        <browser.name>chrome</browser.name>
+        <env>firefox</env>
+        <user.username></user.username>
+        <user.password></user.password>
+        <grid2.hub></grid2.hub>
+        <site.url>http://turnkeye.com/</site.url>
+        <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
@@ -133,27 +140,14 @@
       </activation>
     </profile>
     <profile>
-      <id>dev</id>
+      <id>chrome</id>
       <properties>
-        <env>dev</env>
+        <env>chrome</env>
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
-        <browser.version></browser.version>
-        <browser.platform></browser.platform>
-      </properties>
-    </profile>
-    <profile>
-      <id>test</id>
-      <properties>
-        <env>test</env>
-        <user.username></user.username>
-        <user.password></user.password>
-        <grid2.hub></grid2.hub>
-        <site.url></site.url>
-        <browser.name></browser.name>
+        <site.url>http://turnkeye.com/</site.url>
+        <browser.name>chrome</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
@@ -178,5 +172,16 @@
       </properties>
     </profile>
   </profiles>
+  <repositories>
+        <repository>
+            <id>saucelabs-repository</id>
+            <url>http://repository-saucelabs.forge.cloudbees.com/release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
-
