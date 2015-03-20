@@ -35,10 +35,11 @@ public class Js_checkout extends PGS.pages.TestBase {
         WebElement add_to_cart = driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]"));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
                 ,add_to_cart);   
-        add_to_cart.click();      
-        TimeUnit.SECONDS.sleep(10);
-        driver.get(baseUrl + "checkout/onepage/");     
+        add_to_cart.click();   
+        driver.get(baseUrl + "checkout/cart/");     
         TimeUnit.SECONDS.sleep(5);
+        driver.get(baseUrl + "checkout/onepage/");     
+        TimeUnit.SECONDS.sleep(7);
               
         assertEquals ("SECURE CHECKOUT", driver.findElement(By.tagName("h1")).getText());
         

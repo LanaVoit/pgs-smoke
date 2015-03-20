@@ -33,6 +33,8 @@ public class Add_to_wishlist extends PGS.pages.TestBase {
             ,driver.findElement(By.xpath("//*[@id='item-12']")));
     assertEquals(heart_test, driver.findElement(By.cssSelector("a[title=\"Add to Wishlist\"]")).getCssValue("background").toString());
     TimeUnit.SECONDS.sleep(5);
+    driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
+    TimeUnit.SECONDS.sleep(3);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("//*[@id='item-12']")));
     TimeUnit.SECONDS.sleep(5);

@@ -65,6 +65,7 @@ public class Ask extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/a/span"))).build().perform();
     actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li[11]/a/span"))).build().perform();
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.xpath("//ul[@id='nav']/li[3]/ul/li[11]/ul/li/a/span")).click();
     driver.findElement(By.id("pq2QuestionPendingGrid_filter_author_email")).clear();
     driver.findElement(By.id("pq2QuestionPendingGrid_filter_author_email")).sendKeys("testpgs@test.com");

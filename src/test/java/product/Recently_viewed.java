@@ -72,7 +72,7 @@ public class Recently_viewed extends PGS.pages.TestBase {
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("//div[5]/div/div/h2/span")));
     driver.findElement(By.id("recently_clear_all")).click();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(7);
     assertNotEquals("MY RECENTLY VIEWED ITEMS", driver.findElement(By.xpath("//div[5]/div/div/h2/span")).getText());
     
   }
