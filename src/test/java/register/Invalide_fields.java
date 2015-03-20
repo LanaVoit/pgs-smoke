@@ -52,6 +52,9 @@ public class Invalide_fields extends PGS.pages.TestBase {
     driver.findElement(By.id("captcha_user_create")).clear();
     driver.findElement(By.id("captcha_user_create")).sendKeys("123");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.id("confirmation")));
+    driver.findElement(By.id("confirmation")).click();
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("div.buttons-set > button.button.btn-primary")));
     driver.findElement(By.cssSelector("div.buttons-set > button.button.btn-primary")).click();
     assertEquals("Incorrect CAPTCHA.", driver.findElement(By.cssSelector("li > span")).getText());

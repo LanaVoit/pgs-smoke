@@ -36,13 +36,11 @@ public class Js_checkout extends PGS.pages.TestBase {
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
                 ,add_to_cart);   
         add_to_cart.click();      
-        TimeUnit.SECONDS.sleep(5);
+        TimeUnit.SECONDS.sleep(10);
         driver.get(baseUrl + "checkout/onepage/");     
         TimeUnit.SECONDS.sleep(5);
-        
-        
-        WebElement h1 = driver.findElement(By.tagName("h1"));
-        assertEquals ("SECURE CHECKOUT", h1.getText());
+              
+        assertEquals ("SECURE CHECKOUT", driver.findElement(By.tagName("h1")).getText());
         
         Logs log = driver.manage().logs();
         List<LogEntry> logsEntries = log.get("browser").getAll();

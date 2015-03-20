@@ -40,9 +40,7 @@ public class Js_cart extends PGS.pages.TestBase {
         driver.get(baseUrl + "checkout/cart/");     
         TimeUnit.SECONDS.sleep(5);
         
-        
-        WebElement h1 = driver.findElement(By.tagName("h1"));
-        assertEquals ("YOUR SHOPPING BASKET", h1.getText());
+        assertEquals ("YOUR SHOPPING BASKET", driver.findElement(By.tagName("h1")).getText());
         
         Logs log = driver.manage().logs();
         List<LogEntry> logsEntries = log.get("browser").getAll();
