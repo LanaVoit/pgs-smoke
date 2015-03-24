@@ -49,10 +49,10 @@ public class Checkout extends PGS.pages.TestBase {
     driver.findElement(By.xpath("(//ul[@class='checkout-types']/li/p[@class='paypal-logo']/a[@class='paypal-express-btn'])")).click();    
     TimeUnit.SECONDS.sleep(15);
     driver.manage().window().setSize(new Dimension(1366, 1050));
-    assertEquals("PayPal Checkout", driver.getTitle());
-    assertEquals("PGS Gifts Ltd", driver.findElement(By.xpath("//*[@id=\"header\"]/div/span")).getText());  
-    /*assertEquals("PGS Gifts Ltd", driver.findElement(By.cssSelector("h1.confidential")).getText());
-    assertEquals("Choose a way to pay", driver.findElement(By.id("loginPageTitle")).getText());*/
+    //assertEquals("PayPal Checkout", driver.getTitle());
+    //assertEquals("PGS Gifts Ltd", driver.findElement(By.xpath("//*[@id=\"header\"]/div/span")).getText());  
+    assertEquals("PGS Gifts Ltd", driver.findElement(By.cssSelector("h1.confidential")).getText());
+    assertEquals("Choose a way to pay", driver.findElement(By.id("loginPageTitle")).getText());
     driver.get(baseUrl + "checkout/cart/");
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("a.continue-shopping")).click();

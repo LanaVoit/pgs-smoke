@@ -29,18 +29,18 @@ public class Js_cart extends PGS.pages.TestBase {
 
     @Test
   public void Js_cart() throws Exception {
-    	Actions actions = new Actions(driver);
-    	driver.manage().window().setSize(new Dimension(1366, 1050));
-        driver.get(baseUrl + "personalised-door-plaque-for-girls-animal-alphabet.html");
-        WebElement add_to_cart = driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]"));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-                ,add_to_cart);      
-        add_to_cart.click();      
-        TimeUnit.SECONDS.sleep(10);
-        driver.get(baseUrl + "checkout/cart/");     
-        TimeUnit.SECONDS.sleep(5);
-        
-        assertEquals ("YOUR SHOPPING BASKET", driver.findElement(By.tagName("h1")).getText());
+		driver.manage().window().setSize(new Dimension(1366, 1050));
+	    driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+	    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+	            ,driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")));
+	    TimeUnit.SECONDS.sleep(5);
+	    driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")).click();
+	    TimeUnit.SECONDS.sleep(5);
+	    driver.findElement(By.xpath("//a[2]/span")).click();
+	    TimeUnit.SECONDS.sleep(5);
+	    assertEquals("YOUR SHOPPING BASKET", driver.findElement(By.cssSelector("h1")).getText());
+	    assertEquals("ENGRAVED SWAROVSKI CRYSTAL HEART VASE", driver.findElement(By.xpath("(//a[contains(text(),'Engraved Swarovski Crystal Heart Vase')])[3]")).getText());
+
         
         Logs log = driver.manage().logs();
         List<LogEntry> logsEntries = log.get("browser").getAll();
