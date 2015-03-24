@@ -47,7 +47,7 @@ public class Checkout extends PGS.pages.TestBase {
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("(//ul[@class='checkout-types']/li/p[@class='paypal-logo']/a[@class='paypal-express-btn'])")));
     driver.findElement(By.xpath("(//ul[@class='checkout-types']/li/p[@class='paypal-logo']/a[@class='paypal-express-btn'])")).click();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
     assertEquals("PGS Gifts Ltd", driver.findElement(By.cssSelector("h1.confidential")).getText());
     assertEquals("Choose a way to pay", driver.findElement(By.id("loginPageTitle")).getText());
     driver.get(baseUrl + "checkout/cart/");

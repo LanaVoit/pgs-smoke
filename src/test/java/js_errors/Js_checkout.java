@@ -29,17 +29,19 @@ public class Js_checkout extends PGS.pages.TestBase {
 
     @Test
   public void Js_checkout() throws Exception {
-    	Actions actions = new Actions(driver);
     	driver.manage().window().setSize(new Dimension(1366, 1050));
-        driver.get(baseUrl + "personalised-door-plaque-for-girls-animal-alphabet.html");
-        WebElement add_to_cart = driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]"));
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-                ,add_to_cart);   
-        add_to_cart.click();   
-        driver.get(baseUrl + "checkout/cart/");     
-        TimeUnit.SECONDS.sleep(5);
-        driver.get(baseUrl + "checkout/onepage/");     
-        TimeUnit.SECONDS.sleep(7);
+		Actions actions = new Actions(driver);
+		driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+	    TimeUnit.SECONDS.sleep(5);
+	    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+	            ,driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")));
+	    TimeUnit.SECONDS.sleep(5);
+	    driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")).click();
+	    TimeUnit.SECONDS.sleep(5);
+	    driver.findElement(By.xpath("//a[2]/span")).click();
+	    TimeUnit.SECONDS.sleep(5);
+	    driver.get(baseUrl + "checkout/onepage/");
+	    TimeUnit.SECONDS.sleep(7);
               
         assertEquals ("SECURE CHECKOUT", driver.findElement(By.tagName("h1")).getText());
         
