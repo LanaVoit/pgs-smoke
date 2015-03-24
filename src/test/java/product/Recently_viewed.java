@@ -55,13 +55,13 @@ public class Recently_viewed extends PGS.pages.TestBase {
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("//div[5]/div/div/h2/span")));
     assertEquals("MY RECENTLY VIEWED ITEMS", driver.findElement(By.xpath("//div[5]/div/div/h2/span")).getText());
-    assertEquals("TOTAL 6 PRODUCTS VIEWED", driver.findElement(By.cssSelector("div.left")).getText());
+    assertEquals("TOTAL 3 PRODUCTS VIEWED", driver.findElement(By.cssSelector("div.left")).getText());
     assertEquals("VIEW ALL", driver.findElement(By.id("recently_view_all")).getText());
     assertEquals("CLEAR ALL", driver.findElement(By.id("recently_clear_all")).getText());
     actions.moveToElement(driver.findElement(By.xpath("//*[@id=\"recently-viewed-items\"]/li[1]/a[1]/img"))).build().perform();
     driver.findElement(By.cssSelector("ul#recently-viewed-items > li:first-child > a.recently_delete_item")).click();
     TimeUnit.SECONDS.sleep(10);
-    assertEquals("TOTAL 5 PRODUCTS VIEWED", driver.findElement(By.cssSelector("div.left")).getText());
+    assertEquals("TOTAL 2 PRODUCTS VIEWED", driver.findElement(By.cssSelector("div.left")).getText());
     TimeUnit.SECONDS.sleep(10);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("//div[5]/div/div/h2/span")));
