@@ -99,13 +99,19 @@ public class TestBase {
 	                    new URL("http://148.251.21.174:4444/wd/hub"),
 	                    capabillities);
 	        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	        
+	        
+	        
 
 	}  
-	  
+	
+	
 	@AfterMethod
-	public void stopDriver()throws Exception{
-	driver.quit();
-	}
+	public void stopDriver()throws Exception{			
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile, new File("./target/surefire-reports/junitreports/screenshot.png"));
+		driver.quit();
+	}	
 	
 	@AfterSuite
 	public void tearDown() {
