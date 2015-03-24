@@ -19,10 +19,11 @@ public class Update extends PGS.pages.TestBase {
 
     @Test
   public void Update() throws Exception {
-    driver.manage().window().setSize(new Dimension(1366, 1050));
+	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")));
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")).click();
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.xpath("//a[2]/span")).click();
