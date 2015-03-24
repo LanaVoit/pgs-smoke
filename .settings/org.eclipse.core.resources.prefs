@@ -1,7 +1,7 @@
 eclipse.preferences.version=1
-encoding//src/main/java=Cp1251
+encoding//src/main/java=UTF-8
 encoding//src/main/resources=UTF-8
-encoding//src/test/java=Cp1251
+encoding//src/test/java=UTF-8
 encoding//src/test/java/cart/Coupon.java=UTF-8
 encoding//src/test/java/cart/Edit.java=UTF-8
 encoding//src/test/java/checkout/Order_login_customer.java=UTF-8

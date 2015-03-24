@@ -1,37 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Smoke test" verbose="5" data-provider-thread-count="1">
-	<test name="JS Errors">
-		<parameter name="path" value="/"/>
-		<classes>	
-				
-			
-			<class name="js_errors.Js_checkout"/>
-			
-		</classes>
-	</test>
 	
-	<test name="Listing page">
-		<parameter name="path" value="/"/>
-		<classes>		
-			
-			<class name="listing.Sort"/>
-			
-		</classes>
-	</test>
-	<test name="Product page">
-		<parameter name="path" value="/"/>
-		<classes>			
-		
-			<class name="product.Options"/>	
-		
-		</classes>
-	</test>			
 	<test name="Cart page">
 		<parameter name="path" value="/"/>
 		<classes>			
 			
-			<class name="cart.Delete_cart"/>
+	
 			<class name="cart.Checkout"/>
 		</classes>
 	</test>
