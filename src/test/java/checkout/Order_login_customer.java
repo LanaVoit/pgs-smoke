@@ -43,7 +43,9 @@ public class Order_login_customer extends PGS.pages.TestBase {
     driver.findElement(By.xpath("//a[2]/span")).click();
     TimeUnit.SECONDS.sleep(5);
     driver.get(baseUrl + "checkout/onepage/");
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(7);
+          
+    assertEquals ("SECURE CHECKOUT", driver.findElement(By.tagName("h1")).getText());
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("#billing-buttons-container > button.button.btn-primary")));
     driver.findElement(By.cssSelector("#billing-buttons-container > button.button.btn-primary")).click();
