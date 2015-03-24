@@ -46,12 +46,13 @@ public class Checkout extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(10);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("(//ul[@class='checkout-types']/li/p[@class='paypal-logo']/a[@class='paypal-express-btn'])")));
-    driver.findElement(By.xpath("(//ul[@class='checkout-types']/li/p[@class='paypal-logo']/a[@class='paypal-express-btn'])")).click();
-    
+    driver.findElement(By.xpath("(//ul[@class='checkout-types']/li/p[@class='paypal-logo']/a[@class='paypal-express-btn'])")).click();    
     TimeUnit.SECONDS.sleep(15);
-    //assertEquals("Pay with a PayPal account – PayPal", driver.getTitle());
-    assertEquals("PGS Gifts Ltd", driver.findElement(By.cssSelector("h1.confidential")).getText());
-    assertEquals("Choose a way to pay", driver.findElement(By.id("loginPageTitle")).getText());
+    driver.manage().window().setSize(new Dimension(1366, 1050));
+    assertEquals("PayPal Checkout", driver.getTitle());
+    assertEquals("PGS Gifts Ltd", driver.findElement(By.xpath("//*[@id=\"header\"]/div/span")).getText());  
+    /*assertEquals("PGS Gifts Ltd", driver.findElement(By.cssSelector("h1.confidential")).getText());
+    assertEquals("Choose a way to pay", driver.findElement(By.id("loginPageTitle")).getText());*/
     driver.get(baseUrl + "checkout/cart/");
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("a.continue-shopping")).click();
