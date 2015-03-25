@@ -1,14 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Smoke test" verbose="5" data-provider-thread-count="1">
-	
+	<test name="JS Errors">
+		<parameter name="path" value="/"/>
+		<classes>	
+				
+			<class name="js_errors.Js_error_home"/>
+			<class name="js_errors.Js_error_listing"/>
+			<class name="js_errors.Js_error_product"/>
+			<class name="js_errors.Js_error_login"/>
+			<class name="js_errors.Js_error_register"/>
+			<class name="js_errors.Js_error_account"/>
+			<class name="js_errors.Js_cart"/>
+			<class name="js_errors.Js_checkout"/>
+			
+		</classes>
+	</test>
+	<test name="Homepage">
+		<parameter name="path" value="/"/>
+		<classes>
+				
+			<class name="home.Search"/>	
+			<class name="home.Menu"/>	
+		</classes>
+	</test>
+	<test name="Listing page">
+		<parameter name="path" value="/"/>
+		<classes>		
+			<class name="listing.Filter"/>
+			<class name="listing.Sort"/>
+			<class name="listing.Add_to_wishlist"/>
+			<class name="listing.Img_hover"/>
+			<class name="listing.Next_page"/>
+			<class name="listing.Product_page"/>
+			<class name="listing.Description"/>
+		</classes>
+	</test>
 	<test name="Product page">
 		<parameter name="path" value="/"/>
 		<classes>			
-			
+			<class name="product.Image"/>
+			<class name="product.Options"/>	
+			<class name="product.Wishlist"/>
+			<class name="product.Reviews"/>	
 			<class name="product.Ask"/>
-		
+			<class name="product.Recently_viewed"/>
 		</classes>
 	</test>			
+	<test name="Cart page">
+		<parameter name="path" value="/"/>
+		<classes>			
+			<class name="cart.Add_cart"/>	
+			<class name="cart.Delete_cart"/>
+			<class name="cart.Edit"/>	
+			<class name="cart.Update"/>
+			<class name="cart.Move_wishlist"/>
+			<class name="cart.Coupon"/>	
+			<class name="cart.Checkout"/>
+		</classes>
+	</test>
+	<test name="Login page">
+		<parameter name="path" value="/"/>
+		<classes>					
+			<class name="login.Empty_field"/>
+			<class name="login.Invalid_field"/>
+			<class name="login.Login"/>	
+		</classes>
+	</test>
+	<test name="Register page">
+		<parameter name="path" value="/"/>
+		<classes>				
+			<class name="register.Empty_field"/>
+			<class name="register.Invalide_fields"/>
+			<class name="register.Valide_fields"/>	
+		</classes>
+	</test>
+	<test name="Account page">
+		<parameter name="path" value="/"/>
+		<classes>					
+			<class name="account.Edit_account"/>
+			<class name="account.Menu"/>	
+			<class name="account.Address"/>	
+		</classes>
+	</test>
+	<test name="Wishlist page">
+		<parameter name="path" value="/"/>
+		<classes>				
+			<class name="wishlist.Create_delete_wishlist"/>	
+			<class name="wishlist.Add_cart"/>	
+			<class name="wishlist.Add_delete_wishlist"/>
+			<class name="wishlist.Share"/>
+			<class name="wishlist.Add_all_cart"/>
+		</classes>
+	</test>
+	<test name="Checkout page">
+		<parameter name="path" value="/"/>
+		<classes>			
+			<class name="checkout.Order_login_customer"/>	
+			<class name="checkout.Order_logout"/>	
+			<class name="checkout.Email"/>	
+					
 	
+		</classes>
+	</test>  
 </suite>
