@@ -31,7 +31,7 @@ public class Create_delete_wishlist extends PGS.pages.TestBase {
     driver.findElement(By.id("send2")).click();
     TimeUnit.SECONDS.sleep(5);
     assertEquals("MY DASHBOARD", driver.findElement(By.cssSelector("h1")).getText());
-    assertEquals("GREAT TO SEE YOU, TOM JOHNS!", driver.findElement(By.cssSelector("h3.hello")).getText());
+    //assertEquals("GREAT TO SEE YOU, TOM JOHNS!", driver.findElement(By.cssSelector("h3.hello")).getText());
     TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[8]/a")).click();
     assertEquals("MY WISHLISTS", driver.findElement(By.cssSelector("h1")).getText());

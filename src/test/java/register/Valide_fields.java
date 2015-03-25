@@ -44,13 +44,13 @@ public class Valide_fields extends PGS.pages.TestBase {
     driver.findElement(By.id("login")).sendKeys("E/4zp^Gi79:heX6{wp");
     driver.findElement(By.cssSelector("input.form-button")).click();
     driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[14]/a/span"))).build().perform();
-    driver.findElement(By.xpath("//ul[@id='nav']/li[14]/ul/li[22]/a/span")).click();
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[16]/a/span"))).build().perform();
+    driver.findElement(By.xpath("//ul[@id='nav']/li[16]/ul/li[21]/a/span")).click();
     TimeUnit.SECONDS.sleep(5);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[7]/dl/dd[1]/a/span")));
+            ,driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[8]/dl/dd[1]/a/span")));
     TimeUnit.SECONDS.sleep(5);
-    driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[8]/dl/dd[2]/a")).click();
+    driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[9]/dl/dd[2]/a")).click();
     TimeUnit.SECONDS.sleep(5);
     //driver.findElement(By.id("customer_captcha-head")).click();
    // TimeUnit.SECONDS.sleep(3);
@@ -91,13 +91,13 @@ public class Valide_fields extends PGS.pages.TestBase {
     driver.findElement(By.xpath("(//a[contains(text(),'Sign Out')])[2]")).click();
     TimeUnit.SECONDS.sleep(10);
     
-    driver.get(baseUrl + "admin");
-    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[14]/a/span"))).build().perform();
-    driver.findElement(By.xpath("//ul[@id='nav']/li[14]/ul/li[22]/a/span")).click();
+    driver.get(baseUrl + "dukkan");
+    actions.moveToElement(driver.findElement(By.xpath("//ul[@id='nav']/li[16]/a/span"))).build().perform();
+    driver.findElement(By.xpath("//ul[@id='nav']/li[16]/ul/li[21]/a/span")).click();
     TimeUnit.SECONDS.sleep(5);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[7]/dl/dd[1]/a/span")));
-    driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[8]/dl/dd[2]/a/span")).click();
+            ,driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[8]/dl/dd[1]/a/span")));
+    driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[9]/dl/dd[2]/a/span")).click();
    //driver.findElement(By.id("customer_captcha-head")).click();
    // TimeUnit.SECONDS.sleep(3);
     new Select(driver.findElement(By.id("customer_captcha_enable"))).selectByVisibleText("Yes");
