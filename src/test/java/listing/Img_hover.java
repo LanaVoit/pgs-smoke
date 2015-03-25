@@ -25,9 +25,9 @@ public class Img_hover extends PGS.pages.TestBase {
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     TimeUnit.SECONDS.sleep(3);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.cssSelector("li#item-12 a.product-image")));
-    String img_test = "http://dev.personalisedgiftsshop.co.uk/media/catalog/product/cache/1/small_image/335x/9df78eab33525d08d6e5fb8d27136e95/p/0/p010257.jpg";
-    assertEquals(img_test, driver.findElement(By.cssSelector("li#item-12 a.product-image img")).getAttribute("src").toString());
+            ,driver.findElement(By.cssSelector("li#item-7677 a.product-image")));
+    String img_test = "http://www.personalisedgiftsshop.co.uk/media/catalog/product/cache/1/small_image/335x/9df78eab33525d08d6e5fb8d27136e95/p/e/personalised-teddy-and-maple-wood-heart-in-a-tin.jpg";
+    assertEquals(img_test, driver.findElement(By.cssSelector("li#item-7677 a.product-image img")).getAttribute("src").toString());
 
     
   }

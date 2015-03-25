@@ -50,7 +50,7 @@ public class Coupon extends PGS.pages.TestBase {
       verificationErrors.append(e.toString());
     }
     try {
-      assertEquals("Current Balance: £0.00", driver.findElement(By.xpath("//div[@id='giftcard_balance_lookup']/div/p[2]")).getText());
+      assertEquals("Current Balance: £100.00", driver.findElement(By.xpath("//div[@id='giftcard_balance_lookup']/div/p[2]")).getText());
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

@@ -28,12 +28,12 @@ public class Sort extends PGS.pages.TestBase {
     assertEquals("£5.99", driver.findElement(By.cssSelector("#product-price-1282 > span.price")).getText());
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html?dir=asc&order=name");
     TimeUnit.SECONDS.sleep(3);
-    assertEquals("Baby Boy Photo Frame Token", driver.findElement(By.linkText("Baby Boy Photo Frame Token")).getText());
-    assertEquals("Baby Girl Photo Frame Token", driver.findElement(By.linkText("Baby Girl Photo Frame Token")).getText());
     assertEquals("Baby Prints On Canvas Gift Box", driver.findElement(By.linkText("Baby Prints On Canvas Gift Box")).getText());
+    assertEquals("Balloons Happy Birthday YoYo", driver.findElement(By.linkText("Balloons Happy Birthday YoYo")).getText());
+    assertEquals("Beauty and the Beast Personalised Fairy Tale", driver.findElement(By.linkText("Beauty and the Beast Personalised Fairy Tale")).getText());
     driver.findElement(By.linkText("2")).click();
     TimeUnit.SECONDS.sleep(3);
-    assertEquals("30 to 58 of 583 items", driver.findElement(By.cssSelector("p.amount")).getText());
+    assertEquals("30 to 58 of 417 items", driver.findElement(By.cssSelector("p.amount")).getText());
     TimeUnit.SECONDS.sleep(3);
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html?dir=desc&order=bestsellers");
 

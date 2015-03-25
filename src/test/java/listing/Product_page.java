@@ -25,10 +25,10 @@ public class Product_page extends PGS.pages.TestBase {
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
     TimeUnit.SECONDS.sleep(3);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.cssSelector("h2.product-name > a[title=\"Personalised Children's Pirate Ship Money Box\"]")));
-    driver.findElement(By.cssSelector("h2.product-name > a[title=\"Personalised Children's Pirate Ship Money Box\"]")).click();
+            ,driver.findElement(By.cssSelector("h2.product-name > a[title=\"Personalised Teddy and Maple Wooden Heart in a Tin\"]")));
+    driver.findElement(By.cssSelector("h2.product-name > a[title=\"Personalised Teddy and Maple Wooden Heart in a Tin\"]")).click();
     TimeUnit.SECONDS.sleep(3);
-    assertEquals("Personalised Children's Pirate Ship Money Box", driver.findElement(By.cssSelector("h1 > span")).getText());
+    assertEquals("Personalised Teddy and Maple Wooden Heart in a Tin", driver.findElement(By.cssSelector("h1 > span")).getText());
 
   }
 

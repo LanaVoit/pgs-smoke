@@ -25,7 +25,7 @@ public class Reviews extends PGS.pages.TestBase {
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("#reviews-tab > span")));
     driver.findElement(By.cssSelector("#reviews-tab > span")).click();
-    assertEquals("67 CUSTOMER REVIEWS", driver.findElement(By.cssSelector("p.reviews-title")).getText());
+    assertEquals("83 CUSTOMER REVIEWS", driver.findElement(By.cssSelector("p.reviews-title")).getText());
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("div.reviews-legend-content > p")));
     assertEquals("We have chosen to work with one of the the most trusted independent customer feedback forum, FEEFO. All reviews collected by FEEFO after real purchases and published on product pages.", driver.findElement(By.cssSelector("div.reviews-legend-content > p")).getText());

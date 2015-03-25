@@ -21,7 +21,7 @@ public class Image extends PGS.pages.TestBase {
   public void Image() throws Exception {
     	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
-    String img = "http://dev.personalisedgiftsshop.co.uk/media/catalog/product/cache/1/image/400x/9df78eab33525d08d6e5fb8d27136e95/p/e/personalised-swarovski-crystal-heart-vase.jpg";
+    String img = "http://www.personalisedgiftsshop.co.uk/media/catalog/product/cache/1/image/400x/9df78eab33525d08d6e5fb8d27136e95/p/e/personalised-swarovski-crystal-heart-vase.jpg";
     assertEquals(img, driver.findElement(By.cssSelector("div.product-image.product-image-zoom a img")).getAttribute("src").toString());
    /* ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("(//img[@alt='Engraved Swarovski Crystal Heart Vase'])[4]")));*/
