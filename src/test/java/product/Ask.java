@@ -84,7 +84,7 @@ public class Ask extends PGS.pages.TestBase {
             ,driver.findElement(By.cssSelector("dt.tab.last > span")));
     driver.findElement(By.cssSelector("dt.tab.last > span")).click();
     TimeUnit.SECONDS.sleep(5);
-    assertEquals("testpgs", driver.findElement(By.cssSelector("ul.aw-pq2-list > li:last-child > div.aw-pq2-list__question-wrapper > div.aw-pq2-list__question > span.aw-pq2-list__question-content")).getText());
+    assertEquals("testpgs", driver.findElement(By.cssSelector("ul.aw-pq2-list > li:nth-child(1) > div.aw-pq2-list__question-wrapper > div.aw-pq2-list__question > span.aw-pq2-list__question-content")).getText());
     TimeUnit.SECONDS.sleep(10);
     driver.get(baseUrl + "admin");
     TimeUnit.SECONDS.sleep(10);
