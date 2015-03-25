@@ -22,15 +22,15 @@ public class Filter extends PGS.pages.TestBase {
     	driver.manage().window().setSize(new Dimension(1366, 1050));
     TimeUnit.SECONDS.sleep(3);
     driver.get(baseUrl + "personalised-birthday-gifts/for-babies.html");
-    assertEquals("REFINE BY", driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div[3]/div[1]/p")).getText());
+    assertEquals("REFINE BY", driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div[4]/div[1]/p")).getText());
     //assertEquals("MOST POPULAR", driver.findElement(By.cssSelector("dt")).getText());
     //assertEquals("REFINE BY", driver.findElement(By.cssSelector("div.block-content > p.block-subtitle")).getText());
    // assertEquals("PRICE", driver.findElement(By.cssSelector("dt.last.odd")).getText());
     TimeUnit.SECONDS.sleep(3);
-    WebElement webelement = driver.findElement(By.cssSelector("a[href=\"http://dev.personalisedgiftsshop.co.uk/default/personalised-birthday-gifts/for-babies/shopby/price-110-.html\"]"));
+    WebElement webelement = driver.findElement(By.cssSelector("a[href=\"http://www.personalisedgiftsshop.co.uk/personalised-birthday-gifts/for-babies/shopby/price-110-.html\"]"));
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,webelement);
-    driver.findElement(By.cssSelector("a[href=\"http://dev.personalisedgiftsshop.co.uk/default/personalised-birthday-gifts/for-babies/shopby/price-110-.html\"]")).click();
+    driver.findElement(By.cssSelector("a[href=\"http://www.personalisedgiftsshop.co.uk/personalised-birthday-gifts/for-babies/shopby/price-110-.html\"]")).click();
     TimeUnit.SECONDS.sleep(3);
     assertEquals("16 item(s)", driver.findElement(By.cssSelector("p.amount")).getText());
     driver.findElement(By.linkText("reset")).click();

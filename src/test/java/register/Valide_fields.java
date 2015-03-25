@@ -37,7 +37,7 @@ public class Valide_fields extends PGS.pages.TestBase {
         
         driver.manage().window().setSize(new Dimension(1366, 1050));
 	Actions actions = new Actions(driver);
-	driver.get(baseUrl + "admin");
+	driver.get(baseUrl + "dukkan");
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("Turnkey@1986");
     driver.findElement(By.id("login")).clear();

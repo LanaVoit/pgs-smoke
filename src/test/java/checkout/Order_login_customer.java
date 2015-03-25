@@ -50,7 +50,7 @@ public class Order_login_customer extends PGS.pages.TestBase {
             ,driver.findElement(By.cssSelector("#billing-buttons-container > button.button.btn-primary")));
     driver.findElement(By.cssSelector("#billing-buttons-container > button.button.btn-primary")).click();
     TimeUnit.SECONDS.sleep(10);
-    driver.findElement(By.cssSelector("label[for='s_method_freeshipping_freeshipping']")).click();
+    driver.findElement(By.cssSelector("label[for='s_method_productmatrix_royal_mail_48']")).click();
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("#shipping-method-buttons-container > button.button.btn-primary")));
     driver.findElement(By.cssSelector("#shipping-method-buttons-container > button.button.btn-primary")).click();
@@ -77,7 +77,7 @@ public class Order_login_customer extends PGS.pages.TestBase {
     if (m.find()) {
     	driver.get(baseUrl + "customer/account/logout");
         TimeUnit.SECONDS.sleep(5);
-        driver.get(baseUrl + "admin");
+        driver.get(baseUrl + "dukkan");
         driver.findElement(By.id("username")).clear();
         driver.findElement(By.id("username")).sendKeys("Turnkey@1986");
         driver.findElement(By.id("login")).clear();

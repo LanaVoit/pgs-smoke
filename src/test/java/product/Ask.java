@@ -53,9 +53,9 @@ public class Ask extends PGS.pages.TestBase {
     post.getURI();
     waitForAjax(100000);
     TimeUnit.SECONDS.sleep(10);
-    assertEquals("Your question has been received. You can track all your questions and the answers given here", driver.findElement(By.cssSelector("li > span")).getText());
+    assertEquals("Your question has been received. You can track all your questions and the answers given here", driver.findElement(By.cssSelector("body > div.wrapper > div.page > div.main.col1-layout > div:nth-child(1) > ul > li > ul > li > span")).getText());
     TimeUnit.SECONDS.sleep(5);
-    driver.get(baseUrl + "admin");
+    driver.get(baseUrl + "dukkan");
     driver.findElement(By.id("username")).clear();
     driver.findElement(By.id("username")).sendKeys("Turnkey@1986");
     driver.findElement(By.id("login")).clear();

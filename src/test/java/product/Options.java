@@ -22,7 +22,7 @@ public class Options extends PGS.pages.TestBase {
   public void Options() throws Exception {
     	driver.manage().window().setSize(new Dimension(1366, 1050));
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
-    assertEquals("£40.00", driver.findElement(By.xpath("//*[@id='product-price-1914']")).getText());
+    assertEquals("£42.99", driver.findElement(By.xpath("//*[@id='product-price-1914']")).getText());
     
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.id("options_32498_text")));

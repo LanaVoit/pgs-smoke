@@ -52,8 +52,8 @@ public class Address extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     assertEquals("The address has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.xpath("(//a[contains(text(),'Delete Address')])[5]")));
-    driver.findElement(By.xpath("(//a[contains(text(),'Delete Address')])[5]")).click();
+            ,driver.findElement(By.xpath("(//a[contains(text(),'Delete Address')])[4]")));
+    driver.findElement(By.xpath("(//a[contains(text(),'Delete Address')])[4]")).click();
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to delete this address[\\s\\S]$"));
     TimeUnit.SECONDS.sleep(5);
     assertEquals("The address has been deleted.", driver.findElement(By.cssSelector("li > span")).getText());

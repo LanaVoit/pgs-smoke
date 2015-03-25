@@ -57,7 +57,7 @@ public class Checkout extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("a.continue-shopping")).click();
     String title = driver.getTitle();
-    String title_test = "Personalised Gifts Shop | Over 6,000 Gifts | Fast UK Delivery";
+    String title_test = "Personalised Gifts Shop | Over 8,000 Gifts | Fast UK Delivery";
     TimeUnit.SECONDS.sleep(5);
     assertEquals(title_test, title);
     TimeUnit.SECONDS.sleep(5);
