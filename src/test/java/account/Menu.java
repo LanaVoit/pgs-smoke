@@ -36,7 +36,7 @@ public class Menu extends PGS.pages.TestBase {
     assertEquals("MY ACCOUNT", driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[1]/h3")).getText());
     driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[2]/a")).click();
     assertEquals("EDIT ACCOUNT INFORMATION", driver.findElement(By.cssSelector("h1")).getText());
-    TimeUnit.SECONDS.sleep(3);
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[3]/a")).click();
     assertEquals("MY ADDRESS BOOK", driver.findElement(By.cssSelector("h1")).getText());
     TimeUnit.SECONDS.sleep(3);

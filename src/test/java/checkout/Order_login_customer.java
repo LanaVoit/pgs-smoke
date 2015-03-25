@@ -78,6 +78,7 @@ public class Order_login_customer extends PGS.pages.TestBase {
     	driver.get(baseUrl + "customer/account/logout");
         TimeUnit.SECONDS.sleep(5);
         driver.get(baseUrl + "dukkan");
+        TimeUnit.SECONDS.sleep(5);
         driver.findElement(By.id("username")).clear();
         driver.findElement(By.id("username")).sendKeys("Turnkey@1986");
         driver.findElement(By.id("login")).clear();

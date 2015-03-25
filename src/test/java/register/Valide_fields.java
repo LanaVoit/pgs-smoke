@@ -52,8 +52,8 @@ public class Valide_fields extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.xpath("//ul[@id='system_config_tabs']/li[9]/dl/dd[2]/a")).click();
     TimeUnit.SECONDS.sleep(5);
-    //driver.findElement(By.id("customer_captcha-head")).click();
-   // TimeUnit.SECONDS.sleep(3);
+    driver.findElement(By.id("customer_captcha-head")).click();
+    TimeUnit.SECONDS.sleep(3);
     new Select(driver.findElement(By.id("customer_captcha_enable"))).selectByVisibleText("No");
     driver.findElement(By.cssSelector("button[title=\"Save Config\"]")).click();
     TimeUnit.SECONDS.sleep(5);
