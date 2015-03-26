@@ -57,12 +57,7 @@ public class Address extends PGS.pages.TestBase {
     assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to delete this address[\\s\\S]$"));
     TimeUnit.SECONDS.sleep(5);
     assertEquals("The address has been deleted.", driver.findElement(By.cssSelector("li > span")).getText());
-    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
-            ,driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[19]/a")));
-    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[19]/a")).click();
-    TimeUnit.SECONDS.sleep(3);
-    assertEquals("YOU ARE NOW LOGGED OUT", driver.findElement(By.cssSelector("h1")).getText());
-    driver.get(baseUrl + "customer/account/login/");
+    driver.get(baseUrl + "customer/account/logout/");
   }
 
    private boolean isElementPresent(By by) {

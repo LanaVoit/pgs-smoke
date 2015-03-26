@@ -80,7 +80,7 @@ public class Add_all_cart extends PGS.pages.TestBase {
       driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
       TimeUnit.SECONDS.sleep(7);
       driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
-      TimeUnit.SECONDS.sleep(5);
+      TimeUnit.SECONDS.sleep(10);
       assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
       TimeUnit.SECONDS.sleep(5);
       driver.get(baseUrl + "customer/account/logout");
