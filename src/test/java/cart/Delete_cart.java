@@ -31,7 +31,7 @@ public class Delete_cart extends PGS.pages.TestBase {
         assertEquals("YOUR SHOPPING BASKET", driver.findElement(By.cssSelector("h1")).getText());
         assertEquals("ENGRAVED SWAROVSKI CRYSTAL HEART VASE", driver.findElement(By.xpath("(//a[contains(text(),'Engraved Swarovski Crystal Heart Vase')])[3]")).getText());
         driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
-        TimeUnit.SECONDS.sleep(5);
+        TimeUnit.SECONDS.sleep(10);
         assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
 
 
