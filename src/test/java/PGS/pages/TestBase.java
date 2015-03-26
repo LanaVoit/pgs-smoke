@@ -107,7 +107,12 @@ public class TestBase {
 	
 	
 	@AfterMethod
-	public void stopDriver() throws Exception{	
+	public void stopDriver(ITestResult result) throws Exception{			
+		if (!result.isSuccess()) {
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			// Now you can do whatever you need to do with it, for example copy somewhere
+			FileUtils.copyFile(scrFile, new File("./target/surefire-reports/junitreports/screenshot.jpg"));			
+		}
 		driver.quit();
 	}	
 	

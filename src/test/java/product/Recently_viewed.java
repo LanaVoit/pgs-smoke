@@ -34,13 +34,13 @@ public class Recently_viewed extends PGS.pages.TestBase {
 	TimeUnit.SECONDS.sleep(5);*/
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     driver.navigate().refresh();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
     driver.get(baseUrl + "personalised-silver-plated-baby-photo-album.html");
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
     driver.get(baseUrl + "personalised-purple-ronnie-godfather-chocolate-bar.html");
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
     driver.get(baseUrl + "personalised-swarovski-diamante-vase-mr-and-mrs.html");
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
     /*driver.get(baseUrl + "personalised-keep-calm-toffee-jar.html");
     TimeUnit.SECONDS.sleep(5);
     driver.get(baseUrl + "personalised-door-plaque-for-girls-animal-alphabet.html");
@@ -51,7 +51,7 @@ public class Recently_viewed extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);*/
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html"); 
     //driver.navigate().refresh();
-    TimeUnit.SECONDS.sleep(10);
+    TimeUnit.SECONDS.sleep(15);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("//div[5]/div/div/h2/span")));
     assertEquals("MY RECENTLY VIEWED ITEMS", driver.findElement(By.xpath("//div[5]/div/div/h2/span")).getText());

@@ -48,6 +48,7 @@ public class Ask extends PGS.pages.TestBase {
     driver.findElement(By.id("question_content")).sendKeys("testpgs");
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("#aw-pq2-question-form > div.buttons-set > button.button.btn-primary.aw-pq2-form__button")).click();
+    TimeUnit.SECONDS.sleep(3);
     HttpClient client = new DefaultHttpClient();
     HttpPost post = new HttpPost("http://www.personalisedgiftsshop.co.uk/productquestion/question/add/");
     post.getURI();
