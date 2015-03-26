@@ -88,7 +88,9 @@ public class Order_logout extends PGS.pages.TestBase {
         TimeUnit.SECONDS.sleep(5);
         driver.findElement(By.cssSelector("input.form-button")).click();
         TimeUnit.SECONDS.sleep(15);
-        driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();
+        if(driver.findElement(By.cssSelector("a[title=\"close\"] > span")) != null){
+        	driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();
+        }        
         actions.moveToElement(driver.findElement(By.xpath("//*[@id='nav']/li[2]/a/span"))).build().perform();
         driver.findElement(By.xpath("//*[@id='nav']/li[2]/ul/li[1]/a/span")).click();
         TimeUnit.SECONDS.sleep(5);
