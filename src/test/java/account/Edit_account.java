@@ -41,10 +41,10 @@ public class Edit_account extends PGS.pages.TestBase {
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("(//button[@type='submit'])[2]")));
     driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
-    TimeUnit.SECONDS.sleep(3);
+    TimeUnit.SECONDS.sleep(10);
     assertEquals("The account information has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
     assertEquals("GREAT TO SEE YOU, TOM2 JOHNS2!", driver.findElement(By.cssSelector("h3.hello")).getText());
-    TimeUnit.SECONDS.sleep(3);
+    TimeUnit.SECONDS.sleep(10);
     driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[4]/div[1]/div/div[2]/div[1]/div[1]/div[1]/a")).click();
     TimeUnit.SECONDS.sleep(3);
     driver.findElement(By.id("firstname")).clear();

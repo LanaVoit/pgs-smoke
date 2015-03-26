@@ -51,7 +51,7 @@ public class Ask extends PGS.pages.TestBase {
     HttpClient client = new DefaultHttpClient();
     HttpPost post = new HttpPost("http://www.personalisedgiftsshop.co.uk/productquestion/question/add/");
     post.getURI();
-    waitForAjax(100000);
+    waitForAjax(200000);
     TimeUnit.SECONDS.sleep(30);
     assertEquals("Your question has been received. A notification will be sent once the answer is published.", driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[1]/ul/li/ul/li/span")).getText());
     TimeUnit.SECONDS.sleep(5);
