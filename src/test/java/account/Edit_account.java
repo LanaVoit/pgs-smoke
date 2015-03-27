@@ -45,8 +45,8 @@ public class Edit_account extends PGS.pages.TestBase {
     assertEquals("The account information has been saved.", driver.findElement(By.cssSelector("li > span")).getText());
     assertEquals("GREAT TO SEE YOU, TOM2 JOHNS2!", driver.findElement(By.cssSelector("h3.hello")).getText());
     TimeUnit.SECONDS.sleep(10);
-    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[4]/div[1]/div/div[2]/div[1]/div[1]/div[1]/a")).click();
-    TimeUnit.SECONDS.sleep(3);
+    driver.get(baseUrl + "customer/account/edit/");
+    TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.id("firstname")).clear();
     driver.findElement(By.id("firstname")).sendKeys("Tom");
     driver.findElement(By.id("lastname")).clear();
@@ -56,10 +56,7 @@ public class Edit_account extends PGS.pages.TestBase {
 
     driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
     TimeUnit.SECONDS.sleep(3);
-    WebElement signout = driver.findElement(By.linkText("Sign Out"));
-    WebElement my_account = driver.findElement(By.linkText("My Account"));
-    actions.moveToElement(my_account).build().perform();
-    signout.click();
+    driver.get(baseUrl + "customer/account/logout/");
 
   }
 
