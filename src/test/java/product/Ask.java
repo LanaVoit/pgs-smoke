@@ -48,13 +48,14 @@ public class Ask extends PGS.pages.TestBase {
     driver.findElement(By.id("question_content")).sendKeys("testpgs");
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("#aw-pq2-question-form > div.buttons-set > button.button.btn-primary.aw-pq2-form__button")).click();
-    TimeUnit.SECONDS.sleep(3);
     HttpClient client = new DefaultHttpClient();
     HttpPost post = new HttpPost("http://www.personalisedgiftsshop.co.uk/productquestion/question/add/");
     post.getURI();
     waitForAjax(100000);
-    TimeUnit.SECONDS.sleep(40);
-    assertEquals("Your question has been received. A notification will be sent once the answer is published.", driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[1]/ul/li/ul/li/span")).getText());
+    //TimeUnit.SECONDS.sleep(40);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
+            ,driver.findElement(By.cssSelector("body > div.wrapper > div.page > div.main.col1-layout > div:nth-child(1) > ul > li > ul > li > span")));
+    assertEquals("Your question has been received. A notification will be sent once the answer is published.", driver.findElement(By.cssSelector("body > div.wrapper > div.page > div.main.col1-layout > div:nth-child(1) > ul > li > ul > li > span")).getText());
     TimeUnit.SECONDS.sleep(5);
     driver.get(baseUrl + "dukkan");
     driver.findElement(By.id("username")).clear();
