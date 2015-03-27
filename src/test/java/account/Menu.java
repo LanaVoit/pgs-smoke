@@ -34,13 +34,13 @@ public class Menu extends PGS.pages.TestBase {
     //assertEquals("GREAT TO SEE YOU, TOM JOHNS!", driver.findElement(By.cssSelector("h3.hello")).getText());
     TimeUnit.SECONDS.sleep(10);
     assertEquals("MY ACCOUNT", driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[1]/h3")).getText());
-    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[2]/a")).click();
+    driver.findElement(By.cssSelector("body > div.wrapper > div.page > div.main.col2-left-layout.row > div.col-left.sidebar.columns.small-12.large-3 > div > div.block-content > ul > li:nth-child(2) > a")).click();
     assertEquals("EDIT ACCOUNT INFORMATION", driver.findElement(By.cssSelector("h1")).getText());
     TimeUnit.SECONDS.sleep(10);
-    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[3]/a")).click();
+    driver.findElement(By.cssSelector("body > div.wrapper > div.page > div.main.col2-left-layout.row > div.col-left.sidebar.columns.small-12.large-3 > div > div.block-content > ul > li:nth-child(3) > a")).click();
     assertEquals("MY ADDRESS BOOK", driver.findElement(By.cssSelector("h1")).getText());
     TimeUnit.SECONDS.sleep(10);
-    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[4]/a")).click();
+    driver.findElement(By.cssSelector("body > div.wrapper > div.page > div.main.col2-left-layout.row > div.col-left.sidebar.columns.small-12.large-3 > div > div.block-content > ul > li:nth-child(4) > a")).click();
     assertEquals("MY ORDERS", driver.findElement(By.cssSelector("h1")).getText());
     TimeUnit.SECONDS.sleep(10);
     /*driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div[2]/ul/li[5]/a")).click();
