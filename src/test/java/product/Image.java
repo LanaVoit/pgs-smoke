@@ -29,7 +29,7 @@ public class Image extends PGS.pages.TestBase {
    // driver.findElement(By.cssSelector("button.slick-prev")).click();   
   //  driver.findElement(By.xpath("//img[contains(@src,'http://dev-mage.com/store53/store/media/catalog/product/cache/1/thumbnail/110x/9df78eab33525d08d6e5fb8d27136e95/s/c/screenshot_2_5.jpg')]")).click();
     driver.findElement(By.cssSelector("div.product-image.product-image-zoom a img")).click();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(10);
     driver.findElement(By.xpath("(//button[@title='Next (Right arrow key)'])")).click();
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();

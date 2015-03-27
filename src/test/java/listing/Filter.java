@@ -35,7 +35,7 @@ public class Filter extends PGS.pages.TestBase {
     assertEquals("16 item(s)", driver.findElement(By.cssSelector("p.amount")).getText());
     driver.findElement(By.linkText("reset")).click();
     TimeUnit.SECONDS.sleep(3);
-    assertEquals("1 to 29 of 417 items", driver.findElement(By.cssSelector("p.amount")).getText());
+    assertEquals("1 to 29 of 418 items", driver.findElement(By.cssSelector("p.amount")).getText());
 
   }
 
