@@ -25,7 +25,7 @@ public class Invalide_fields extends PGS.pages.TestBase {
     driver.findElement(By.id("firstname")).sendKeys("<script>alert();</script>");
     driver.findElement(By.id("lastname")).click();
     driver.findElement(By.id("lastname")).clear();
-    driver.findElement(By.id("lastname")).sendKeys("<form action=”http://live.hh.ru”><input type=”submit”></form>");
+    driver.findElement(By.id("lastname")).sendKeys("<form action=ï¿½http://live.hh.ruï¿½><input type=ï¿½submitï¿½></form>");
     driver.findElement(By.id("email_address")).clear();
     driver.findElement(By.id("email_address")).sendKeys("test");
     driver.findElement(By.id("email_address")).click();
@@ -45,6 +45,7 @@ public class Invalide_fields extends PGS.pages.TestBase {
     driver.findElement(By.id("confirmation")).clear();
     driver.findElement(By.id("confirmation")).sendKeys("qwert");
     driver.findElement(By.id("captcha_user_create")).clear();
+    TimeUnit.SECONDS.sleep(5);
     assertEquals("Please make sure your passwords match.", driver.findElement(By.id("advice-validate-cpassword-confirmation")).getText());
     driver.findElement(By.id("confirmation")).clear();
     driver.findElement(By.id("confirmation")).sendKeys("qwerty");
