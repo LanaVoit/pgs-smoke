@@ -87,10 +87,11 @@ public class Order_logout extends PGS.pages.TestBase {
         driver.findElement(By.id("login")).sendKeys("E/4zp^Gi79:heX6{wp");
         TimeUnit.SECONDS.sleep(5);
         driver.findElement(By.cssSelector("input.form-button")).click();
-        TimeUnit.SECONDS.sleep(15);
-        if(driver.findElement(By.cssSelector("a[title=\"close\"] > span")) != null){
-        	driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();
-        }        
+        TimeUnit.SECONDS.sleep(25);
+        WebElement webElement = driver.findElement(By.cssSelector("a[title=\"close\"] > span"));
+        if(webElement != null){
+        	webElement.click();
+        }          
         actions.moveToElement(driver.findElement(By.xpath("//*[@id='nav']/li[2]/a/span"))).build().perform();
         driver.findElement(By.xpath("//*[@id='nav']/li[2]/ul/li[1]/a/span")).click();
         TimeUnit.SECONDS.sleep(5);
@@ -106,7 +107,8 @@ public class Order_logout extends PGS.pages.TestBase {
 
         TimeUnit.SECONDS.sleep(10);
         assertEquals("1 order(s) have been canceled.", driver.findElement(By.cssSelector("li > span")).getText());
-    	   
+        driver.findElement(By.cssSelector("#html-body > div.wrapper > div.header > div.header-top > div > p > a.link-logout")).click();
+        TimeUnit.SECONDS.sleep(5);
     }
 
   }
