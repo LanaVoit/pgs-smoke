@@ -25,7 +25,7 @@ public class Delete_cart extends PGS.pages.TestBase {
                 ,driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")));
         TimeUnit.SECONDS.sleep(5);
         driver.findElement(By.cssSelector("button[title=\"Add to Basket\"]")).click();
-        TimeUnit.SECONDS.sleep(5);
+        TimeUnit.SECONDS.sleep(8);
         driver.findElement(By.xpath("//a[2]/span")).click();
         TimeUnit.SECONDS.sleep(5);
         assertEquals("YOUR SHOPPING BASKET", driver.findElement(By.cssSelector("h1")).getText());

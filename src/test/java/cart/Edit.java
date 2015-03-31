@@ -45,7 +45,7 @@ public class Edit extends PGS.pages.TestBase {
     driver.findElement(By.cssSelector("button.mfp-close")).click();
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.xpath("//div[@class='item']/div[7]/a")).click();
-    TimeUnit.SECONDS.sleep(5);
+    TimeUnit.SECONDS.sleep(8);
     
     assertEquals("SHOPPING CART IS EMPTY", driver.findElement(By.cssSelector("h1")).getText());
 
