@@ -113,7 +113,10 @@ public class TestBase {
 			// Now you can do whatever you need to do with it, for example copy somewhere
 			FileUtils.copyFile(scrFile, new File("./target/surefire-reports/junitreports/"+result.getName()+".jpg"));			
 		}
-		driver.quit();
+		if (driver != null) {
+			driver.quit();
+		}
+		//driver.quit();
 	}	
 	
 	@AfterSuite
