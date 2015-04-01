@@ -51,7 +51,7 @@ public class Ask extends PGS.pages.TestBase {
     HttpClient client = new DefaultHttpClient();
     HttpPost post = new HttpPost("http://www.personalisedgiftsshop.co.uk/productquestion/question/add/");
     post.getURI();
-    //waitForAjax(100000);
+    waitForAjax(100000);
     TimeUnit.SECONDS.sleep(15);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("body > div.wrapper > div.page > div.main.col1-layout > div:nth-child(1) > ul > li > ul > li > span")));
