@@ -45,6 +45,7 @@ public class Address extends PGS.pages.TestBase {
     driver.findElement(By.id("zip")).clear();
     driver.findElement(By.id("zip")).sendKeys("AA11AA");
     driver.findElement(By.id("_cp_button_id")).click();
+    TimeUnit.SECONDS.sleep(5);
     new Select(driver.findElement(By.id("crafty_postcode_lookup_result_option1"))).selectByVisibleText("THE BAKERY, 1 High Street, Crafty Valley, BIG CITY");
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.cssSelector("div.buttons-set.form-buttons > button.button")));
