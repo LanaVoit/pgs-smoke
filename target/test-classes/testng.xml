@@ -43,6 +43,7 @@
 			<class name="product.Options"/>	
 			<class name="product.Wishlist"/>
 			<class name="product.Reviews"/>	
+			<class name="product.Ask"/>
 			<class name="product.Recently_viewed"/>
 		</classes>
 	</test>			
