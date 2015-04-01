@@ -38,7 +38,6 @@ public class Reviews extends PGS.pages.TestBase {
     assertEquals("LOAD MORE", driver.findElement(By.linkText("LOAD MORE")).getText());
     driver.findElement(By.linkText("LOAD MORE")).click();
     assertEquals("LOAD MORE", driver.findElement(By.linkText("LOAD MORE")).getText());
-    TimeUnit.SECONDS.sleep(5);
   }
 
    private boolean isElementPresent(By by) {

@@ -34,13 +34,13 @@ public class Recently_viewed extends PGS.pages.TestBase {
 	TimeUnit.SECONDS.sleep(5);*/
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
     //driver.navigate().refresh();
-    TimeUnit.SECONDS.sleep(15);
+    TimeUnit.SECONDS.sleep(10);
     driver.get(baseUrl + "personalised-silver-plated-baby-photo-album.html");
-    TimeUnit.SECONDS.sleep(15);
+    TimeUnit.SECONDS.sleep(10);
     driver.get(baseUrl + "personalised-purple-ronnie-godfather-chocolate-bar.html");
-    TimeUnit.SECONDS.sleep(15);
+    TimeUnit.SECONDS.sleep(10);
     driver.get(baseUrl + "personalised-swarovski-diamante-vase-mr-and-mrs.html");
-    TimeUnit.SECONDS.sleep(15);
+    TimeUnit.SECONDS.sleep(10);
     /*driver.get(baseUrl + "personalised-keep-calm-toffee-jar.html");
     TimeUnit.SECONDS.sleep(5);
     driver.get(baseUrl + "personalised-door-plaque-for-girls-animal-alphabet.html");
