@@ -68,6 +68,7 @@ public class Recently_viewed extends PGS.pages.TestBase {
     TimeUnit.SECONDS.sleep(5);
     driver.findElement(By.cssSelector("ul.products-grid.row"));
     driver.get(baseUrl + "personalised-swarovski-crystal-heart-vase.html");
+    TimeUnit.SECONDS.sleep(15);
     ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();"
             ,driver.findElement(By.xpath("//div[5]/div/div/h2/span")));
     driver.findElement(By.id("recently_clear_all")).click();

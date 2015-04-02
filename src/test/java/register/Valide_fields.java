@@ -50,7 +50,6 @@ public class Valide_fields extends PGS.pages.TestBase {
     	driver.findElement(By.cssSelector("a[title=\"close\"] > span")).click();
     	TimeUnit.SECONDS.sleep(5);
     }   
-    TimeUnit.SECONDS.sleep(5);
     actions.moveToElement(driver.findElement(By.xpath("//*[@id='nav']/li[16]/a/span"))).build().perform();
     driver.findElement(By.xpath("//*[@id='nav']/li[16]/ul/li[21]/a/span")).click();
     TimeUnit.SECONDS.sleep(5);
