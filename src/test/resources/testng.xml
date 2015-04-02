@@ -39,7 +39,6 @@
 	<test name="Product page">
 		<parameter name="path" value="/"/>
 		<classes>		
-			<class name="product.Ask"/>	
 			<class name="product.Image"/>
 			<class name="product.Options"/>	
 			<class name="product.Wishlist"/>
